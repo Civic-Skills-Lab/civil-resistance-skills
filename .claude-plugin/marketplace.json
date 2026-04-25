@@ -1,0 +1,62 @@
+{
+  "name": "civil-resistance-skills-marketplace",
+
+  "owner": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+
+  "metadata": {
+    "description": "Civil resistance tactics catalog  -  atomic method skills grouped into six domain plugins (governance, economic, labor, communication, social, intervention). Backed by a registry of 347 atomic methods crosswalked from Sharp's 198 Methods and Beer/ICNC Civil Resistance Tactics in the 21st Century. Descriptive for high-risk methods; low-risk methods include preparatory guidance paraphrased from CANVAS, Beautiful Trouble, ICNC, and Swarthmore case studies.",
+    "version": "2026.04.21"
+  },
+
+  "plugins": [
+    {
+      "name": "civil-resistance-communication",
+      "description": "Communication, symbols, media, and public narrative tactics (domain code comm, registry range 4000-4899). Atomic methods for spoken, written, symbolic, assembly, documentary, and digital expression.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills-catalog/4104-public-speeches",
+        "./skills-catalog/4004-marches"
+      ]
+    },
+    {
+      "name": "civil-resistance-governance",
+      "description": "Governance, political power, legitimacy, elections, and state institution tactics (domain code gov, registry range 1000-1699). Atomic methods for authority challenge, civil disobedience, and pillar-institution noncooperation.",
+      "source": "./",
+      "strict": false,
+      "skills": []
+    },
+    {
+      "name": "civil-resistance-economic",
+      "description": "Economic pressure, boycott, divestment, and alternative-economy tactics (domain code econ, registry range 2000-2899). Atomic methods for consumer, supplier, financial, trade, and property action.",
+      "source": "./",
+      "strict": false,
+      "skills": []
+    },
+    {
+      "name": "civil-resistance-labor",
+      "description": "Labor, workplace, strike, and professional noncooperation tactics (domain code labr, registry range 3000-3799). Atomic methods for symbolic, sectoral, restricted, and constructive labor action.",
+      "source": "./",
+      "strict": false,
+      "skills": []
+    },
+    {
+      "name": "civil-resistance-social",
+      "description": "Social, community, cultural, and religious relations tactics (domain code soc, registry range 5000-5899). Atomic methods for ostracism, withdrawal, parallel institutions, and identity-based solidarity.",
+      "source": "./",
+      "strict": false,
+      "skills": []
+    },
+    {
+      "name": "civil-resistance-intervention",
+      "description": "Nonviolent intervention, presence, obstruction, and parallel-institution tactics (domain code intv, registry range 6000-6899). Atomic methods for physical presence, self-exposure, protective accompaniment, and service intervention.",
+      "source": "./",
+      "strict": false,
+      "skills": []
+    }
+  ]
+}

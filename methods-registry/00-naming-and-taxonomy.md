@@ -4,10 +4,10 @@ Naming rules, artifact ID semantics, and the domain taxonomy for atomic method r
 
 ## Naming scheme
 
-Current skill IDs are code-first and domain-oriented. Source taxonomies are metadata, not part of the skill name.
+Current skill IDs combine a project domain digit with the source NVI tactic ID. This keeps IDs sortable by project domain while preserving direct source compatibility.
 
 ```text
-Atomic method skill: <4digit-id>-<slug>
+Atomic method skill: <domain-digit><nvi_tactic_id:000>-<slug>
 Coordinator skill:   <3digit-id>-<slug>
 Command entrypoint:  /nv-<command>
 Reference artifact:  <3digit-id>-ref-<slug>
@@ -19,29 +19,28 @@ ID length carries the artifact type:
 - `3 digits` = coordinator skill.
 - `3 digits + cmd/ref marker` = command or reference artifact.
 
-Atomic method IDs start with a four-digit hierarchy:
+Atomic method IDs use this four-digit structure:
 
 ```text
-ABCD
-A = domain group
-B = subgroup
-CD = stable sequence inside the subgroup
+DNNN
+D = project domain digit
+NNN = zero-padded NVI tactic ID
 ```
 
-| Code | Group | Domain | Naming basis |
-|---|---:|---|---|
-| `gov` | `1000` | Governance, political power, legitimacy, elections, state institutions | Common government abbreviation |
-| `econ` | `2000` | Economic pressure, boycott, divestment, consumption, finance | Common economics abbreviation |
-| `labr` | `3000` | Labor, workplace, strikes, professional noncooperation | Common labor studies code |
-| `comm` | `4000` | Communication, media, symbols, public narrative, persuasion | Common communication abbreviation |
-| `soc` | `5000` | Social/community/cultural/religious relations and noncooperation | Common sociology/social code |
-| `intv` | `6000` | Nonviolent intervention, presence, obstruction, parallel institutions | Project mnemonic for intervention |
+| Code | Digit | Registry file | Domain | Naming basis |
+|---|---:|---|---|---|
+| `gov` | `1` | `1000-governance.md` | Governance, political power, legitimacy, elections, state institutions | Common government abbreviation |
+| `econ` | `2` | `2000-economic.md` | Economic pressure, boycott, divestment, consumption, finance | Common economics abbreviation |
+| `labr` | `3` | `3000-labor.md` | Labor, workplace, strikes, professional noncooperation | Common labor studies code |
+| `comm` | `4` | `4000-communication.md` | Communication, media, symbols, public narrative, persuasion | Common communication abbreviation |
+| `soc` | `5` | `5000-social.md` | Social/community/cultural/religious relations and noncooperation | Common sociology/social code |
+| `intv` | `6` | `6000-intervention.md` | Nonviolent intervention, presence, obstruction, parallel institutions | Project mnemonic for intervention |
 
-Source identity stays in registry metadata: `source`, `source_number`, `source_family`, and `source_category`. Domain identity stays in metadata fields: `domain_group` and `domain_subgroup`. Examples: `4108-public-speeches`, `1204-mock-elections`, `2101-consumers-boycott`, `3101-protest-or-warning-strikes`, `6116-nonviolent-occupations`.
+`7xxx` is reserved. Source identity stays in registry metadata: `source`, `nvi_tactic_id`, `sharp_crosswalk`, `source_family`, and `source_category`. Domain identity stays in metadata fields: `domain_group` and `domain_subgroup`. Examples: `4104-public-speeches` (communication + NVI 104), `1276-mock-elections` (governance + NVI 276), `2130-consumers-boycott` (economic + NVI 130), `3154-protest-or-warning-strikes` (labor + NVI 154), `6289-nonviolent-occupations` (intervention + NVI 289).
 
 ## Complete domain taxonomy
 
-The taxonomy below lists active, populated subgroups only. Codes are intentionally domain-oriented: source taxonomies are metadata, while the first two digits define the operational domain and subdomain used by agent skills. Future methods must map into one of these groups or trigger an explicit taxonomy revision.
+The taxonomy below lists active, populated subgroups only. Subgroup codes are taxonomy metadata used in headings and `domain_subgroup`; they are not derived from the atomic skill ID. Future methods must map into one of these groups or trigger an explicit taxonomy revision.
 
 | Range | Domain | Subdomain | Records |
 |---:|---|---|---:|
