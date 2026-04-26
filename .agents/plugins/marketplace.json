@@ -1,0 +1,80 @@
+{
+  "name": "civil-resistance-skills-marketplace",
+  "interface": {
+    "displayName": "Civil Resistance Skills Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "civil-resistance-communication",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-communication"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "civil-resistance-governance",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-governance"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "civil-resistance-economic",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-economic"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "civil-resistance-labor",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-labor"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "civil-resistance-social",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-social"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "civil-resistance-intervention",
+      "source": {
+        "source": "local",
+        "path": "./plugins/civil-resistance-intervention"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

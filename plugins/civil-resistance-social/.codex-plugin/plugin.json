@@ -1,0 +1,37 @@
+{
+  "name": "civil-resistance-social",
+  "version": "0.1.0",
+  "description": "Social, community, cultural, and religious relations tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "social"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Civil Resistance Social",
+    "shortDescription": "Social and community tactics from the civil resistance registry.",
+    "longDescription": "Social, community, cultural, and religious relations tactics from the civil resistance skills catalog. Operational skills will be added after risk review.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Show available social tactics.",
+      "Review social tactic risk.",
+      "Explain the social domain."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "civil-resistance-labor",
+  "version": "0.1.0",
+  "description": "Labor, workplace, strike, and professional noncooperation tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "labor"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Civil Resistance Labor",
+    "shortDescription": "Labor and workplace tactics from the civil resistance registry.",
+    "longDescription": "Labor, workplace, strike, and professional noncooperation tactics from the civil resistance skills catalog. Operational skills will be added after risk review.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Show available labor tactics.",
+      "Review labor tactic risk.",
+      "Explain the labor domain."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

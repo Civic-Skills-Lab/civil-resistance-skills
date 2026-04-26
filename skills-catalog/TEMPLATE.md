@@ -86,13 +86,13 @@ Omit this section entirely when `risk_status: high`.
 - Beer NVI #<id> / Sharp #<id or ->: canonical taxonomic entry for "<method name>".
 - Albert Einstein Institution, *198 Methods of Nonviolent Action*.
 - Michael Beer / ICNC, *Civil Resistance Tactics in the 21st Century*.
-- Full source index: [../../methods-registry/03-sources-and-references.md](../../methods-registry/03-sources-and-references.md)
+- Full source index: [../methods-registry/03-sources-and-references.md](../methods-registry/03-sources-and-references.md)
 
 **Secondary (preparatory, training-derived, paraphrased):**
 
 - Include only sources actually used for the preparatory layer.
 
-**Evidence caveat:** [../../civil-resistance-evidence-and-critique.md](../../civil-resistance-evidence-and-critique.md): method-level effectiveness claims for isolated tactics outrun the evidence base.
+**Evidence caveat:** [../civil-resistance-evidence-and-critique.md](../civil-resistance-evidence-and-critique.md): method-level effectiveness claims for isolated tactics outrun the evidence base.
 
 ## Definition of Done
 
@@ -130,7 +130,7 @@ Run from repository root after creating or editing a skill:
 ```powershell
 $file = "skills-catalog/<skill-id>/SKILL.md"
 ((Get-Content $file) -match '^## ').Count
-rg "related_skills|skills-catalog/communication|@path|MANDATORY READ|/nv-|`[0-9]{4}-|`[0-9]{3}-" $file
+rg "related_skills|skills-catalog/communi[c]ation|@path|MANDATORY READ|/nv-|`[0-9]{4}-|`[0-9]{3}-" $file
 rg "- \[x\]" $file
 ```
 

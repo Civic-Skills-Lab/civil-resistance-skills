@@ -1,0 +1,37 @@
+{
+  "name": "civil-resistance-economic",
+  "version": "0.1.0",
+  "description": "Economic pressure, boycott, divestment, and alternative-economy tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "economic"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Civil Resistance Economic",
+    "shortDescription": "Economic pressure tactics from the civil resistance registry.",
+    "longDescription": "Economic pressure, boycott, divestment, and alternative-economy tactics from the civil resistance skills catalog. Operational skills will be added after risk review.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Show available economic tactics.",
+      "Review economic tactic risk.",
+      "Explain the economic domain."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

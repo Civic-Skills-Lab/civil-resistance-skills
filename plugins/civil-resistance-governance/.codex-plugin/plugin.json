@@ -1,0 +1,37 @@
+{
+  "name": "civil-resistance-governance",
+  "version": "0.1.0",
+  "description": "Governance, political power, legitimacy, elections, and state institution tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "governance"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Civil Resistance Governance",
+    "shortDescription": "Governance and legitimacy tactics from the civil resistance registry.",
+    "longDescription": "Governance, political power, legitimacy, elections, and state institution tactics from the civil resistance skills catalog. Operational skills will be added after risk review.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Show available governance tactics.",
+      "Review governance tactic risk.",
+      "Explain the governance domain."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

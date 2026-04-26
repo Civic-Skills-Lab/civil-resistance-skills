@@ -117,7 +117,7 @@ Preserve source discipline throughout: do not invent permits, legal rules, turno
 - Beer NVI #4 / Sharp #038: the canonical entry for "Marches" in Sharp's Processions subcategory (methods 37-43).
 - Albert Einstein Institution, *198 Methods of Nonviolent Action*.
 - Michael Beer / ICNC, *Civil Resistance Tactics in the 21st Century*.
-- Full source index: [../../methods-registry/03-sources-and-references.md](../../methods-registry/03-sources-and-references.md)
+- Full source index: [methods-registry/03-sources-and-references.md](https://github.com/levnikolaevich/civil-resistance-skills/blob/main/methods-registry/03-sources-and-references.md)
 
 **Secondary (preparatory, training-derived, paraphrased):**
 
@@ -128,11 +128,11 @@ Preserve source discipline throughout: do not invent permits, legal rules, turno
 - [Beautiful Trouble training](https://beautifultrouble.org/training) and [Amnesty right-to-protest materials](https://www.amnesty.org/en/what-we-do/freedom-of-expression/protest/): tactical safety, audience fit, debrief, and right-to-protest framing.
 - CANVAS / ICNC training patterns, Swarthmore case observations, and standard movement marshalling practice.
 
-**Evidence caveat:** [../../civil-resistance-evidence-and-critique.md](../../civil-resistance-evidence-and-critique.md): method-level effectiveness claims for marches in isolation outrun the evidence base; treat marches as one component of broader campaign arcs.
+**Evidence caveat:** [civil-resistance-evidence-and-critique.md](https://github.com/levnikolaevich/civil-resistance-skills/blob/main/civil-resistance-evidence-and-critique.md): method-level effectiveness claims for marches in isolation outrun the evidence base; treat marches as one component of broader campaign arcs.
 
 ## Definition of Done
 
-User-value checks for this skill. Keep boxes unchecked; they are review criteria, not author attestation. Generic repository lint rules live in `skills-catalog/README.md`.
+User-value checks for this skill. Keep boxes unchecked; they are review criteria, not author attestation. Generic repository lint rules live in the canonical skills catalog documentation.
 
 - [ ] Intake is complete, or missing facts are listed for the user to supply or verify.
 - [ ] Legal / permitting posture is jurisdiction-specific or explicitly marked as unknown.

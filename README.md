@@ -22,3 +22,12 @@ Core layers:
 The registry is not a cookbook. It is a structured reference and simulation substrate for historical tactical patterns, coordinator-driven analysis, and risk-aware skill generation.
 
 High-risk methods remain in the registry for traceability, education, and simulation, but are excluded from operational skill generation until explicitly reviewed.
+
+## Plugin Packaging
+
+`skills-catalog/` is the canonical authoring surface. Claude Code and Codex use separate marketplace surfaces generated from that catalog:
+
+- Claude Code: `.claude-plugin/marketplace.json` plus self-contained plugin directories under `plugins/<domain>/`.
+- Codex: `.agents/plugins/marketplace.json` plus `.codex-plugin/plugin.json` manifests and thin `codex-skills/` adapters.
+
+Install and enable the marketplace through one agent surface at a time to avoid duplicate skill discovery.

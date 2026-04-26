@@ -1,0 +1,37 @@
+{
+  "name": "civil-resistance-intervention",
+  "version": "0.1.0",
+  "description": "Nonviolent intervention, presence, obstruction, and parallel-institution tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "intervention"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Civil Resistance Intervention",
+    "shortDescription": "Nonviolent intervention tactics from the civil resistance registry.",
+    "longDescription": "Nonviolent intervention, presence, obstruction, and parallel-institution tactics from the civil resistance skills catalog. Operational skills will be added after risk review.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Show available intervention tactics.",
+      "Review intervention tactic risk.",
+      "Explain the intervention domain."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

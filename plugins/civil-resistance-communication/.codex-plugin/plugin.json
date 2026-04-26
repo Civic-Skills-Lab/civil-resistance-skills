@@ -1,0 +1,38 @@
+{
+  "name": "civil-resistance-communication",
+  "version": "0.1.0",
+  "description": "Communication, symbols, media, and public narrative tactics from the civil resistance skills catalog.",
+  "author": {
+    "name": "Lev Nikolaevich",
+    "email": "levnikolaevich.com@gmail.com",
+    "url": "https://github.com/levnikolaevich"
+  },
+  "homepage": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "repository": "https://github.com/levnikolaevich/civil-resistance-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "codex",
+    "skills",
+    "civil-resistance",
+    "communication"
+  ],
+  "skills": "./codex-skills/",
+  "interface": {
+    "displayName": "Civil Resistance Communication",
+    "shortDescription": "Communication and public narrative tactics for civil resistance planning.",
+    "longDescription": "Communication, symbols, media, and public narrative tactics from the civil resistance skills catalog. Current operational skills cover public speech preparation and march planning.",
+    "developerName": "Lev Nikolaevich",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/levnikolaevich/civil-resistance-skills",
+    "defaultPrompt": [
+      "Help me prepare a public speech.",
+      "Create a march planning package.",
+      "Review civil resistance communication risks."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

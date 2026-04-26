@@ -117,7 +117,12 @@ Every `skills-catalog/<skill-id>/SKILL.md` conforms to this contract:
 
 ## Marketplace integration
 
-When adding a new `SKILL.md`, append its path (e.g. `./skills-catalog/4104-public-speeches`) to the matching plugin's `skills:` array in [../.claude-plugin/marketplace.json](../.claude-plugin/marketplace.json).
+`skills-catalog/` is the canonical authoring source for both agent surfaces. Distribution packages live under [../plugins](../plugins):
+
+- **Claude Code:** [../.claude-plugin/marketplace.json](../.claude-plugin/marketplace.json) points to self-contained plugin directories. Each Claude plugin keeps full skill directories under `plugins/<plugin>/skills/<skill-id>/` because installed marketplace plugins are copied into Claude's plugin cache and cannot rely on files outside the plugin root.
+- **Codex:** [../.agents/plugins/marketplace.json](../.agents/plugins/marketplace.json) points to the same domain plugin directories, but Codex manifests load thin adapters from `plugins/<plugin>/codex-skills/`. Adapters point back to canonical `skills-catalog/<skill-id>/SKILL.md` during repo-local Codex use.
+
+When adding a new operational skill, update the canonical `skills-catalog/<skill-id>/` first, then sync the matching Claude plugin copy and add a Codex adapter. Do not symlink one agent's plugin root into the other, and avoid enabling both surfaces in the same runtime when that would duplicate skill discovery.
 
 ## Validation (external)
 
