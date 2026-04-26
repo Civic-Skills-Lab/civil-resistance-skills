@@ -23,6 +23,14 @@ The registry is not a cookbook. It is a structured reference and simulation subs
 
 High-risk methods remain in the registry for traceability, education, and simulation, but are excluded from operational skill generation until explicitly reviewed.
 
+See [SAFETY.md](SAFETY.md) for the public use boundaries: no violence, coercion, deception, privacy invasion, technical abuse, or illegal/dangerous execution guidance.
+
+## License and Sources
+
+This repository uses a mixed-license model: code and packaging infrastructure are Apache-2.0, while original project prose, skill text, references, and website copy are CC BY-NC-SA 4.0. Source-derived registry metadata is attributed for research and reference; third-party source materials remain under their original rights and are not relicensed here.
+
+See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), and [THIRD_PARTY_SOURCES.md](THIRD_PARTY_SOURCES.md).
+
 ## Plugin Packaging
 
 `skills-catalog/` is the canonical authoring surface. Claude Code and Codex use separate marketplace surfaces generated from that catalog:

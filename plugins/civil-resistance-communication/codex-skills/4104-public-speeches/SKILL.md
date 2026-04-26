@@ -1,7 +1,7 @@
 ---
 name: 4104-public-speeches
 description: "Codex adapter for the canonical public speeches skill. Use when the user asks to prepare, draft, review, or apply a public speech tactic."
-license: UNLICENSED
+license: SEE LICENSE IN LICENSE
 ---
 
 > **Paths:** This is a Codex-native adapter. Load canonical files relative to the skills repo root.

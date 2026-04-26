@@ -1,0 +1,24 @@
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+
+This repository applies CC BY-NC-SA 4.0 to original documentation, skill text,
+reference templates, research notes, registry commentary, and website copy
+authored for this project, except where a file or section states otherwise.
+
+Canonical license deed:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Canonical legal code:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Summary:
+
+- Attribution: give appropriate credit, provide a link to the license, and
+  indicate whether changes were made.
+- NonCommercial: do not use the licensed material for commercial purposes.
+- ShareAlike: adaptations must be distributed under the same license.
+- No additional restrictions: do not apply legal terms or technological
+  measures that legally restrict others from doing anything the license permits.
+
+This file is a pointer and summary, not a substitute for the canonical Creative
+Commons legal code.
+

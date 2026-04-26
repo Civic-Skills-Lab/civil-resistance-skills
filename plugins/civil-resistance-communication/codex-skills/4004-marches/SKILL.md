@@ -1,7 +1,7 @@
 ---
 name: 4004-marches
 description: "Codex adapter for the canonical marches skill. Use when the user asks to plan, review, or prepare a march planning package."
-license: UNLICENSED
+license: SEE LICENSE IN LICENSE
 ---
 
 > **Paths:** This is a Codex-native adapter. Load canonical files relative to the skills repo root.

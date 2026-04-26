@@ -1,0 +1,38 @@
+# Civil Resistance Skills License
+
+This repository uses a mixed-license model.
+
+## Code and Packaging Infrastructure
+
+The repository's code-like infrastructure is licensed under the Apache License,
+Version 2.0. This includes GitHub Actions workflows, plugin and marketplace
+manifests, adapter files, generated site mechanics, scripts, configuration, and
+similar packaging/runtime glue.
+
+See [licenses/APACHE-2.0.txt](licenses/APACHE-2.0.txt).
+
+## Original Documentation and Skill Content
+
+Original prose, templates, skill text, reference files, research notes, registry
+commentary, and website copy authored for this repository are licensed under
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+(CC BY-NC-SA 4.0).
+
+See [licenses/CC-BY-NC-SA-4.0.txt](licenses/CC-BY-NC-SA-4.0.txt).
+
+## Source-Derived Registry Metadata
+
+The method registry includes source-derived factual metadata, method names,
+numbering, source crosswalks, and taxonomy references from third-party works.
+Those third-party source materials remain under their original rights, licenses,
+and terms. This repository does not relicense NVI, ICNC, Sharp, AEI, CANVAS,
+Beautiful Trouble, The Commons, Swarthmore, ACLU, NDI, Amnesty, Harvard, or
+other third-party works.
+
+See [NOTICE.md](NOTICE.md) and [THIRD_PARTY_SOURCES.md](THIRD_PARTY_SOURCES.md).
+
+## No Endorsement
+
+Source attribution does not imply endorsement by any cited author, publisher,
+institution, organization, or project.
+
