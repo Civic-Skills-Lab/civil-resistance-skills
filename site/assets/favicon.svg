@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Civil Resistance Skills research atlas icon">
+  <rect width="64" height="64" rx="14" fill="#f6f7f6"/>
+  <rect x="9" y="9" width="46" height="46" rx="7" fill="#ffffff" stroke="#d3dcda" stroke-width="2"/>
+  <path d="M18 10v44M29 10v44M40 10v44M51 10v44M10 18h44M10 29h44M10 40h44M10 51h44" stroke="#e7eceb" stroke-width="1.4"/>
+  <path d="M18 45c5-9 10-14 18-16 5-1 8-5 11-11" fill="none" stroke="#245d8f" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="18" cy="45" r="4" fill="#2f6f4e"/>
+  <circle cx="47" cy="18" r="4" fill="#8a5d13"/>
+  <circle cx="36" cy="29" r="3" fill="#245d8f"/>
+</svg>

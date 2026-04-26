@@ -1,0 +1,31 @@
+{
+  "name": "Civil Resistance Skills",
+  "short_name": "CRS Atlas",
+  "description": "Research-grade civil-resistance method skills for education, simulation, and careful preparation.",
+  "start_url": "/civil-resistance-skills/",
+  "display": "standalone",
+  "background_color": "#f6f7f6",
+  "theme_color": "#245d8f",
+  "icons": [
+    {
+      "src": "assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

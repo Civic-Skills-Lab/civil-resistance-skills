@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://levnikolaevich.github.io/civil-resistance-skills/sitemap.xml

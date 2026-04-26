@@ -6,293 +6,34 @@
   <title>Communication Domain - Civil Resistance Skills</title>
   <meta name="description" content="Communication, symbols, media, and public narrative skills in the Civil Resistance Skills research atlas.">
   <link rel="canonical" href="https://levnikolaevich.github.io/civil-resistance-skills/plugins/civil-resistance-communication.html">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    :root {
-      --paper: #f6f7f6;
-      --paper-deep: #e7eceb;
-      --ink: #22252a;
-      --ink-soft: #4f5662;
-      --muted: #747b86;
-      --line: #d3dcda;
-      --panel: #ffffff;
-      --blue: #245d8f;
-      --green: #2f6f4e;
-      --green-bg: #e6f2ea;
-      --gray-bg: #e9eded;
-      --amber: #8a5d13;
-      --amber-bg: #f5e8c8;
-      --red: #8d3434;
-      --red-bg: #f2dede;
-      --shadow: 0 18px 45px rgba(26, 44, 52, 0.08);
-      --mono: "SF Mono", "Cascadia Code", Consolas, monospace;
-      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --serif: Georgia, "Times New Roman", serif;
-    }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: var(--sans);
-      line-height: 1.55;
-    }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    .topbar { position: sticky; top: 0; z-index: 10; background: rgba(246, 247, 246, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-    .nav { height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .brand { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--ink); }
-    .links { display: flex; gap: 18px; font-size: 14px; }
-    .links a { color: var(--ink-soft); }
-    .hero { padding: 64px 0 34px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%); }
-    .back { display: inline-block; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
-    h1 { max-width: 900px; margin: 0 0 16px; font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 0.98; letter-spacing: 0; }
-    .lead { max-width: 760px; color: var(--ink-soft); font-size: clamp(1.02rem, 2vw, 1.25rem); }
-    .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .badge {
-      display: inline-flex;
-      min-height: 24px;
-      align-items: center;
-      justify-content: center;
-      padding: 3px 8px;
-      border-radius: 8px;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.15;
-      text-align: center;
-      white-space: nowrap;
-      justify-self: start;
-    }
-    .badge.risk { min-width: 56px; }
-    .badge.status { min-width: 92px; }
-    .badge.operational { color: var(--green); background: var(--green-bg); }
-    .badge.soon { color: var(--muted); background: var(--gray-bg); }
-    .badge.analysis { color: var(--amber); background: var(--amber-bg); }
-    .badge.high { color: var(--red); background: var(--red-bg); }
-    .badge.review { color: var(--blue); background: #dfeef8; }
-    section { padding: 58px 0; }
-    h2 { margin: 0 0 10px; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); letter-spacing: 0; }
-    .section-copy { margin: 0 0 24px; max-width: 720px; color: var(--ink-soft); }
-    .skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 20px; box-shadow: var(--shadow); }
-    .skill-card h3 { margin: 8px 0 8px; font-size: 22px; }
-    .skill-id { font-family: var(--mono); color: var(--muted); font-size: 13px; }
-    .skill-card p { color: var(--ink-soft); margin: 0 0 16px; }
-    .links-list { display: flex; flex-wrap: wrap; gap: 10px; }
-    .link-pill { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: #f8faf9; font-size: 13px; }
-    .filters { display: grid; grid-template-columns: 1.3fr repeat(2, minmax(130px, 0.5fr)); gap: 10px; margin-bottom: 14px; }
-    input, select { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: inherit; }
-    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; box-shadow: var(--shadow); }
-    table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 900px; font-size: 14px; }
-    th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-    th { font-size: 12px; text-transform: uppercase; letter-spacing: 0; color: var(--muted); background: var(--paper-deep); }
-    tr:last-child td { border-bottom: 0; }
-    th:nth-child(1), td:nth-child(1) { width: 42%; }
-    th:nth-child(2), td:nth-child(2) { width: 27%; }
-    th:nth-child(3), td:nth-child(3) { width: 11%; white-space: nowrap; }
-    th:nth-child(4), td:nth-child(4) { width: 9%; text-align: center; white-space: nowrap; }
-    th:nth-child(5), td:nth-child(5) { width: 11%; text-align: center; white-space: nowrap; }
-    .method-id { font-family: var(--mono); overflow-wrap: anywhere; font-size: 13px; }
-    .method-name { font-weight: 650; }
-    .meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
-    footer { padding: 34px 0 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-    @media (max-width: 850px) { .skill-grid, .filters { grid-template-columns: 1fr; } .links { display: none; } }
-    @media (max-width: 720px) {
-      .table-wrap { overflow-x: visible; }
-      table { display: block; min-width: 0; }
-      colgroup, thead { display: none; }
-      tbody, tr, td { display: block; width: 100% !important; }
-      tr { padding: 6px 0; border-bottom: 1px solid var(--line); }
-      tr:last-child { border-bottom: 0; }
-      td {
-        display: grid;
-        grid-template-columns: 92px minmax(0, 1fr);
-        gap: 12px;
-        align-items: start;
-        padding: 8px 10px;
-        border-bottom: 0;
-        text-align: left !important;
-        white-space: normal !important;
-      }
-      td::before {
-        content: attr(data-label);
-        color: var(--muted);
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-      .badge.status { min-width: 0; }
-    }
-  </style>
+  <link rel="alternate" hreflang="en" href="https://levnikolaevich.github.io/civil-resistance-skills/plugins/civil-resistance-communication.html">
+  <link rel="alternate" hreflang="ru" href="https://levnikolaevich.github.io/civil-resistance-skills/ru/plugins/civil-resistance-communication.html">
+  <link rel="alternate" hreflang="es" href="https://levnikolaevich.github.io/civil-resistance-skills/es/plugins/civil-resistance-communication.html">
+  <link rel="alternate" hreflang="x-default" href="https://levnikolaevich.github.io/civil-resistance-skills/plugins/civil-resistance-communication.html">
+  <meta property="og:title" content="Communication Domain - Civil Resistance Skills">
+  <meta property="og:description" content="Operational communication skills and indexed communication methods for civil-resistance research and simulation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://levnikolaevich.github.io/civil-resistance-skills/plugins/civil-resistance-communication.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/site.css">
 </head>
-<body>
-  <header class="topbar">
-    <nav class="wrap nav" aria-label="Primary">
-      <a class="brand" href="../index.html">Civil Resistance Skills</a>
-      <div class="links">
-        <a href="#operational">Operational</a>
-        <a href="#registry">Registry</a>
-        <a href="https://github.com/levnikolaevich/civil-resistance-skills">GitHub</a>
-      </div>
-    </nav>
-  </header>
+<body data-page="communication" data-root="../">
+  <header class="topbar"><nav class="wrap nav" aria-label="Primary"><a class="brand" href="../index.html">Civil Resistance Skills</a><div class="nav-right"><div class="links"><a href="#operational">Operational</a><a href="#registry">Registry</a><a href="https://github.com/levnikolaevich/civil-resistance-skills">GitHub</a></div><div class="lang-switch" aria-label="Language"><a href="civil-resistance-communication.html" aria-current="true">EN</a><a href="../ru/plugins/civil-resistance-communication.html">RU</a><a href="../es/plugins/civil-resistance-communication.html">ES</a></div></div></nav></header>
 
   <main>
-    <section class="hero">
-      <div class="wrap">
-        <a class="back" href="../index.html">Back to atlas</a>
-        <h1>Communication, symbols, media, and public narrative.</h1>
-        <p class="lead">This is the first active domain. Its operational skills focus on low-risk communication methods that can be prepared, reviewed, simulated, and debriefed without turning the registry into a campaign command system.</p>
-        <div class="meta-row">
-          <span class="badge operational">2 operational skills</span>
-          <span class="badge soon">133 indexed methods</span>
-          <span class="badge analysis">high-risk rows held for analysis</span>
-        </div>
-      </div>
-    </section>
+    <section class="domain-hero"><div class="wrap"><a class="back" href="../index.html">Back to atlas</a><h1>Communication, symbols, media, and public narrative.</h1><p class="lead">This is the first active domain. Its operational skills focus on low-risk communication methods that can be prepared, reviewed, simulated, and debriefed without turning the registry into a campaign command system.</p><div class="meta-row"><span class="badge operational">2 operational skills</span><span class="badge soon">133 indexed methods</span><span class="badge analysis">high-risk rows held for analysis</span></div></div></section>
 
-    <section id="operational">
-      <div class="wrap">
-        <h2>Operational skills</h2>
-        <p class="section-copy">These are the current exemplar skills. They use source-linked references, runtime phases, artifacts, risk review, and readiness criteria.</p>
-        <div class="skill-grid">
-          <article class="card skill-card">
-            <div class="skill-id">4104-public-speeches</div>
-            <h3>Public Speeches</h3>
-            <p>Guides preparation of a public speech tactic. Planning Mode produces a research-backed speech brief; Application Mode can produce a complete final speech package.</p>
-            <div class="links-list">
-              <a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/blob/main/skills-catalog/4104-public-speeches/SKILL.md">Canonical skill</a>
-              <a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/tree/main/skills-catalog/4104-public-speeches/references">References</a>
-            </div>
-          </article>
-          <article class="card skill-card">
-            <div class="skill-id">4004-marches</div>
-            <h3>Marches</h3>
-            <p>Planning-only skill for producing a March Planning Package: route, legal posture, staffing, safety, accessibility, communications, debrief, ledger, and readiness verdict.</p>
-            <div class="links-list">
-              <a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/blob/main/skills-catalog/4004-marches/SKILL.md">Canonical skill</a>
-              <a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/tree/main/skills-catalog/4004-marches/references">References</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section id="operational"><div class="wrap"><h2>Operational skills</h2><p class="section-copy">These are the current exemplar skills. They use source-linked references, runtime phases, artifacts, risk review, and readiness criteria.</p><div class="skill-grid"><article class="card skill-card"><div class="skill-id">4104-public-speeches</div><h3>Public Speeches</h3><p>Guides preparation of a public speech tactic. Planning Mode produces a research-backed speech brief; Application Mode can produce a complete final speech package.</p><div class="links-list"><a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/blob/main/skills-catalog/4104-public-speeches/SKILL.md">Canonical skill</a><a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/tree/main/skills-catalog/4104-public-speeches/references">References</a></div></article><article class="card skill-card"><div class="skill-id">4004-marches</div><h3>Marches</h3><p>Planning-only skill for producing a March Planning Package: route, legal posture, staffing, safety, accessibility, communications, debrief, ledger, and readiness verdict.</p><div class="links-list"><a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/blob/main/skills-catalog/4004-marches/SKILL.md">Canonical skill</a><a class="link-pill" href="https://github.com/levnikolaevich/civil-resistance-skills/tree/main/skills-catalog/4004-marches/references">References</a></div></article></div></div></section>
 
-    <section id="registry">
-      <div class="wrap">
-        <h2>Communication registry</h2>
-        <p class="section-copy">All communication methods remain visible so the research surface is complete. Rows without skill files are marked coming soon; high-risk rows stay analysis-only.</p>
-        <div class="filters">
-          <input id="search" type="search" placeholder="Search communication methods...">
-          <select id="statusFilter" aria-label="Status filter">
-            <option value="">All statuses</option>
-            <option value="operational">Operational</option>
-            <option value="coming_soon">Coming soon</option>
-          </select>
-          <select id="riskFilter" aria-label="Risk filter">
-            <option value="">All risk flags</option>
-            <option value="review">Review</option>
-            <option value="high">High</option>
-          </select>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <colgroup>
-              <col style="width: 42%;">
-              <col style="width: 27%;">
-              <col style="width: 11%;">
-              <col style="width: 9%;">
-              <col style="width: 11%;">
-            </colgroup>
-            <thead>
-              <tr>
-                <th>Method</th>
-                <th>Subgroup</th>
-                <th>NVI / Sharp</th>
-                <th>Risk</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="catalogBody"></tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <section id="registry"><div class="wrap"><h2>Communication registry</h2><p class="section-copy">All communication methods remain visible so the research surface is complete. Rows without skill files are marked coming soon; high-risk rows stay analysis-only.</p><div class="filters domain-filters"><input id="search" type="search" placeholder="Search communication methods..."><select id="statusFilter" aria-label="Status filter"><option value="">All statuses</option><option value="operational">Operational</option><option value="coming_soon">Coming soon</option></select><select id="riskFilter" aria-label="Risk filter"><option value="">All risk flags</option><option value="review">Review</option><option value="high">High</option></select></div><div class="table-wrap"><table class="domain-table"><colgroup><col style="width: 42%;"><col style="width: 27%;"><col style="width: 11%;"><col style="width: 9%;"><col style="width: 11%;"></colgroup><thead><tr><th>Method</th><th>Subgroup</th><th>NVI / Sharp</th><th>Risk</th><th>Status</th></tr></thead><tbody id="catalogBody"></tbody></table></div></div></section>
   </main>
 
-  <footer>
-    <div class="wrap">Civil Resistance Skills - communication domain atlas.</div>
-  </footer>
-
+  <footer><div class="wrap">Civil Resistance Skills - communication domain atlas.</div></footer>
   <script src="../data/registry.js"></script>
-  <script>
-    const repo = "https://github.com/levnikolaevich/civil-resistance-skills";
-    const data = window.CRS_REGISTRY.methods.filter(method => method.domain === "comm");
-    const statusLabel = { operational: "Operational", coming_soon: "Coming soon" };
-    const catalogBody = document.getElementById("catalogBody");
-    const search = document.getElementById("search");
-    const statusFilter = document.getElementById("statusFilter");
-    const riskFilter = document.getElementById("riskFilter");
-    const filterKey = "civil-resistance-skills:communication-filters";
-
-    function readStoredFilters() {
-      try {
-        return JSON.parse(localStorage.getItem(filterKey) || "{}");
-      } catch {
-        return {};
-      }
-    }
-    function writeStoredFilters() {
-      const filters = {
-        search: search.value,
-        status: statusFilter.value,
-        risk: riskFilter.value
-      };
-      localStorage.setItem(filterKey, JSON.stringify(filters));
-    }
-    function restoreStoredFilters() {
-      const filters = readStoredFilters();
-      if (typeof filters.search === "string") search.value = filters.search;
-      if (typeof filters.status === "string") statusFilter.value = filters.status;
-      if (typeof filters.risk === "string") riskFilter.value = filters.risk;
-    }
-
-    function badgeStatus(status) {
-      const cls = status === "operational" ? "operational" : "soon";
-      return `<span class="badge status ${cls}">${statusLabel[status]}</span>`;
-    }
-    function badgeRisk(risk) {
-      return `<span class="badge risk ${risk === "high" ? "high" : "review"}">${risk}</span>`;
-    }
-    function methodLink(method) {
-      if (method.status !== "operational") return `<span class="method-id">${method.id}</span>`;
-      return `<a class="method-id" href="${repo}/blob/main/skills-catalog/${method.id}/SKILL.md">${method.id}</a>`;
-    }
-    function renderCatalog() {
-      const q = search.value.trim().toLowerCase();
-      const status = statusFilter.value;
-      const risk = riskFilter.value;
-      const rows = data.filter(method => {
-        const haystack = `${method.id} ${method.method} ${method.subgroup} ${method.subgroupLabel}`.toLowerCase();
-        return (!q || haystack.includes(q)) &&
-          (!status || method.status === status) &&
-          (!risk || method.risk === risk);
-      });
-      catalogBody.innerHTML = rows.map(method => `
-        <tr>
-          <td data-label="Method">${methodLink(method)}<div class="method-name">${method.method}</div></td>
-          <td data-label="Subgroup">${method.subgroup}<div class="meta">${method.subgroupLabel}</div></td>
-          <td data-label="NVI / Sharp">${method.nvi} / ${method.sharp}</td>
-          <td data-label="Risk">${badgeRisk(method.risk)}</td>
-          <td data-label="Status">${badgeStatus(method.status)}</td>
-        </tr>`).join("");
-    }
-    restoreStoredFilters();
-    [search, statusFilter, riskFilter].forEach(el => el.addEventListener("input", () => {
-      writeStoredFilters();
-      renderCatalog();
-    }));
-    renderCatalog();
-  </script>
+  <script src="../assets/site.js"></script>
 </body>
 </html>
