@@ -13,6 +13,7 @@ const canonicalPath = localizedPaths[page][lang];
 const canonicalUrl = absoluteUrl(canonicalPath);
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
 const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
+const languageStorageKey = "civil-resistance-skills:language";
 ---
 
 <!DOCTYPE html>
@@ -52,12 +53,21 @@ const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
   </head>
   <body>
     <slot />
-    <script is:inline define:vars={{ basePath }}>
-      document.querySelectorAll(".lang-switch a").forEach((link) => {
-        link.addEventListener("click", (event) => {
-          const href = link.getAttribute("href");
+    <script is:inline define:vars={{ basePath, languageStorageKey, lang }}>
+      document.querySelectorAll("[data-language-switch]").forEach((select) => {
+        try {
+          localStorage.setItem(languageStorageKey, lang);
+        } catch {}
+
+        select.addEventListener("change", (event) => {
+          const target = event.currentTarget;
+          if (!(target instanceof HTMLSelectElement)) return;
+          const href = target.value;
           if (!href || href.startsWith("http")) return;
-          event.preventDefault();
+          try {
+            const selectedOption = target.selectedOptions[0];
+            if (selectedOption) localStorage.setItem(languageStorageKey, selectedOption.dataset.language || "");
+          } catch {}
           window.location.href = href + (window.location.hash || "");
         });
       });

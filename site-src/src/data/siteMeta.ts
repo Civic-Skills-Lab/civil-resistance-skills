@@ -2,13 +2,13 @@ export const basePath = "/civil-resistance-skills";
 export const repoUrl = "https://github.com/levnikolaevich/civil-resistance-skills";
 export const siteUrl = "https://levnikolaevich.github.io/civil-resistance-skills";
 
-export const languages = ["en", "ru", "es"] as const;
+export const languages = ["en", "es", "ru"] as const;
 export type Language = (typeof languages)[number];
 
 export const langNames: Record<Language, string> = {
-  en: "EN",
-  ru: "RU",
-  es: "ES"
+  en: "English",
+  es: "Español",
+  ru: "Русский"
 };
 
 export const localizedPaths = {

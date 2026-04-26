@@ -1,5 +1,5 @@
 ---
-import { langNames, localizedPaths, pathFor, type Language } from "../data/siteMeta";
+import { languages, langNames, localizedPaths, pathFor, type Language } from "../data/siteMeta";
 
 interface Props {
   current: Language;
@@ -9,11 +9,13 @@ interface Props {
 const { current, page } = Astro.props;
 ---
 
-<div class="lang-switch" aria-label="Language">
-  {(Object.keys(langNames) as Language[]).map((language) => (
-    <a href={pathFor(localizedPaths[page][language])} aria-current={language === current ? "true" : undefined}>
-      {langNames[language]}
-    </a>
-  ))}
-</div>
-
+<label class="lang-switch" aria-label="Language">
+  <span>Language</span>
+  <select data-language-switch aria-label="Language">
+    {languages.map((language) => (
+      <option value={pathFor(localizedPaths[page][language])} data-language={language} selected={language === current}>
+        {langNames[language]}
+      </option>
+    ))}
+  </select>
+</label>
