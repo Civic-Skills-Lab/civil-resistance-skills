@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "./Header.astro";
+import CopyButton from "./CopyButton";
+import DomainGrid from "./DomainGrid";
+import CatalogTable from "./CatalogTable";
+import content from "../data/site-content.json";
+import registry from "../data/registry.json";
+import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const page = content[lang].home;
+const common = content[lang].common;
+const domainLabels = common.domains as Record<string, { label: string; description: string }>;
+const commHref = pathFor(lang === "en" ? "/domains/communication/" : `/${lang}/domains/communication/`);
+const safetyHref = `${repoUrl}/blob/main/SAFETY.md`;
+const sourcesHref = `${repoUrl}/blob/main/methods-registry/03-sources-and-references.md`;
+const claudeCommand = "/plugin marketplace add levnikolaevich/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
+const codexCommand = "codex plugin marketplace add levnikolaevich/civil-resistance-skills\ncodex\n/plugins";
+---
+
+<BaseLayout lang={lang} page="home">
+  <Header current={lang} page="home" nav={page.nav} />
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">{page.hero.eyebrow}</div>
+        <h1>{page.hero.title}</h1>
+        <p class="lead">{page.hero.lead}</p>
+        <div class="boundary">{page.hero.boundary}</div>
+        <div class="actions">
+          <a class="button primary" href="#catalog">{page.hero.actions.browse}</a>
+          <a class="button" href={commHref}>{page.hero.actions.operational}</a>
+          <a class="button" href={repoUrl}>{page.hero.actions.repo}</a>
+          <a class="button" href={safetyHref}>{page.hero.actions.safety}</a>
+        </div>
+        <div class="stats" aria-label="Registry stats">
+          <div class="stat"><div class="num">{registry.stats.methods}</div><div class="label">{page.hero.stats[0]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.domains}</div><div class="label">{page.hero.stats[1]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.operational}</div><div class="label">{page.hero.stats[2]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.highRisk}</div><div class="label">{page.hero.stats[3]}</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-band" aria-label="Registry atlas preview">
+      <div class="wrap">
+        <div class="atlas-panel">
+          <h2>{common.brand}</h2>
+          <p class="atlas-kicker">{page.atlas.kicker}</p>
+          <div class="atlas-domains" aria-label="Domain counts">
+            {registry.domains.map((domain) => (
+              <div class="atlas-domain">
+                <span>{page.atlas.domainWord} {domain.code}</span>
+                <strong>{domainLabels[domain.key].label}</strong>
+                <em>{domain.count} {page.atlas.recordWord}</em>
+              </div>
+            ))}
+          </div>
+          <div class="atlas-notes">
+            {page.atlas.notes.map((note) => (
+              <div class={`atlas-note ${note.kind}`}>
+                <strong>{note.title}</strong>
+                <p>{note.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head"><div><h2>{page.why.title}</h2><p class="section-copy">{page.why.body}</p></div></div>
+        <div class="callout">
+          {page.why.cards.map((card) => <article class="card"><h3>{card.title}</h3><p>{card.body}</p></article>)}
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="wrap">
+        <div class="section-head"><div><h2>{page.install.title}</h2><p class="section-copy">{page.install.body}</p></div></div>
+        <div class="install-grid">
+          <article class="card install">
+            <h3>Claude Code</h3>
+            <p>{page.install.claudeBody}</p>
+            <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add levnikolaevich/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
+          </article>
+          <article class="card install">
+            <h3>Codex</h3>
+            <p>{page.install.codexBody}</p>
+            <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add levnikolaevich/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="domains">
+      <div class="wrap">
+        <div class="section-head"><div><h2>{page.domainsSection.title}</h2><p class="section-copy">{page.domainsSection.body}</p></div></div>
+        <DomainGrid domains={registry.domains} labels={common} communicationHref={commHref} />
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="wrap">
+        <div class="section-head"><div><h2>{page.catalog.title}</h2><p class="section-copy">{page.catalog.body}</p></div><a class="button" href={commHref}>{page.catalog.detail}</a></div>
+        <CatalogTable client:load methods={registry.methods} domains={registry.domains} labels={common} filterLabels={page.catalog.filters} repoUrl={repoUrl} storageKey="civil-resistance-skills:atlas-filters" mode="home" />
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>GitHub</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
+</BaseLayout>

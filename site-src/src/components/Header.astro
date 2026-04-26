@@ -1,0 +1,39 @@
+---
+import LanguageSwitch from "./LanguageSwitch.astro";
+import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+
+interface Props {
+  current: Language;
+  page: "home" | "communication";
+  nav: Record<string, string>;
+}
+
+const { current, page, nav } = Astro.props;
+const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
+const pageLinks =
+  page === "home"
+    ? [
+        ["#why", nav.why],
+        ["#install", nav.install],
+        ["#domains", nav.domains],
+        ["#catalog", nav.catalog]
+      ]
+    : [
+        ["#operational", nav.operational],
+        ["#registry", nav.registry]
+      ];
+---
+
+<header class="topbar">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href={homeHref}>Civil Resistance Skills</a>
+    <div class="nav-right">
+      <div class="links">
+        {pageLinks.map(([href, label]) => <a href={href}>{label}</a>)}
+        <a href={repoUrl}>GitHub</a>
+      </div>
+      <LanguageSwitch current={current} page={page} />
+    </div>
+  </nav>
+</header>
+

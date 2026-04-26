@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "./Header.astro";
+import CatalogTable from "./CatalogTable";
+import content from "../data/site-content.json";
+import registry from "../data/registry.json";
+import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const page = content[lang].communication;
+const common = content[lang].common;
+const homeHref = pathFor(lang === "en" ? "/" : `/${lang}/`);
+const communicationMethods = registry.methods.filter((method) => method.domain === "comm");
+---
+
+<BaseLayout lang={lang} page="communication">
+  <Header current={lang} page="communication" nav={page.nav} />
+  <main>
+    <section class="domain-hero">
+      <div class="wrap">
+        <a class="back" href={homeHref}>{page.back}</a>
+        <h1>{page.hero.title}</h1>
+        <p class="lead">{page.hero.lead}</p>
+        <div class="meta-row">
+          <span class="badge operational">{page.hero.badges[0]}</span>
+          <span class="badge soon">{page.hero.badges[1]}</span>
+          <span class="badge analysis">{page.hero.badges[2]}</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="operational">
+      <div class="wrap">
+        <h2>{page.operational.title}</h2>
+        <p class="section-copy">{page.operational.body}</p>
+        <div class="skill-grid">
+          {page.operational.skills.map((skill) => (
+            <article class="card skill-card">
+              <div class="skill-id">{skill.id}</div>
+              <h3>{skill.title}</h3>
+              <p>{skill.body}</p>
+              <div class="links-list">
+                <a class="link-pill" href={`${repoUrl}/blob/main/skills-catalog/${skill.id}/SKILL.md`}>{page.operational.canonical}</a>
+                <a class="link-pill" href={`${repoUrl}/tree/main/skills-catalog/${skill.id}/references`}>{page.operational.references}</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="registry">
+      <div class="wrap">
+        <h2>{page.registry.title}</h2>
+        <p class="section-copy">{page.registry.body}</p>
+        <CatalogTable client:load methods={communicationMethods} labels={common} filterLabels={page.registry.filters} repoUrl={repoUrl} storageKey="civil-resistance-skills:communication-filters" mode="communication" />
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">{page.footer}</div></footer>
+</BaseLayout>
+

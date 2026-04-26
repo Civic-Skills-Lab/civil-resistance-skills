@@ -39,3 +39,7 @@ See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), and [THIRD_PARTY_SOURCES.md](THI
 - Codex: `.agents/plugins/marketplace.json` plus `.codex-plugin/plugin.json` manifests and thin `codex-skills/` adapters.
 
 Install and enable the marketplace through one agent surface at a time to avoid duplicate skill discovery.
+
+## Website
+
+The public GitHub Pages site is generated from `site-src/` with Astro and React islands. It publishes static localized pages for English, Russian, and Spanish; generated `dist/` output is deployed by GitHub Actions and is not committed.
