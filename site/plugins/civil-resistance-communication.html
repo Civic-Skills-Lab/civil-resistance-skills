@@ -180,6 +180,30 @@
     const search = document.getElementById("search");
     const statusFilter = document.getElementById("statusFilter");
     const riskFilter = document.getElementById("riskFilter");
+    const filterKey = "civil-resistance-skills:communication-filters";
+
+    function readStoredFilters() {
+      try {
+        return JSON.parse(localStorage.getItem(filterKey) || "{}");
+      } catch {
+        return {};
+      }
+    }
+    function writeStoredFilters() {
+      const filters = {
+        search: search.value,
+        status: statusFilter.value,
+        risk: riskFilter.value
+      };
+      localStorage.setItem(filterKey, JSON.stringify(filters));
+    }
+    function restoreStoredFilters() {
+      const filters = readStoredFilters();
+      if (typeof filters.search === "string") search.value = filters.search;
+      if (typeof filters.status === "string") statusFilter.value = filters.status;
+      if (typeof filters.risk === "string") riskFilter.value = filters.risk;
+    }
+
     function badgeStatus(status) {
       const cls = status === "operational" ? "operational" : "soon";
       return `<span class="badge ${cls}">${statusLabel[status]}</span>`;
@@ -210,7 +234,11 @@
           <td>${badgeStatus(method.status)}</td>
         </tr>`).join("");
     }
-    [search, statusFilter, riskFilter].forEach(el => el.addEventListener("input", renderCatalog));
+    restoreStoredFilters();
+    [search, statusFilter, riskFilter].forEach(el => el.addEventListener("input", () => {
+      writeStoredFilters();
+      renderCatalog();
+    }));
     renderCatalog();
   </script>
 </body>

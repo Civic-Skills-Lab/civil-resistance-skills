@@ -10,7 +10,6 @@
   <meta property="og:description" content="Research-grade civil-resistance method skills for Claude, Codex, education, and simulation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levnikolaevich.github.io/civil-resistance-skills/">
-  <meta property="og:image" content="https://levnikolaevich.github.io/civil-resistance-skills/assets/atlas-preview.png">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     :root {
@@ -141,14 +140,63 @@
     .label { margin-top: 6px; color: var(--muted); font-size: 13px; }
     section { padding: 62px 0; }
     .visual-band { padding: 20px 0 18px; }
-    .atlas-preview {
-      display: block;
-      width: 100%;
-      height: auto;
+    .atlas-panel {
       border: 1px solid var(--line);
       border-radius: 8px;
+      background:
+        linear-gradient(rgba(36, 93, 143, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36, 93, 143, 0.07) 1px, transparent 1px),
+        rgba(255, 255, 255, 0.92);
+      background-size: 36px 36px;
       box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 42px);
+      overflow: hidden;
     }
+    .atlas-panel h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+    .atlas-kicker { color: var(--muted); margin: 4px 0 28px; }
+    .atlas-domains {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+    .atlas-domain {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 108px;
+    }
+    .atlas-domain span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .atlas-domain strong { display: block; }
+    .atlas-domain em {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-style: normal;
+    }
+    .atlas-notes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .atlas-note {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      min-height: 84px;
+    }
+    .atlas-note strong { display: block; margin-bottom: 4px; }
+    .atlas-note.operational strong { color: var(--green); }
+    .atlas-note.risk strong { color: var(--red); }
+    .atlas-note p { margin: 0; color: var(--ink-soft); }
     .section-head {
       display: flex;
       justify-content: space-between;
@@ -247,12 +295,15 @@
     footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
     @media (max-width: 900px) {
       .grid, .install-grid, .callout { grid-template-columns: 1fr; }
+      .atlas-domains { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .atlas-notes { grid-template-columns: 1fr; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .section-head { display: block; }
       .filters { grid-template-columns: 1fr 1fr; }
       .links { display: none; }
     }
     @media (max-width: 560px) {
+      .atlas-domains { grid-template-columns: 1fr; }
       .stats, .filters { grid-template-columns: 1fr; }
       .hero { padding-top: 50px; }
       h1 { font-size: 2.55rem; }
@@ -299,7 +350,28 @@
 
     <section class="visual-band" aria-label="Registry atlas preview">
       <div class="wrap">
-        <img class="atlas-preview" src="assets/atlas-preview.png" alt="Civil Resistance Skills atlas preview with domain counts, operational exemplars, and risk-gating summary.">
+        <div class="atlas-panel">
+          <h2>Civil Resistance Skills</h2>
+          <p class="atlas-kicker">Civic Research Atlas / 347 methods / 6 domains / risk-gated AI skills</p>
+          <div class="atlas-domains" aria-label="Domain counts">
+            <div class="atlas-domain"><span>Domain 1</span><strong>Governance</strong><em>57 records</em></div>
+            <div class="atlas-domain"><span>Domain 2</span><strong>Economic</strong><em>44 records</em></div>
+            <div class="atlas-domain"><span>Domain 3</span><strong>Labor</strong><em>30 records</em></div>
+            <div class="atlas-domain"><span>Domain 4</span><strong>Communication</strong><em>133 records</em></div>
+            <div class="atlas-domain"><span>Domain 5</span><strong>Social</strong><em>23 records</em></div>
+            <div class="atlas-domain"><span>Domain 6</span><strong>Intervention</strong><em>60 records</em></div>
+          </div>
+          <div class="atlas-notes">
+            <div class="atlas-note operational">
+              <strong>Operational exemplars: 4104-public-speeches / 4004-marches</strong>
+              <p>Each skill carries phases, artifacts, guards, risk review, and readiness criteria.</p>
+            </div>
+            <div class="atlas-note risk">
+              <strong>High-risk records: 54 held for education and simulation</strong>
+              <p>Operationalization is gated by source basis, legality, safety, and review.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -434,6 +506,7 @@
     const search = document.getElementById("search");
     const statusFilter = document.getElementById("statusFilter");
     const riskFilter = document.getElementById("riskFilter");
+    const filterKey = "civil-resistance-skills:atlas-filters";
 
     for (const [key, value] of Object.entries(data.stats)) {
       const node = document.querySelector(`[data-stat="${key}"]`);
@@ -466,6 +539,30 @@
         </div>`;
       domainGrid.appendChild(card);
     });
+
+    function readStoredFilters() {
+      try {
+        return JSON.parse(localStorage.getItem(filterKey) || "{}");
+      } catch {
+        return {};
+      }
+    }
+    function writeStoredFilters() {
+      const filters = {
+        search: search.value,
+        domain: domainFilter.value,
+        status: statusFilter.value,
+        risk: riskFilter.value
+      };
+      localStorage.setItem(filterKey, JSON.stringify(filters));
+    }
+    function restoreStoredFilters() {
+      const filters = readStoredFilters();
+      if (typeof filters.search === "string") search.value = filters.search;
+      if (typeof filters.domain === "string") domainFilter.value = filters.domain;
+      if (typeof filters.status === "string") statusFilter.value = filters.status;
+      if (typeof filters.risk === "string") riskFilter.value = filters.risk;
+    }
 
     function badgeStatus(status) {
       const cls = status === "operational" ? "operational" : "soon";
@@ -503,7 +600,11 @@
           <td>${badgeStatus(method.status)}</td>
         </tr>`).join("");
     }
-    [search, domainFilter, statusFilter, riskFilter].forEach(el => el.addEventListener("input", renderCatalog));
+    restoreStoredFilters();
+    [search, domainFilter, statusFilter, riskFilter].forEach(el => el.addEventListener("input", () => {
+      writeStoredFilters();
+      renderCatalog();
+    }));
     renderCatalog();
 
     document.querySelectorAll("[data-copy]").forEach(button => {
