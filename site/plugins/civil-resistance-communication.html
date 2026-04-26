@@ -49,7 +49,22 @@
     h1 { max-width: 900px; margin: 0 0 16px; font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 0.98; letter-spacing: 0; }
     .lead { max-width: 760px; color: var(--ink-soft); font-size: clamp(1.02rem, 2vw, 1.25rem); }
     .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    .badge { display: inline-flex; min-height: 24px; align-items: center; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .badge {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.15;
+      text-align: center;
+      white-space: nowrap;
+      justify-self: start;
+    }
+    .badge.risk { min-width: 56px; }
+    .badge.status { min-width: 92px; }
     .badge.operational { color: var(--green); background: var(--green-bg); }
     .badge.soon { color: var(--muted); background: var(--gray-bg); }
     .badge.analysis { color: var(--amber); background: var(--amber-bg); }
@@ -67,16 +82,47 @@
     .link-pill { border: 1px solid var(--line); border-radius: 999px; padding: 7px 10px; background: #f8faf9; font-size: 13px; }
     .filters { display: grid; grid-template-columns: 1.3fr repeat(2, minmax(130px, 0.5fr)); gap: 10px; margin-bottom: 14px; }
     input, select { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); font: inherit; }
-    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); border-radius: 10px; box-shadow: var(--shadow); }
-    table { width: 100%; border-collapse: collapse; min-width: 780px; font-size: 14px; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); border-radius: 8px; box-shadow: var(--shadow); }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 900px; font-size: 14px; }
     th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
     th { font-size: 12px; text-transform: uppercase; letter-spacing: 0; color: var(--muted); background: var(--paper-deep); }
     tr:last-child td { border-bottom: 0; }
-    .method-id { font-family: var(--mono); white-space: nowrap; font-size: 13px; }
+    th:nth-child(1), td:nth-child(1) { width: 42%; }
+    th:nth-child(2), td:nth-child(2) { width: 27%; }
+    th:nth-child(3), td:nth-child(3) { width: 11%; white-space: nowrap; }
+    th:nth-child(4), td:nth-child(4) { width: 9%; text-align: center; white-space: nowrap; }
+    th:nth-child(5), td:nth-child(5) { width: 11%; text-align: center; white-space: nowrap; }
+    .method-id { font-family: var(--mono); overflow-wrap: anywhere; font-size: 13px; }
     .method-name { font-weight: 650; }
     .meta { color: var(--muted); font-size: 12px; margin-top: 2px; }
     footer { padding: 34px 0 44px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
     @media (max-width: 850px) { .skill-grid, .filters { grid-template-columns: 1fr; } .links { display: none; } }
+    @media (max-width: 720px) {
+      .table-wrap { overflow-x: visible; }
+      table { display: block; min-width: 0; }
+      colgroup, thead { display: none; }
+      tbody, tr, td { display: block; width: 100% !important; }
+      tr { padding: 6px 0; border-bottom: 1px solid var(--line); }
+      tr:last-child { border-bottom: 0; }
+      td {
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 12px;
+        align-items: start;
+        padding: 8px 10px;
+        border-bottom: 0;
+        text-align: left !important;
+        white-space: normal !important;
+      }
+      td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .badge.status { min-width: 0; }
+    }
   </style>
 </head>
 <body>
@@ -151,6 +197,13 @@
         </div>
         <div class="table-wrap">
           <table>
+            <colgroup>
+              <col style="width: 42%;">
+              <col style="width: 27%;">
+              <col style="width: 11%;">
+              <col style="width: 9%;">
+              <col style="width: 11%;">
+            </colgroup>
             <thead>
               <tr>
                 <th>Method</th>
@@ -206,10 +259,10 @@
 
     function badgeStatus(status) {
       const cls = status === "operational" ? "operational" : "soon";
-      return `<span class="badge ${cls}">${statusLabel[status]}</span>`;
+      return `<span class="badge status ${cls}">${statusLabel[status]}</span>`;
     }
     function badgeRisk(risk) {
-      return `<span class="badge ${risk === "high" ? "high" : "review"}">${risk}</span>`;
+      return `<span class="badge risk ${risk === "high" ? "high" : "review"}">${risk}</span>`;
     }
     function methodLink(method) {
       if (method.status !== "operational") return `<span class="method-id">${method.id}</span>`;
@@ -227,11 +280,11 @@
       });
       catalogBody.innerHTML = rows.map(method => `
         <tr>
-          <td>${methodLink(method)}<div class="method-name">${method.method}</div></td>
-          <td>${method.subgroup}<div class="meta">${method.subgroupLabel}</div></td>
-          <td>${method.nvi} / ${method.sharp}</td>
-          <td>${badgeRisk(method.risk)}</td>
-          <td>${badgeStatus(method.status)}</td>
+          <td data-label="Method">${methodLink(method)}<div class="method-name">${method.method}</div></td>
+          <td data-label="Subgroup">${method.subgroup}<div class="meta">${method.subgroupLabel}</div></td>
+          <td data-label="NVI / Sharp">${method.nvi} / ${method.sharp}</td>
+          <td data-label="Risk">${badgeRisk(method.risk)}</td>
+          <td data-label="Status">${badgeStatus(method.status)}</td>
         </tr>`).join("");
     }
     restoreStoredFilters();
