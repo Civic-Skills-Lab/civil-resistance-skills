@@ -27,48 +27,48 @@ export const localizedPaths = {
 export const pageMeta = {
   home: {
     en: {
-      title: "Civil Resistance Skills - Civic Research Atlas",
+      title: "Civil Resistance Skills - Research Atlas",
       description:
-        "A research-grade skill registry for studying, simulating, and carefully preparing civil-resistance methods with AI agents.",
+        "A source-linked research atlas for studying, simulating, and carefully preparing civil-resistance methods with AI agents.",
       ogDescription:
-        "Research-grade civil-resistance method skills for Claude, Codex, education, and simulation."
+        "Civil-resistance method skills for Claude, Codex, education, and simulation."
     },
     ru: {
       title: "Civil Resistance Skills - исследовательский атлас",
       description:
-        "Исследовательский реестр навыков для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с AI-агентами.",
+        "Исследовательский атлас для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с AI-агентами.",
       ogDescription:
-        "Исследовательские навыки по методам гражданского сопротивления для Claude, Codex, образования и симуляции."
+        "Навыки по методам гражданского сопротивления для Claude, Codex, образования и симуляции."
     },
     es: {
-      title: "Civil Resistance Skills - atlas de investigación cívica",
+      title: "Civil Resistance Skills - atlas de investigación",
       description:
-        "Un registro de habilidades de nivel investigativo para estudiar, simular y preparar con cuidado métodos de resistencia civil con agentes de IA.",
+        "Un atlas de investigación con fuentes para estudiar, simular y preparar con cuidado métodos de resistencia civil con agentes de IA.",
       ogDescription:
-        "Habilidades de métodos de resistencia civil para Claude, Codex, educación y simulación."
+        "Habilidades sobre métodos de resistencia civil para Claude, Codex, educación y simulación."
     }
   },
   communication: {
     en: {
       title: "Communication Domain - Civil Resistance Skills",
       description:
-        "Communication, symbols, media, and public narrative skills in the Civil Resistance Skills research atlas.",
+        "Communication, symbols, media, and public narrative methods in the Civil Resistance Skills research atlas.",
       ogDescription:
-        "Operational communication skills and indexed communication methods for civil-resistance research and simulation."
+        "Applied communication skills and indexed communication methods for civil-resistance research and simulation."
     },
     ru: {
       title: "Домен коммуникации - Civil Resistance Skills",
       description:
         "Коммуникация, символы, медиа и публичный нарратив в исследовательском атласе Civil Resistance Skills.",
       ogDescription:
-        "Операционные коммуникационные навыки и индексированные методы коммуникации для исследования и симуляции гражданского сопротивления."
+        "Прикладные коммуникационные навыки и методы из реестра для исследования и симуляции гражданского сопротивления."
     },
     es: {
       title: "Dominio de comunicación - Civil Resistance Skills",
       description:
         "Comunicación, símbolos, medios y narrativa pública en el atlas de investigación Civil Resistance Skills.",
       ogDescription:
-        "Habilidades operativas de comunicación y métodos de comunicación indexados para investigación y simulación de resistencia civil."
+        "Habilidades aplicadas de comunicación y métodos indexados para investigación y simulación de resistencia civil."
     }
   }
 } as const;

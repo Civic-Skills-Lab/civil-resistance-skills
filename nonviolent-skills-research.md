@@ -12,7 +12,7 @@ Package the civil-resistance tactics universe as AI-agent skills:
 - **Atomic method layer** — domain-organized method records populated from the current live Beer/NVI/ICNC index: 347 records total, covering IDs `1-346` plus live ID `348` (`tactic_id=347` is absent in the source index).
 - **Coordinator layer** — Srdja Popovic / CANVAS / Helvey strategic concepts as coordinators over atomic methods, not as method records.
 
-...as a standalone **SKILL**, modeled after [D:\Development\LevNikolaevich\claude-code-skills](D:\Development\LevNikolaevich\claude-code-skills).
+...as a standalone **SKILL**, modeled after the local `claude-code-skills` reference project.
 
 ---
 

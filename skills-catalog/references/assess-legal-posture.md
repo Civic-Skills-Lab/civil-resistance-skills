@@ -2,24 +2,24 @@
 
 ## Purpose
 
-Before publicising an action, assess the legal environment that will shape it: permit availability, tolerated practice, recent enforcement precedent, and the specific statutes that could be invoked. Legal posture is not just a go/no-go check — it shapes route, timing, visibility, speaker choice, and contingency design. A legally well-posed action has more leverage; a legally misread action hands initiative to opponents.
+Before publicising an action, assess the legal environment that will shape it: permit availability, public-forum rules, recent enforcement precedent, and the specific restrictions that could apply. Legal posture is informational, jurisdiction-specific, and should be reviewed with qualified local counsel or a rights organisation where available. It is not a substitute for legal advice.
 
 ## Key patterns
 
-- **Check three layers.** (1) Formal law — statutes and ordinances that apply to assembly, speech, or specific tactics; (2) enforcement practice — how those statutes have actually been applied to similar actions in the last 6-12 months, which may diverge from formal law in either direction; (3) political signal — whether current political conditions make enforcement more or less likely than recent precedent suggests.
-- **Permit or tolerated practice, not both assumed.** Where permits are available, secure one early; the permit itself becomes a documentary artifact that shifts legitimacy framing. Where permits are refused or impractical, document the refusal and the tolerated-practice precedent. Never assume tolerance where precedent is thin or recent enforcement has tightened.
-- **Name a legal lead.** One person carries the legal brief: rights summary for participants, contact list for legal observers, jail-support arrangements if relevant, known defence attorneys. Do not distribute this role across many hands.
-- **Brief participants in plain language.** A one-page rights summary — what to say if stopped, what documentation to carry, who to call if arrested — is more useful than an hour-long legal training that participants forget.
-- **Log incidents in real time.** Legal observers note time-stamped incidents with location; the log is the primary artifact for any later legal challenge and for accurate narrative.
-- **Separate arrestable and non-arrestable roles.** Clarify in advance who is willing to be arrested, who is not, and what the plan is if police issue dispersal orders. A mixed group without that separation fractures under pressure.
+- **Check three layers.** (1) Formal rules that apply to assembly, speech, route, sound, signs, or venue use; (2) recent enforcement practice for similar events; (3) current public conditions that may change risk or visibility.
+- **Do not assume tolerance.** If a permit, notice, insurance, or venue approval may be required, flag it for local review. If precedent is unclear or enforcement has recently changed, mark the plan as `blocked` until the organiser gets reliable local guidance.
+- **Name a legal-review owner.** One person tracks open legal questions, rights resources, permit status, and legal-observer coordination. The role is coordination and documentation, not improvised legal advice.
+- **Use plain-language rights resources.** Prefer links or handouts from qualified local legal organisations. The skill should summarise open questions and referral needs, not invent jurisdiction-specific instructions.
+- **Document facts, not confrontation.** Legal observers or documentation volunteers record time, location, visible sequence of events, and source reliability. They should avoid escalation and stay within their role boundaries.
+- **Separate role assumptions.** Distinguish participants, marshals/stewards, accessibility support, legal observers, media/documentation, and organisers. Do not assume every participant accepts the same legal or physical risk.
 
 ## Common failure modes
 
 - Extrapolating from old precedent. An enforcement window that was relaxed two years ago may have tightened under a new administration or commander; re-check.
-- Confusing formal law with practice. Many actions operate within a gap between what is technically illegal and what is routinely tolerated. Closing that gap — via a policy change or a political signal — is the opponent's cheapest move.
-- Skipping the legal observer role for "low-risk" events. When things escalate unexpectedly, the absence of documentation weakens every downstream legal and narrative response.
-- Over-reliance on a single attorney or legal contact. One phone unavailable means the whole support chain stalls.
-- No plan for dispersal orders. Participants making individual decisions under pressure is less safe and less coherent than a pre-briefed collective response.
+- Confusing formal rules with current practice. A previous event may not predict current enforcement; re-check recent local conditions.
+- Treating legal observers as decision-makers. Observers document; they do not direct participants, negotiate tactics, or give on-the-spot legal advice unless qualified and explicitly serving in that role.
+- Over-reliance on one information source. Cross-check public guidance, permit offices, local rights organisations, and recent comparable events.
+- No decision point for unresolved legal questions. If a core legal question remains unresolved, the plan should pause rather than normalise uncertainty.
 
 ## Sources
 

@@ -1,3 +1,16 @@
 node_modules/
 dist/
 .astro/
+.env
+.env.*
+!.env.example
+client_secret*.json
+*client_secret*.json
+application_default_credentials.json
+credentials.json
+token.json
+*service_account*.json
+*service-account*.json
+*.p12
+*.pem
+*.key

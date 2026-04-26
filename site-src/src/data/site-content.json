@@ -5,90 +5,194 @@
       "github": "GitHub",
       "copy": "Copy",
       "copied": "Copied",
-      "active": "Active",
-      "comingSoon": "Coming soon",
-      "noOperational": "No operational skills yet",
-      "openDomain": "Open domain page",
+      "active": "Available",
+      "comingSoon": "Planned",
+      "noOperational": "No applied skills yet",
+      "openDomain": "Open domain",
       "indexedMethods": "indexed methods",
-      "highRiskRecords": "high-risk records",
-      "status": { "operational": "Operational", "coming_soon": "Coming soon" },
-      "risk": { "review": "review", "high": "high" },
-      "domains": {
-        "gov": { "label": "Governance", "description": "Governance and political-institutional methods." },
-        "econ": { "label": "Economic", "description": "Economic pressure, boycotts, divestment, and market-rule tactics." },
-        "labr": { "label": "Labor", "description": "Labor, workplace, strike, and worker-organization methods." },
-        "comm": { "label": "Communication", "description": "Communication, symbols, public narrative, media, and documentation." },
-        "soc": { "label": "Social", "description": "Social participation, association, identity, and community methods." },
-        "intv": { "label": "Intervention", "description": "Intervention methods, including higher-risk direct and technical records." }
+      "highRiskRecords": "higher-risk records",
+      "status": {
+        "operational": "Applied",
+        "coming_soon": "Planned"
       },
-      "table": { "method": "Method", "domain": "Domain", "subgroup": "Subgroup", "nviSharp": "NVI / Sharp", "risk": "Risk", "status": "Status" }
+      "risk": {
+        "review": "review",
+        "high": "high"
+      },
+      "domains": {
+        "gov": {
+          "label": "Governance",
+          "description": "Political institutions, legitimacy, public authority, and civic administration."
+        },
+        "econ": {
+          "label": "Economic",
+          "description": "Economic pressure, consumer action, divestment, and market participation."
+        },
+        "labr": {
+          "label": "Labor",
+          "description": "Workplaces, unions, strikes, and worker organization."
+        },
+        "comm": {
+          "label": "Communication",
+          "description": "Public speech, symbols, media, documentation, and narrative."
+        },
+        "soc": {
+          "label": "Social",
+          "description": "Social participation, association, identity, and community life."
+        },
+        "intv": {
+          "label": "Intervention",
+          "description": "Direct intervention records, including methods that require stricter review."
+        }
+      },
+      "table": {
+        "method": "Method",
+        "domain": "Domain",
+        "subgroup": "Subgroup",
+        "nviSharp": "NVI / Sharp",
+        "risk": "Risk",
+        "status": "Status"
+      }
     },
     "home": {
-      "nav": { "why": "Why", "install": "Install", "domains": "Domains", "catalog": "Catalog" },
+      "nav": {
+        "why": "Why",
+        "install": "Install",
+        "domains": "Domains",
+        "catalog": "Catalog"
+      },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "Research-grade skills for civil-resistance method study and simulation.",
-        "lead": "A structured registry for studying, simulating, and carefully preparing civil-resistance methods with AI agents. Built from public taxonomies, source-linked records, and risk-gated skill design.",
-        "boundary": "This is research, education, simulation, and planning infrastructure. It is not a campaign organizer, and high-risk methods are held for analysis rather than operational guidance. See the repository safety policy before use.",
-        "actions": { "browse": "Browse the atlas", "operational": "View operational skills", "repo": "Repository", "safety": "Safety policy" },
-        "stats": ["indexed methods", "research domains", "operational low-risk skills", "high-risk records held back"]
+        "title": "A research atlas for civil-resistance methods and agent skills.",
+        "lead": "Civil Resistance Skills turns public method taxonomies into a source-linked atlas for study, simulation, and careful preparation with AI agents.",
+        "boundary": "This is research, education, simulation, and planning infrastructure. It is not a campaign organizer. Higher-risk methods remain descriptive records for analysis rather than operational guidance.",
+        "actions": {
+          "browse": "Browse the atlas",
+          "operational": "View applied skills",
+          "repo": "Repository",
+          "safety": "Safety policy"
+        },
+        "stats": [
+          "indexed methods",
+          "research domains",
+          "applied low-risk skills",
+          "higher-risk records kept descriptive"
+        ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 methods / 6 domains / risk-gated AI skills",
+        "kicker": "Civic Research Atlas / 347 methods / 6 domains / risk-reviewed AI skills",
         "domainWord": "Domain",
         "recordWord": "records",
         "notes": [
-          { "kind": "operational", "title": "Operational exemplars: 4104-public-speeches / 4004-marches", "body": "Each skill carries phases, artifacts, guards, risk review, and readiness criteria." },
-          { "kind": "risk", "title": "High-risk records: 54 held for education and simulation", "body": "Operationalization is gated by source basis, legality, safety, and review." }
+          {
+            "kind": "operational",
+            "title": "Applied examples: 4104-public-speeches / 4004-marches",
+            "body": "Each published skill includes phases, working artifacts, review checks, and readiness criteria."
+          },
+          {
+            "kind": "risk",
+            "title": "Higher-risk records: 54 kept for education and simulation",
+            "body": "Applied guidance depends on sources, legality, safety, and explicit review."
+          }
         ]
       },
       "why": {
         "title": "Why this exists",
-        "body": "Civil-resistance methods are usually published as prose taxonomies. Agents need something more explicit: provenance, risk boundaries, operational availability, references, and completion criteria.",
+        "body": "Civil-resistance methods are often published as prose taxonomies. AI agents need a clearer structure: source provenance, risk boundaries, availability, references, and completion criteria.",
         "cards": [
-          { "title": "Source basis", "body": "The registry crosswalks the Beer/NVI/ICNC tactic universe with Sharp's method taxonomy. Primary sources identify the method; secondary training sources inform low-risk preparation patterns." },
-          { "title": "Risk-gated transformation", "body": "Low-risk methods can become operational skills with planning, research, review, and debrief support. High-risk methods remain descriptive for education, analysis, and simulation until explicitly reviewed." },
-          { "title": "For whom", "body": "Researchers, civic educators, agent builders, simulation designers, movement-support analysts, and practitioners who need structured learning rather than slogans." },
-          { "title": "Simulation path", "body": "The skills are shaped as structured artifacts: phases, artifacts, guards, risk flags, and readiness verdicts. That makes them suitable for future sandbox and game agents." }
+          {
+            "title": "Source basis",
+            "body": "The atlas crosswalks the Beer/NVI/ICNC tactic universe with Sharp's method taxonomy. Primary sources identify methods; secondary training sources inform low-risk preparation patterns."
+          },
+          {
+            "title": "Risk-reviewed transformation",
+            "body": "Low-risk methods can become applied skills with planning, research, review, and debrief support. Higher-risk methods stay descriptive for education, analysis, and simulation until explicitly reviewed."
+          },
+          {
+            "title": "For whom",
+            "body": "For researchers, civic educators, agent builders, simulation designers, movement-support analysts, and careful practitioners who need structured learning rather than slogans."
+          },
+          {
+            "title": "Simulation path",
+            "body": "Skills are shaped as structured artifacts: phases, outputs, checks, risk flags, and readiness judgments. That makes them useful for future sandbox and game agents."
+          }
         ]
       },
       "install": {
-        "title": "Install surfaces",
-        "body": "The canonical skills live in this repository. Claude Code and Codex use separate marketplace surfaces so each agent can discover skills in its own native format.",
+        "title": "Install options",
+        "body": "The canonical skills live in this repository. Claude Code and Codex use separate plugin surfaces so each agent can discover skills in its native format.",
         "claudeBody": "Add the marketplace, then install the communication plugin.",
         "codexBody": "Add the Codex marketplace, then choose plugins from the native plugin UI."
       },
-      "domainsSection": { "title": "Domains", "body": "Six domains organize the 347 methods. Communication is active first; the other domains remain registry-backed and marked coming soon until operational skills are authored." },
+      "domainsSection": {
+        "title": "Domains",
+        "body": "Six domains organize the 347 methods. Communication is the first active domain; the others remain indexed and planned until applied skills are authored."
+      },
       "catalog": {
         "title": "Method atlas",
-        "body": "Implemented rows link to canonical skill files. Coming soon rows are indexed methods not yet turned into skills. High-risk rows are analysis-only.",
+        "body": "Implemented rows link to published skill files. Planned rows are indexed methods not yet turned into skills. Higher-risk rows remain analysis-only.",
         "detail": "Communication detail",
-        "filters": { "search": "Search method, ID, subgroup...", "allDomains": "All domains", "allStatuses": "All statuses", "allRisks": "All risk flags", "operational": "Operational", "comingSoon": "Coming soon", "review": "Review", "high": "High" }
+        "filters": {
+          "search": "Search method, ID, subgroup...",
+          "allDomains": "All domains",
+          "allStatuses": "All statuses",
+          "allRisks": "All risk flags",
+          "operational": "Applied",
+          "comingSoon": "Planned",
+          "review": "Review",
+          "high": "High"
+        }
       },
-      "footer": { "text": "Civil Resistance Skills - research and simulation infrastructure.", "sources": "Sources" }
+      "footer": {
+        "text": "Civil Resistance Skills - research and simulation infrastructure.",
+        "sources": "Sources"
+      }
     },
     "communication": {
-      "nav": { "operational": "Operational", "registry": "Registry" },
+      "nav": {
+        "operational": "Operational",
+        "registry": "Registry"
+      },
       "back": "Back to atlas",
       "hero": {
         "title": "Communication, symbols, media, and public narrative.",
-        "lead": "This is the first active domain. Its operational skills focus on low-risk communication methods that can be prepared, reviewed, simulated, and debriefed without turning the registry into a campaign command system.",
-        "badges": ["2 operational skills", "133 indexed methods", "high-risk rows held for analysis"]
+        "lead": "This is the first active domain. Its applied skills focus on low-risk communication methods that can be prepared, reviewed, simulated, and debriefed without turning the atlas into a campaign command system.",
+        "badges": [
+          "2 applied skills",
+          "133 indexed methods",
+          "higher-risk rows kept for analysis"
+        ]
       },
       "operational": {
-        "title": "Operational skills",
-        "body": "These are the current exemplar skills. They use source-linked references, runtime phases, artifacts, risk review, and readiness criteria.",
-        "canonical": "Canonical skill",
+        "title": "Applied skills",
+        "body": "These are the current example skills. They use source-linked references, working phases, artifacts, risk review, and readiness criteria.",
+        "canonical": "Skill file",
         "references": "References",
         "skills": [
-          { "id": "4104-public-speeches", "title": "Public Speeches", "body": "Guides preparation of a public speech tactic. Planning Mode produces a research-backed speech brief; Application Mode can produce a complete final speech package." },
-          { "id": "4004-marches", "title": "Marches", "body": "Planning-only skill for producing a March Planning Package: route, legal posture, staffing, safety, accessibility, communications, debrief, ledger, and readiness verdict." }
+          {
+            "id": "4104-public-speeches",
+            "title": "Public Speeches",
+            "body": "Helps prepare a public speech method. Planning Mode produces a research-backed speech brief; Application Mode can produce a complete speech package."
+          },
+          {
+            "id": "4004-marches",
+            "title": "Marches",
+            "body": "Planning-only skill for a march planning package: route, legal posture, staffing, safety, accessibility, communications, debrief criteria, and readiness judgment."
+          }
         ]
       },
       "registry": {
         "title": "Communication registry",
-        "body": "All communication methods remain visible so the research surface is complete. Rows without skill files are marked coming soon; high-risk rows stay analysis-only.",
-        "filters": { "search": "Search communication methods...", "allStatuses": "All statuses", "allRisks": "All risk flags", "operational": "Operational", "comingSoon": "Coming soon", "review": "Review", "high": "High" }
+        "body": "All communication methods remain visible so the research surface is complete. Rows without skill files are marked planned; higher-risk rows stay analysis-only.",
+        "filters": {
+          "search": "Search communication methods...",
+          "allStatuses": "All statuses",
+          "allRisks": "All risk flags",
+          "operational": "Applied",
+          "comingSoon": "Planned",
+          "review": "Review",
+          "high": "High"
+        }
       },
       "footer": "Civil Resistance Skills - communication domain atlas."
     }
@@ -97,67 +201,198 @@
     "common": {
       "brand": "Civil Resistance Skills",
       "github": "GitHub",
-      "copy": "Копировать",
-      "copied": "Скопировано",
-      "active": "Активен",
-      "comingSoon": "Скоро",
-      "noOperational": "Операционных навыков пока нет",
-      "openDomain": "Открыть домен",
-      "indexedMethods": "индексированных методов",
-      "highRiskRecords": "записей высокого риска",
-      "status": { "operational": "Операционный", "coming_soon": "Скоро" },
-      "risk": { "review": "review", "high": "high" },
-      "domains": {
-        "gov": { "label": "Управление", "description": "Методы управления и политико-институционального давления." },
-        "econ": { "label": "Экономика", "description": "Экономическое давление, бойкоты, divestment и рыночные тактики." },
-        "labr": { "label": "Труд", "description": "Трудовые, рабочие, забастовочные и организационные методы." },
-        "comm": { "label": "Коммуникация", "description": "Коммуникация, символы, публичный нарратив, медиа и документация." },
-        "soc": { "label": "Социальное", "description": "Социальное участие, ассоциации, идентичность и сообщества." },
-        "intv": { "label": "Вмешательство", "description": "Методы вмешательства, включая записи прямого и технического характера с повышенным риском." }
+      "copy": "??????????",
+      "copied": "???????????",
+      "active": "????????",
+      "comingSoon": "? ??????",
+      "noOperational": "?????????? ??????? ???? ???",
+      "openDomain": "??????? ??????",
+      "indexedMethods": "??????? ? ???????",
+      "highRiskRecords": "??????? ??????????? ?????",
+      "status": {
+        "operational": "??????????",
+        "coming_soon": "? ??????"
       },
-      "table": { "method": "Метод", "domain": "Домен", "subgroup": "Подгруппа", "nviSharp": "NVI / Sharp", "risk": "Риск", "status": "Статус" }
+      "risk": {
+        "review": "????????",
+        "high": "??????????"
+      },
+      "domains": {
+        "gov": {
+          "label": "??????????",
+          "description": "???????????? ?????????, ????????????, ????????? ?????? ? ??????????? ?????????????????."
+        },
+        "econ": {
+          "label": "?????????",
+          "description": "????????????? ????????, ??????????????? ????????, ????? ?? ?????????? ? ??????? ? ?????."
+        },
+        "labr": {
+          "label": "????",
+          "description": "??????? ?????, ?????????, ?????????? ? ??????????????? ??????????."
+        },
+        "comm": {
+          "label": "????????????",
+          "description": "????????? ????, ???????, ?????, ???????????? ? ????????."
+        },
+        "soc": {
+          "label": "?????????? ?????",
+          "description": "?????????? ???????, ??????????, ???????????? ? ????? ?????????."
+        },
+        "intv": {
+          "label": "?????????????",
+          "description": "?????? ??????? ?????????????, ??????? ??????, ????????? ????? ??????? ????????."
+        }
+      },
+      "table": {
+        "method": "?????",
+        "domain": "??????",
+        "subgroup": "?????????",
+        "nviSharp": "NVI / Sharp",
+        "risk": "????",
+        "status": "??????"
+      }
     },
     "home": {
-      "nav": { "why": "Зачем", "install": "Установка", "domains": "Домены", "catalog": "Каталог" },
+      "nav": {
+        "why": "?????",
+        "install": "?????????",
+        "domains": "???????",
+        "catalog": "???????"
+      },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "Исследовательские навыки для изучения и симуляции методов гражданского сопротивления.",
-        "lead": "Структурированный реестр для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с AI-агентами. Основан на публичных таксономиях, записях с источниками и риск-гейтированном дизайне навыков.",
-        "boundary": "Это инфраструктура для исследования, образования, симуляции и планирования. Проект не является организатором кампаний, а методы высокого риска оставлены для анализа, а не для операционного руководства. Перед использованием см. safety policy репозитория.",
-        "actions": { "browse": "Открыть атлас", "operational": "Операционные навыки", "repo": "Репозиторий", "safety": "Safety policy" },
-        "stats": ["индексированных методов", "исследовательских доменов", "операционных low-risk навыка", "high-risk записей удержано"]
+        "title": "????????????????? ????? ??????? ???????????? ????????????? ? agent skills.",
+        "lead": "Civil Resistance Skills ?????????? ????????? ?????????? ??????? ? ?????? ? ???????????: ??? ????????, ????????? ? ?????????? ?????????? ? ??????? AI-???????.",
+        "boundary": "??? ?????????????? ??? ????????????, ???????????, ????????? ? ????????????. ?????? ?? ?????????? ????????. ?????? ??????????? ????? ???????? ????????????? ???????? ??? ???????, ? ?? ????????????? ????????????.",
+        "actions": {
+          "browse": "??????? ?????",
+          "operational": "???????? ?????????? ??????",
+          "repo": "???????????",
+          "safety": "??????? ????????????"
+        },
+        "stats": [
+          "??????? ? ???????",
+          "????????????????? ????????",
+          "?????????? ?????? ??????? ?????",
+          "?????? ??????????? ????? ????????? ?????????????"
+        ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 методов / 6 доменов / risk-gated AI skills",
-        "domainWord": "Домен",
-        "recordWord": "записей",
+        "kicker": "Civic Research Atlas / 347 ??????? / 6 ???????? / AI-?????? ? ????????? ?????",
+        "domainWord": "??????",
+        "recordWord": "???????",
         "notes": [
-          { "kind": "operational", "title": "Операционные образцы: 4104-public-speeches / 4004-marches", "body": "Каждый навык содержит фазы, артефакты, guards, risk review и критерии готовности." },
-          { "kind": "risk", "title": "High-risk записи: 54 для образования и симуляции", "body": "Операционализация ограничена источниками, законностью, безопасностью и review." }
+          {
+            "kind": "operational",
+            "title": "?????????? ???????: 4104-public-speeches / 4004-marches",
+            "body": "?????? ?????????????? ????? ???????? ???? ??????, ?????????, ??????????? ???????? ? ?????? ??????????."
+          },
+          {
+            "kind": "risk",
+            "title": "?????? ??????????? ?????: 54 ??? ??????????? ? ?????????",
+            "body": "???????????? ?????????? ??????? ?? ??????????, ??????????, ???????????? ? ????????? ????????."
+          }
         ]
       },
       "why": {
-        "title": "Зачем это существует",
-        "body": "Методы гражданского сопротивления обычно публикуются как прозаические таксономии. Агентам нужна более явная структура: происхождение, границы риска, операционная доступность, references и критерии завершения.",
+        "title": "????? ??? ?????",
+        "body": "?????? ???????????? ????????????? ????? ??????????? ??? ????????? ??????????. AI-??????? ????? ????? ????? ?????????: ????????????? ??????, ??????? ?????, ?????? ??????????, ????????? ? ???????? ??????????.",
         "cards": [
-          { "title": "Источник метода", "body": "Реестр сопоставляет тактики Beer/NVI/ICNC с таксономией методов Sharp. Первичные источники задают идентичность метода; вторичные training sources помогают формировать low-risk подготовку." },
-          { "title": "Риск-гейтированный переход", "body": "Low-risk методы могут становиться операционными навыками с планированием, исследованием, review и debrief. High-risk методы остаются описательными для образования, анализа и симуляции до явного review." },
-          { "title": "Для кого", "body": "Для исследователей, civic educators, создателей агентов, дизайнеров симуляций, аналитиков поддержки движений и практиков, которым нужна структурированная учебная среда, а не лозунги." },
-          { "title": "Путь к симуляции", "body": "Навыки оформляются как структурированные артефакты: фазы, outputs, guards, risk flags и verdict готовности. Это делает их пригодными для будущих sandbox/game agents." }
+          {
+            "title": "????????? ? ??????????",
+            "body": "????? ???????????? ??????? Beer/NVI/ICNC ? ??????????? ??????? Sharp. ????????? ????????? ?????? ???????????? ??????; ????????? ????????? ????????? ???????? ????????? ?????????? ???????? ?????????? ??? ????????????? ???????."
+          },
+          {
+            "title": "??????? ????? ???????? ?????",
+            "body": "?????? ??????? ????? ????? ??????????? ??????????? ???????? ? ?????????????, ?????????????, ????????? ? ???????? ???????????. ?????? ??????????? ????? ???????? ????????????? ??? ???????????, ??????? ? ?????????, ???? ?? ??????? ????????? ????????."
+          },
+          {
+            "title": "??? ????",
+            "body": "??? ??????????????, ??????????? ?????????, ????????????? ???????, ?????????? ?????????, ?????????? ????????? ???????? ? ?????????, ??????? ????? ????????????????? ??????? ?????, ? ?? ???????."
+          },
+          {
+            "title": "???? ? ?????????",
+            "body": "?????? ??????????? ??? ????????????????? ?????????: ????, ??????????, ????????, ????? ????? ? ?????? ??????????. ????? ????? ???????? ??? ??????? sandbox- ? ??????? ???????."
+          }
         ]
       },
-      "install": { "title": "Поверхности установки", "body": "Канонические навыки живут в этом репозитории. Claude Code и Codex используют отдельные marketplace-поверхности, чтобы каждый агент находил навыки в своём нативном формате.", "claudeBody": "Добавьте marketplace, затем установите communication plugin.", "codexBody": "Добавьте Codex marketplace, затем выберите плагины в нативном UI." },
-      "domainsSection": { "title": "Домены", "body": "Шесть доменов организуют 347 методов. Коммуникация активна первой; остальные домены остаются registry-backed и помечены как coming soon, пока не будут написаны операционные навыки." },
-      "catalog": { "title": "Атлас методов", "body": "Реализованные строки ведут к каноническим skill files. Coming soon строки - индексированные методы, ещё не превращённые в навыки. High-risk строки остаются analysis-only.", "detail": "Домен коммуникации", "filters": { "search": "Искать метод, ID, подгруппу...", "allDomains": "Все домены", "allStatuses": "Все статусы", "allRisks": "Все риски", "operational": "Операционный", "comingSoon": "Скоро", "review": "Review", "high": "High" } },
-      "footer": { "text": "Civil Resistance Skills - инфраструктура для исследования и симуляции.", "sources": "Источники" }
+      "install": {
+        "title": "???????? ?????????",
+        "body": "???????????? ?????? ???????? ? ???? ???????????. Claude Code ? Codex ?????????? ?????? ??????????? ????????, ????? ?????? ????? ??????? ?????? ? ????? ???????? ???????.",
+        "claudeBody": "???????? marketplace, ????? ?????????? ???????????????? ??????.",
+        "codexBody": "???????? marketplace ??? Codex, ????? ???????? ??????? ? ???????? ??????????."
+      },
+      "domainsSection": {
+        "title": "???????",
+        "body": "????? ???????? ?????????? 347 ???????. ???????????? ??????? ??????; ????????? ??????? ??? ???? ? ??????? ? ???????? ? ??????, ???? ??? ??? ?? ????? ???????????? ?????????? ??????."
+      },
+      "catalog": {
+        "title": "????? ???????",
+        "body": "????????????? ?????? ????? ? ?????????????? ?????? ???????. ?????? ?? ??????? ? ??? ??????, ??? ????????? ? ??????, ?? ??? ?? ???????????? ? ??????. ?????? ??????????? ????? ???????? ?????? ??? ???????.",
+        "detail": "?????? ????????????",
+        "filters": {
+          "search": "?????? ?????, ID ??? ?????????...",
+          "allDomains": "??? ???????",
+          "allStatuses": "??? ???????",
+          "allRisks": "??? ?????? ?????",
+          "operational": "??????????",
+          "comingSoon": "? ??????",
+          "review": "????????",
+          "high": "??????????"
+        }
+      },
+      "footer": {
+        "text": "Civil Resistance Skills ? ?????????????? ??? ???????????? ? ?????????.",
+        "sources": "?????????"
+      }
     },
     "communication": {
-      "nav": { "operational": "Операционные", "registry": "Реестр" },
-      "back": "Назад к атласу",
-      "hero": { "title": "Коммуникация, символы, медиа и публичный нарратив.", "lead": "Это первый активный домен. Его операционные навыки сосредоточены на low-risk коммуникационных методах, которые можно подготовить, проверить, симулировать и разобрать, не превращая реестр в командную систему кампании.", "badges": ["2 операционных навыка", "133 индексированных метода", "high-risk строки удержаны для анализа"] },
-      "operational": { "title": "Операционные навыки", "body": "Это текущие образцовые навыки. Они используют references с источниками, runtime phases, artifacts, risk review и критерии готовности.", "canonical": "Canonical skill", "references": "References", "skills": [ { "id": "4104-public-speeches", "title": "Public Speeches", "body": "Помогает подготовить публичную речь как тактику. Planning Mode создаёт research-backed speech brief; Application Mode может создать полный final speech package." }, { "id": "4004-marches", "title": "Marches", "body": "Planning-only навык для создания March Planning Package: маршрут, legal posture, staffing, safety, accessibility, communications, debrief, ledger и readiness verdict." } ] },
-      "registry": { "title": "Реестр коммуникационных методов", "body": "Все коммуникационные методы остаются видимыми, чтобы исследовательская поверхность была полной. Строки без skill files помечены как скоро; high-risk строки остаются analysis-only.", "filters": { "search": "Искать коммуникационные методы...", "allStatuses": "Все статусы", "allRisks": "Все риски", "operational": "Операционный", "comingSoon": "Скоро", "review": "Review", "high": "High" } },
-      "footer": "Civil Resistance Skills - атлас коммуникационного домена."
+      "nav": {
+        "operational": "??????????",
+        "registry": "??????"
+      },
+      "back": "????? ? ??????",
+      "hero": {
+        "title": "????????????, ???????, ????? ? ????????? ????????.",
+        "lead": "??? ?????? ???????? ??????. ??? ?????????? ?????? ????????? ????????????? ???????????????? ???????, ??????? ????? ???????????, ?????????, ???????????? ? ????????? ??? ??????????? ?????? ? ????????? ??????? ????????.",
+        "badges": [
+          "2 ?????????? ??????",
+          "133 ?????? ? ???????",
+          "?????? ??????????? ????? ????????? ??? ???????"
+        ]
+      },
+      "operational": {
+        "title": "?????????? ??????",
+        "body": "??? ??????? ?????????? ??????. ? ??? ???? ?????? ?? ?????????, ??????? ????, ?????????, ???????? ?????? ? ???????? ??????????.",
+        "canonical": "???? ??????",
+        "references": "?????????",
+        "skills": [
+          {
+            "id": "4104-public-speeches",
+            "title": "Public Speeches",
+            "body": "???????? ??????????? ????? ?????????? ???????????. ????? ???????????? ??????? ????????????????? ????; ????? ?????????? ????? ??????????? ?????? ????? ????."
+          },
+          {
+            "id": "4004-marches",
+            "title": "Marches",
+            "body": "????? ?????? ??? ???????????? ?????: ???????, ???????? ????????, ????, ????????????, ???????????, ????????????, ???????? ??????? ? ?????? ??????????."
+          }
+        ]
+      },
+      "registry": {
+        "title": "?????? ???????????????? ???????",
+        "body": "??? ???????????????? ?????? ???????? ????????, ????? ????????????????? ??????? ???? ??????. ?????? ??? ?????? ??????? ???????? ??? ?? ???????; ?????? ??????????? ????? ???????? ?????? ??? ???????.",
+        "filters": {
+          "search": "?????? ???????????????? ??????...",
+          "allStatuses": "??? ???????",
+          "allRisks": "??? ?????? ?????",
+          "operational": "??????????",
+          "comingSoon": "? ??????",
+          "review": "????????",
+          "high": "??????????"
+        }
+      },
+      "footer": "Civil Resistance Skills ? ????? ????????????????? ???????."
     }
   },
   "es": {
@@ -166,41 +401,196 @@
       "github": "GitHub",
       "copy": "Copiar",
       "copied": "Copiado",
-      "active": "Activo",
-      "comingSoon": "Próximamente",
-      "noOperational": "Aún no hay habilidades operativas",
-      "openDomain": "Abrir dominio",
-      "indexedMethods": "métodos indexados",
+      "active": "Disponible",
+      "comingSoon": "En preparaci?n",
+      "noOperational": "A?n no hay habilidades aplicadas",
+      "openDomain": "Abrir secci?n",
+      "indexedMethods": "m?todos indexados",
       "highRiskRecords": "registros de alto riesgo",
-      "status": { "operational": "Operativa", "coming_soon": "Próximamente" },
-      "risk": { "review": "review", "high": "high" },
-      "domains": {
-        "gov": { "label": "Gobernanza", "description": "Métodos de gobernanza y presión político-institucional." },
-        "econ": { "label": "Economía", "description": "Presión económica, boicots, desinversión y tácticas de mercado." },
-        "labr": { "label": "Trabajo", "description": "Métodos laborales, de lugar de trabajo, huelga y organización de trabajadores." },
-        "comm": { "label": "Comunicación", "description": "Comunicación, símbolos, narrativa pública, medios y documentación." },
-        "soc": { "label": "Social", "description": "Participación social, asociación, identidad y métodos comunitarios." },
-        "intv": { "label": "Intervención", "description": "Métodos de intervención, incluidos registros directos y técnicos de mayor riesgo." }
+      "status": {
+        "operational": "Aplicada",
+        "coming_soon": "En preparaci?n"
       },
-      "table": { "method": "Método", "domain": "Dominio", "subgroup": "Subgrupo", "nviSharp": "NVI / Sharp", "risk": "Riesgo", "status": "Estado" }
+      "risk": {
+        "review": "revisi?n",
+        "high": "alto"
+      },
+      "domains": {
+        "gov": {
+          "label": "Gobernanza",
+          "description": "Instituciones pol?ticas, legitimidad, autoridad p?blica y administraci?n c?vica."
+        },
+        "econ": {
+          "label": "Econom?a",
+          "description": "Presi?n econ?mica, acci?n de consumidores, desinversi?n y participaci?n en el mercado."
+        },
+        "labr": {
+          "label": "Trabajo",
+          "description": "Lugares de trabajo, sindicatos, huelgas y organizaci?n de trabajadores."
+        },
+        "comm": {
+          "label": "Comunicaci?n",
+          "description": "Discurso p?blico, s?mbolos, medios, documentaci?n y narrativa."
+        },
+        "soc": {
+          "label": "Social",
+          "description": "Participaci?n social, asociaciones, identidad y vida comunitaria."
+        },
+        "intv": {
+          "label": "Intervenci?n",
+          "description": "Registros de intervenci?n directa, incluidos m?todos que requieren una revisi?n m?s estricta."
+        }
+      },
+      "table": {
+        "method": "M?todo",
+        "domain": "Secci?n",
+        "subgroup": "Subgrupo",
+        "nviSharp": "NVI / Sharp",
+        "risk": "Riesgo",
+        "status": "Estado"
+      }
     },
     "home": {
-      "nav": { "why": "Por qué", "install": "Instalar", "domains": "Dominios", "catalog": "Catálogo" },
-      "hero": { "eyebrow": "Civic Research Atlas", "title": "Habilidades de nivel investigativo para estudiar y simular métodos de resistencia civil.", "lead": "Un registro estructurado para estudiar, simular y preparar con cuidado métodos de resistencia civil con agentes de IA. Construido a partir de taxonomías públicas, registros con fuentes y diseño de habilidades con control de riesgo.", "boundary": "Esta es infraestructura para investigación, educación, simulación y planificación. No es un organizador de campañas, y los métodos de alto riesgo se mantienen para análisis, no para guía operativa. Consulta la política de seguridad del repositorio antes de usarlo.", "actions": { "browse": "Explorar el atlas", "operational": "Ver habilidades operativas", "repo": "Repositorio", "safety": "Política de seguridad" }, "stats": ["métodos indexados", "dominios de investigación", "habilidades low-risk operativas", "registros high-risk retenidos"] },
-      "atlas": { "kicker": "Civic Research Atlas / 347 métodos / 6 dominios / habilidades de IA con control de riesgo", "domainWord": "Dominio", "recordWord": "registros", "notes": [ { "kind": "operational", "title": "Ejemplos operativos: 4104-public-speeches / 4004-marches", "body": "Cada habilidad incluye fases, artefactos, controles, revisión de riesgo y criterios de preparación." }, { "kind": "risk", "title": "Registros high-risk: 54 para educación y simulación", "body": "La operacionalización está limitada por fuentes, legalidad, seguridad y revisión." } ] },
-      "why": { "title": "Por qué existe", "body": "Los métodos de resistencia civil suelen publicarse como taxonomías en prosa. Los agentes necesitan algo más explícito: procedencia, límites de riesgo, disponibilidad operativa, referencias y criterios de finalización.", "cards": [ { "title": "Base de fuentes", "body": "El registro cruza el universo táctico Beer/NVI/ICNC con la taxonomía de métodos de Sharp. Las fuentes primarias identifican el método; las fuentes secundarias de formación informan patrones de preparación low-risk." }, { "title": "Transformación con control de riesgo", "body": "Los métodos low-risk pueden convertirse en habilidades operativas con planificación, investigación, revisión y debrief. Los métodos high-risk siguen siendo descriptivos para educación, análisis y simulación hasta una revisión explícita." }, { "title": "Para quién", "body": "Investigadores, educadores cívicos, constructores de agentes, diseñadores de simulación, analistas de apoyo a movimientos y practicantes que necesitan aprendizaje estructurado, no consignas." }, { "title": "Ruta hacia la simulación", "body": "Las habilidades se forman como artefactos estructurados: fases, outputs, controles, flags de riesgo y veredictos de preparación. Eso las hace útiles para futuros agentes de sandbox y juego." } ] },
-      "install": { "title": "Superficies de instalación", "body": "Las habilidades canónicas viven en este repositorio. Claude Code y Codex usan superficies de marketplace separadas para que cada agente descubra habilidades en su propio formato nativo.", "claudeBody": "Añade el marketplace y después instala el plugin de comunicación.", "codexBody": "Añade el marketplace de Codex y luego elige plugins desde la interfaz nativa." },
-      "domainsSection": { "title": "Dominios", "body": "Seis dominios organizan los 347 métodos. Comunicación es el primer dominio activo; los demás siguen respaldados por el registro y marcados como próximamente hasta que se creen habilidades operativas." },
-      "catalog": { "title": "Atlas de métodos", "body": "Las filas implementadas enlazan a los archivos canónicos de habilidades. Las filas próximamente son métodos indexados aún no convertidos en habilidades. Las filas high-risk son solo de análisis.", "detail": "Detalle de comunicación", "filters": { "search": "Buscar método, ID, subgrupo...", "allDomains": "Todos los dominios", "allStatuses": "Todos los estados", "allRisks": "Todos los riesgos", "operational": "Operativa", "comingSoon": "Próximamente", "review": "Review", "high": "High" } },
-      "footer": { "text": "Civil Resistance Skills - infraestructura de investigación y simulación.", "sources": "Fuentes" }
+      "nav": {
+        "why": "Por qu?",
+        "install": "Instalaci?n",
+        "domains": "Secciones",
+        "catalog": "Cat?logo"
+      },
+      "hero": {
+        "eyebrow": "Civic Research Atlas",
+        "title": "Un atlas de investigaci?n para m?todos de resistencia civil y agent skills.",
+        "lead": "Civil Resistance Skills convierte taxonom?as p?blicas de m?todos en un registro con fuentes: para estudiar, simular y preparar con cuidado con agentes de IA.",
+        "boundary": "Esta es infraestructura para investigaci?n, educaci?n, simulaci?n y planificaci?n. No organiza campa?as. Los m?todos de alto riesgo permanecen como registros descriptivos para an?lisis, no como gu?a pr?ctica.",
+        "actions": {
+          "browse": "Explorar el atlas",
+          "operational": "Ver habilidades aplicadas",
+          "repo": "Repositorio",
+          "safety": "Pol?tica de seguridad"
+        },
+        "stats": [
+          "m?todos indexados",
+          "secciones de investigaci?n",
+          "habilidades aplicadas de bajo riesgo",
+          "registros de alto riesgo mantenidos como descriptivos"
+        ]
+      },
+      "atlas": {
+        "kicker": "Civic Research Atlas / 347 m?todos / 6 secciones / habilidades de IA con revisi?n de riesgo",
+        "domainWord": "Secci?n",
+        "recordWord": "registros",
+        "notes": [
+          {
+            "kind": "operational",
+            "title": "Ejemplos aplicados: 4104-public-speeches / 4004-marches",
+            "body": "Cada habilidad publicada incluye fases de trabajo, artefactos, criterios de revisi?n y evaluaci?n de preparaci?n."
+          },
+          {
+            "kind": "risk",
+            "title": "Registros de alto riesgo: 54 para educaci?n y simulaci?n",
+            "body": "La elaboraci?n pr?ctica depende de las fuentes, la legalidad, la seguridad y una revisi?n expl?cita."
+          }
+        ]
+      },
+      "why": {
+        "title": "Por qu? existe",
+        "body": "Los m?todos de resistencia civil suelen publicarse como taxonom?as narrativas. Los agentes de IA necesitan una estructura m?s expl?cita: procedencia, l?mites de riesgo, estado de aplicaci?n, fuentes y criterios de finalizaci?n.",
+        "cards": [
+          {
+            "title": "Base documental",
+            "body": "El atlas cruza el universo t?ctico Beer/NVI/ICNC con la taxonom?a de m?todos de Sharp. Las fuentes primarias identifican el m?todo; los materiales formativos secundarios ayudan a describir pr?cticas prudentes para m?todos de bajo riesgo."
+          },
+          {
+            "title": "Paso por revisi?n de riesgo",
+            "body": "Los m?todos de bajo riesgo pueden convertirse en habilidades aplicadas con planificaci?n, investigaci?n, revisi?n y evaluaci?n posterior. Los m?todos de alto riesgo permanecen descriptivos para educaci?n, an?lisis y simulaci?n hasta una revisi?n espec?fica."
+          },
+          {
+            "title": "Para qui?n",
+            "body": "Para investigadores, educadores c?vicos, constructores de agentes, dise?adores de simulaci?n, analistas de apoyo a movimientos y practicantes que necesitan aprendizaje estructurado, no consignas."
+          },
+          {
+            "title": "Camino hacia la simulaci?n",
+            "body": "Las habilidades se dise?an como artefactos estructurados: fases, resultados, controles, se?ales de riesgo y evaluaci?n de preparaci?n. Esa forma las hace ?tiles para futuros agentes de sandbox y juegos."
+          }
+        ]
+      },
+      "install": {
+        "title": "Opciones de instalaci?n",
+        "body": "Las habilidades can?nicas viven en este repositorio. Claude Code y Codex usan superficies de plugin separadas para que cada agente descubra las habilidades en su formato nativo.",
+        "claudeBody": "A?ade el marketplace y despu?s instala el plugin de comunicaci?n.",
+        "codexBody": "A?ade el marketplace de Codex y luego elige plugins desde la interfaz nativa."
+      },
+      "domainsSection": {
+        "title": "Secciones",
+        "body": "Seis secciones organizan los 347 m?todos. Comunicaci?n es la primera secci?n activa; las dem?s ya est?n indexadas y quedan en preparaci?n hasta que se creen habilidades aplicadas."
+      },
+      "catalog": {
+        "title": "Atlas de m?todos",
+        "body": "Las filas implementadas enlazan a los archivos publicados de habilidades. Las filas en preparaci?n son m?todos ya indexados que a?n no se han convertido en habilidades. Los registros de alto riesgo quedan solo para an?lisis.",
+        "detail": "Secci?n de comunicaci?n",
+        "filters": {
+          "search": "Buscar m?todo, ID o subgrupo...",
+          "allDomains": "Todas las secciones",
+          "allStatuses": "Todos los estados",
+          "allRisks": "Todos los niveles de riesgo",
+          "operational": "Aplicada",
+          "comingSoon": "En preparaci?n",
+          "review": "Revisi?n",
+          "high": "Alto"
+        }
+      },
+      "footer": {
+        "text": "Civil Resistance Skills ? infraestructura de investigaci?n y simulaci?n.",
+        "sources": "Fuentes"
+      }
     },
     "communication": {
-      "nav": { "operational": "Operativas", "registry": "Registro" },
+      "nav": {
+        "operational": "Aplicadas",
+        "registry": "Registro"
+      },
       "back": "Volver al atlas",
-      "hero": { "title": "Comunicación, símbolos, medios y narrativa pública.", "lead": "Este es el primer dominio activo. Sus habilidades operativas se centran en métodos de comunicación low-risk que pueden prepararse, revisarse, simularse y evaluarse sin convertir el registro en un sistema de mando de campaña.", "badges": ["2 habilidades operativas", "133 métodos indexados", "filas high-risk retenidas para análisis"] },
-      "operational": { "title": "Habilidades operativas", "body": "Estas son las habilidades ejemplares actuales. Usan referencias con fuentes, fases de ejecución, artefactos, revisión de riesgo y criterios de preparación.", "canonical": "Canonical skill", "references": "References", "skills": [ { "id": "4104-public-speeches", "title": "Public Speeches", "body": "Guía la preparación de una táctica de discurso público. Planning Mode produce un speech brief respaldado por investigación; Application Mode puede producir un paquete completo de discurso final." }, { "id": "4004-marches", "title": "Marches", "body": "Habilidad solo de planificación para producir un March Planning Package: ruta, postura legal, personal, seguridad, accesibilidad, comunicaciones, debrief, ledger y readiness verdict." } ] },
-      "registry": { "title": "Registro de comunicación", "body": "Todos los métodos de comunicación siguen visibles para que la superficie de investigación esté completa. Las filas sin skill files se marcan como próximamente; las filas high-risk quedan solo para análisis.", "filters": { "search": "Buscar métodos de comunicación...", "allStatuses": "Todos los estados", "allRisks": "Todos los riesgos", "operational": "Operativa", "comingSoon": "Próximamente", "review": "Review", "high": "High" } },
-      "footer": "Civil Resistance Skills - atlas del dominio de comunicación."
+      "hero": {
+        "title": "Comunicaci?n, s?mbolos, medios y narrativa p?blica.",
+        "lead": "Esta es la primera secci?n activa. Sus habilidades aplicadas se centran en m?todos de comunicaci?n de bajo riesgo que pueden prepararse, revisarse, simularse y evaluarse sin convertir el atlas en un sistema de mando de campa?a.",
+        "badges": [
+          "2 habilidades aplicadas",
+          "133 m?todos indexados",
+          "filas de alto riesgo reservadas para an?lisis"
+        ]
+      },
+      "operational": {
+        "title": "Habilidades aplicadas",
+        "body": "Estas son las habilidades de ejemplo actuales. Incluyen referencias con fuentes, fases de trabajo, artefactos, revisi?n de riesgos y criterios de preparaci?n.",
+        "canonical": "Archivo de habilidad",
+        "references": "Materiales",
+        "skills": [
+          {
+            "id": "4104-public-speeches",
+            "title": "Public Speeches",
+            "body": "Ayuda a preparar el m?todo de discurso p?blico. El modo de planificaci?n produce un informe de investigaci?n; el modo de aplicaci?n puede preparar un paquete completo de discurso."
+          },
+          {
+            "id": "4004-marches",
+            "title": "Marches",
+            "body": "Habilidad solo de planificaci?n para una marcha: ruta, contexto legal, roles, seguridad, accesibilidad, comunicaciones, criterios de evaluaci?n y juicio de preparaci?n."
+          }
+        ]
+      },
+      "registry": {
+        "title": "Registro de m?todos de comunicaci?n",
+        "body": "Todos los m?todos de comunicaci?n permanecen visibles para conservar una imagen completa de investigaci?n. Las filas sin archivo de habilidad se marcan como ?en preparaci?n?; las filas de alto riesgo quedan solo para an?lisis.",
+        "filters": {
+          "search": "Buscar m?todos de comunicaci?n...",
+          "allStatuses": "Todos los estados",
+          "allRisks": "Todos los niveles de riesgo",
+          "operational": "Aplicada",
+          "comingSoon": "En preparaci?n",
+          "review": "Revisi?n",
+          "high": "Alto"
+        }
+      },
+      "footer": "Civil Resistance Skills ? atlas de la secci?n de comunicaci?n."
     }
   }
 }
