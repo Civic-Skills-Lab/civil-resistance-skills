@@ -43,3 +43,5 @@ Install and enable the marketplace through one agent surface at a time to avoid 
 ## Website
 
 The public GitHub Pages site is generated from `site-src/` with Astro and React islands. It publishes static localized pages for English, Russian, and Spanish; generated `dist/` output is deployed by GitHub Actions and is not committed.
+
+Optional Google Analytics tracking is controlled by the repository variable `GA_MEASUREMENT_ID`. When it is set to a GA4 Measurement ID such as `G-XXXXXXXXXX`, the GitHub Pages build injects the Google tag into every generated page.

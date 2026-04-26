@@ -11,6 +11,8 @@ const { lang, page } = Astro.props;
 const meta = pageMeta[page][lang];
 const canonicalPath = localizedPaths[page][lang];
 const canonicalUrl = absoluteUrl(canonicalPath);
+const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
+const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
 ---
 
 <!DOCTYPE html>
@@ -34,6 +36,19 @@ const canonicalUrl = absoluteUrl(canonicalPath);
     <link rel="icon" href={pathFor("/assets/favicon-32.png")} sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href={pathFor("/assets/apple-touch-icon.png")} />
     <link rel="manifest" href={pathFor("/site.webmanifest")} />
+    {hasGoogleAnalytics && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+        <script is:inline define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", gaMeasurementId);
+        </script>
+      </>
+    )}
   </head>
   <body>
     <slot />
@@ -50,4 +65,3 @@ const canonicalUrl = absoluteUrl(canonicalPath);
     </script>
   </body>
 </html>
-
