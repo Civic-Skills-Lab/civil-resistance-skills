@@ -1,6 +1,20 @@
 ---
 import "../styles/global.css";
-import { absoluteUrl, basePath, localizedPaths, pageMeta, pathFor, type Language } from "../data/siteMeta";
+import {
+  absoluteUrl,
+  basePath,
+  defaultImage,
+  languages,
+  localizedPaths,
+  ogLocales,
+  pageMeta,
+  pathFor,
+  repoUrl,
+  siteName,
+  siteUrl,
+  themeColor,
+  type Language
+} from "../data/siteMeta";
 
 interface Props {
   lang: Language;
@@ -11,9 +25,67 @@ const { lang, page } = Astro.props;
 const meta = pageMeta[page][lang];
 const canonicalPath = localizedPaths[page][lang];
 const canonicalUrl = absoluteUrl(canonicalPath);
+const imageUrl = absoluteUrl(defaultImage.path);
+const imageAlt = defaultImage.alt[lang];
+const alternateOgLocales = languages.filter((language) => language !== lang).map((language) => ogLocales[language]);
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
 const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
 const languageStorageKey = "civil-resistance-skills:language";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: siteName,
+      url: siteUrl,
+      inLanguage: languages,
+      description: pageMeta.home.en.description,
+      publisher: {
+        "@id": `${siteUrl}/#project`
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#project`,
+      name: siteName,
+      url: siteUrl,
+      sameAs: [repoUrl]
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: meta.title,
+      description: meta.description,
+      isPartOf: {
+        "@id": `${siteUrl}/#website`
+      },
+      inLanguage: lang,
+      image: imageUrl,
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: imageUrl,
+        width: defaultImage.width,
+        height: defaultImage.height,
+        caption: imageAlt
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": `${siteUrl}/#atlas`,
+      name: "Civil Resistance Skills research atlas",
+      url: siteUrl,
+      description:
+        "A source-linked atlas of 347 civil-resistance method records across six research domains, with high-risk records kept descriptive and low-risk applied skills reviewed separately.",
+      isPartOf: {
+        "@id": `${siteUrl}/#website`
+      },
+      inLanguage: languages,
+      license: `${repoUrl}/blob/main/LICENSE`
+    }
+  ]
+};
 ---
 
 <!DOCTYPE html>
@@ -23,20 +95,35 @@ const languageStorageKey = "civil-resistance-skills:language";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{meta.title}</title>
     <meta name="description" content={meta.description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content={themeColor} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="en" href={absoluteUrl(localizedPaths[page].en)} />
-    <link rel="alternate" hreflang="ru" href={absoluteUrl(localizedPaths[page].ru)} />
-    <link rel="alternate" hreflang="es" href={absoluteUrl(localizedPaths[page].es)} />
+    {languages.map((language) => <link rel="alternate" hreflang={language} href={absoluteUrl(localizedPaths[page][language])} />)}
     <link rel="alternate" hreflang="x-default" href={absoluteUrl(localizedPaths[page].en)} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.ogDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content={ogLocales[lang]} />
+    {alternateOgLocales.map((locale) => <meta property="og:locale:alternate" content={locale} />)}
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:secure_url" content={imageUrl} />
+    <meta property="og:image:type" content={defaultImage.type} />
+    <meta property="og:image:width" content={String(defaultImage.width)} />
+    <meta property="og:image:height" content={String(defaultImage.height)} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={meta.title} />
+    <meta name="twitter:description" content={meta.ogDescription} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <link rel="icon" href={pathFor("/assets/favicon.svg")} type="image/svg+xml" />
     <link rel="icon" href={pathFor("/favicon.ico")} sizes="any" />
     <link rel="icon" href={pathFor("/assets/favicon-32.png")} sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href={pathFor("/assets/apple-touch-icon.png")} />
     <link rel="manifest" href={pathFor("/site.webmanifest")} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     {hasGoogleAnalytics && (
       <>
         <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>

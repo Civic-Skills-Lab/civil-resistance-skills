@@ -1,6 +1,6 @@
 # Site Localization Guide
 
-This guide governs public-facing EN/RU/ES copy in `site-src/src/data/`.
+This guide governs public-facing EN/ES/PL/RU copy in `site-src/src/data/`.
 
 ## Tone
 
@@ -25,27 +25,27 @@ Keep these terms as names or identifiers:
 
 Translate these terms naturally in public copy:
 
-| English concept | Russian | Spanish |
-| --- | --- | --- |
-| registry | реестр | registro |
-| atlas | атлас | atlas |
-| domain | раздел | sección |
-| operational/applied skill | прикладной навык | habilidad aplicada |
-| coming soon/planned | в планах | en preparación |
-| low-risk | низкий риск / низкорисковый | bajo riesgo |
-| high-risk | повышенный риск | alto riesgo |
-| analysis-only | только для анализа | solo para análisis |
-| risk-gated/risk-reviewed | с проверкой риска | con revisión de riesgo |
-| runtime phases | рабочие фазы | fases de trabajo |
-| artifact | артефакт / рабочий результат | artefacto |
-| guard/check | проверка / проверочный критерий | control / criterio de revisión |
-| readiness verdict | оценка готовности | evaluación de preparación |
-| ledger | журнал / сводка статусов | registro / resumen de estado |
-| debrief | разбор результатов | evaluación posterior |
+| English concept | Spanish | Polish | Russian |
+| --- | --- | --- | --- |
+| registry | registro | rejestr | реестр |
+| atlas | atlas | atlas | атлас |
+| domain | sección | sekcja | раздел |
+| operational/applied skill | habilidad aplicada | umiejętność stosowana | прикладной навык |
+| coming soon/planned | en preparación | w przygotowaniu | в планах |
+| low-risk | bajo riesgo | niskie ryzyko | низкий риск / низкорисковый |
+| high-risk | alto riesgo | wysokie ryzyko | повышенный риск |
+| analysis-only | solo para análisis | tylko do analizy | только для анализа |
+| risk-gated/risk-reviewed | con revisión de riesgo | z przeglądem ryzyka | с проверкой риска |
+| runtime phases | fases de trabajo | fazy pracy | рабочие фазы |
+| artifact | artefacto | artefakt | артефакт / рабочий результат |
+| guard/check | control / criterio de revisión | kontrola / kryterium przeglądu | проверка / проверочный критерий |
+| readiness verdict | evaluación de preparación | ocena gotowości | оценка готовности |
+| ledger | registro / resumen de estado | rejestr / podsumowanie statusu | журнал / сводка статусов |
+| debrief | evaluación posterior | omówienie wyników | разбор результатов |
 
 ## QA Checklist
 
-- RU/ES pages should read as standalone public copy, not line-by-line translations.
-- Avoid raw English terms in RU/ES unless they are listed as names or identifiers above.
+- ES/PL/RU pages should read as standalone public copy, not line-by-line translations.
+- Avoid raw English terms in ES/PL/RU unless they are listed as names or identifiers above.
 - Check mobile layout for longer translated labels.
-- Run `rg "Ã|Â|â|Ð|Ñ" site-src/src/data` before publishing.
+- Run `npm run check:localization` before publishing.

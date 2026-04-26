@@ -1,4 +1,4 @@
-import { absoluteUrl, localizedPaths } from "../data/siteMeta";
+import { absoluteUrl, languages, localizedPaths } from "../data/siteMeta";
 
 const groups = [localizedPaths.home, localizedPaths.communication];
 
@@ -10,9 +10,7 @@ ${groups
     Object.values(group).map(
       (path) => `  <url>
     <loc>${absoluteUrl(path)}</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="${absoluteUrl(group.en)}" />
-    <xhtml:link rel="alternate" hreflang="ru" href="${absoluteUrl(group.ru)}" />
-    <xhtml:link rel="alternate" hreflang="es" href="${absoluteUrl(group.es)}" />
+${languages.map((language) => `    <xhtml:link rel="alternate" hreflang="${language}" href="${absoluteUrl(group[language])}" />`).join("\n")}
     <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl(group.en)}" />
   </url>`
     )
@@ -24,4 +22,3 @@ ${groups
     headers: { "Content-Type": "application/xml; charset=utf-8" }
   });
 }
-

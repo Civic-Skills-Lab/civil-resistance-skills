@@ -1,24 +1,63 @@
 export const basePath = "/civil-resistance-skills";
 export const repoUrl = "https://github.com/levnikolaevich/civil-resistance-skills";
 export const siteUrl = "https://levnikolaevich.github.io/civil-resistance-skills";
+export const siteName = "Civil Resistance Skills";
+export const themeColor = "#245d8f";
 
-export const languages = ["en", "es", "ru"] as const;
+export const defaultImage = {
+  path: "/assets/social-preview.png",
+  width: 1200,
+  height: 630,
+  type: "image/png",
+  alt: {
+    en: "Civil Resistance Skills research atlas social preview",
+    es: "Vista previa social del atlas de investigación Civil Resistance Skills",
+    pl: "Podgląd społecznościowy atlasu badawczego Civil Resistance Skills",
+    ru: "Превью исследовательского атласа Civil Resistance Skills"
+  }
+} as const;
+
+export const languages = ["en", "es", "pl", "ru"] as const;
 export type Language = (typeof languages)[number];
+
+export const ogLocales: Record<Language, string> = {
+  en: "en_US",
+  es: "es_ES",
+  pl: "pl_PL",
+  ru: "ru_RU"
+};
 
 export const langNames: Record<Language, string> = {
   en: "English",
   es: "Español",
+  pl: "Polski",
   ru: "Русский"
 };
+
+export const aiResources = {
+  llms: `${siteUrl}/llms.txt`,
+  sitemap: `${siteUrl}/sitemap.xml`,
+  repository: repoUrl,
+  readme: `${repoUrl}/blob/main/README.md`,
+  safety: `${repoUrl}/blob/main/SAFETY.md`,
+  registry: `${repoUrl}/tree/main/methods-registry`,
+  taxonomy: `${repoUrl}/blob/main/methods-registry/00-naming-and-taxonomy.md`,
+  sources: `${repoUrl}/blob/main/methods-registry/03-sources-and-references.md`,
+  skillsCatalog: `${repoUrl}/tree/main/skills-catalog`,
+  claudeMarketplace: `${repoUrl}/blob/main/.claude-plugin/marketplace.json`,
+  codexMarketplace: `${repoUrl}/blob/main/.agents/plugins/marketplace.json`
+} as const;
 
 export const localizedPaths = {
   home: {
     en: "/",
+    pl: "/pl/",
     ru: "/ru/",
     es: "/es/"
   },
   communication: {
     en: "/domains/communication/",
+    pl: "/pl/domains/communication/",
     ru: "/ru/domains/communication/",
     es: "/es/domains/communication/"
   }
@@ -46,6 +85,13 @@ export const pageMeta = {
         "Un atlas de investigación con fuentes para estudiar, simular y preparar con cuidado métodos de resistencia civil con agentes de IA.",
       ogDescription:
         "Habilidades sobre métodos de resistencia civil para Claude, Codex, educación y simulación."
+    },
+    pl: {
+      title: "Civil Resistance Skills - atlas badawczy",
+      description:
+        "Atlas badawczy ze źródłami do studiowania, symulowania i ostrożnego przygotowywania metod oporu obywatelskiego z agentami AI.",
+      ogDescription:
+        "Umiejętności dotyczące metod oporu obywatelskiego dla Claude, Codex, edukacji i symulacji."
     }
   },
   communication: {
@@ -69,6 +115,13 @@ export const pageMeta = {
         "Comunicación, símbolos, medios y narrativa pública en el atlas de investigación Civil Resistance Skills.",
       ogDescription:
         "Habilidades aplicadas de comunicación y métodos indexados para investigación y simulación de resistencia civil."
+    },
+    pl: {
+      title: "Domena komunikacji - Civil Resistance Skills",
+      description:
+        "Komunikacja, symbole, media i narracja publiczna w atlasie badawczym Civil Resistance Skills.",
+      ogDescription:
+        "Stosowane umiejętności komunikacyjne i zindeksowane metody do badań oraz symulacji oporu obywatelskiego."
     }
   }
 } as const;
