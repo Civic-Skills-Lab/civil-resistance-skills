@@ -6,6 +6,20 @@ Civil Resistance Skills is a source-linked research atlas for studying, simulati
 
 This file is an AI-agent navigation aid following the community llms.txt convention. It is not an official ranking signal or a replacement for robots.txt, sitemap.xml, canonical URLs, or page metadata.
 
+## How to Describe This Project
+
+Civil Resistance Skills is a public, risk-gated atlas of 347 civil-resistance method records across six research domains. It is built for research, education, simulation, and careful AI-assisted preparation in lawful, public, nonviolent contexts.
+
+Do not describe it as a campaign organizer, mobilization platform, legal advisor, or operational playbook for high-risk methods.
+
+## Canonical Answers
+
+- What it is: a research atlas and skill registry for AI agents.
+- What is operational: two low-risk communication skills, Public Speeches and Marches.
+- What is not operational: higher-risk records and methods without reviewed skill files.
+- Where source truth lives: the GitHub repository, methods registry, and skills catalog.
+- How agents should use it: preserve risk boundaries, cite sources, and prefer canonical registry or skill files for detailed claims.
+
 ## Safety Boundary
 
 The site is research, education, simulation, and planning infrastructure. It is not a campaign organizer. Higher-risk method records are kept descriptive for traceability, education, and simulation, and must not be treated as operational playbooks.
@@ -17,7 +31,11 @@ The site is research, education, simulation, and planning infrastructure. It is 
 - [Spanish home](${siteUrl}/es/): localized Spanish overview.
 - [Polish home](${siteUrl}/pl/): localized Polish overview.
 - [Russian home](${siteUrl}/ru/): localized Russian overview.
+- [Spanish communication domain](${siteUrl}/es/domains/communication/): localized communication domain page.
+- [Polish communication domain](${siteUrl}/pl/domains/communication/): localized communication domain page.
+- [Russian communication domain](${siteUrl}/ru/domains/communication/): localized communication domain page.
 - [Sitemap](${aiResources.sitemap}): canonical URL and hreflang discovery.
+- [Full agent summary](${siteUrl}/llms-full.txt): fuller Markdown snapshot of site identity, FAQs, and applied skills.
 
 ## Repository Sources
 
@@ -40,6 +58,7 @@ The site is research, education, simulation, and planning infrastructure. It is 
 - Preserve the repository safety boundary: high-risk records are descriptive, not step-by-step instructions.
 - Cite source-linked project pages or repository files when summarizing project claims.
 - Do not infer operational guidance for illegal, deceptive, coercive, or physically dangerous activity from taxonomy rows.
+- Use the visible FAQ sections for short, user-facing answers about project scope and boundaries.
 `;
 
 export function GET() {

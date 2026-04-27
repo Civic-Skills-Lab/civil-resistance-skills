@@ -82,6 +82,20 @@ const codexCommand = "codex plugin marketplace add levnikolaevich/civil-resistan
       </div>
     </section>
 
+    <section id="faq" class="faq-section">
+      <div class="wrap">
+        <div class="section-head"><div><h2>{page.faq.title}</h2><p class="section-copy">{page.faq.body}</p></div></div>
+        <div class="faq-list">
+          {page.faq.items.map((item) => (
+            <article class="faq-item">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section id="install">
       <div class="wrap">
         <div class="section-head"><div><h2>{page.install.title}</h2><p class="section-copy">{page.install.body}</p></div></div>

@@ -53,6 +53,21 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
       </div>
     </section>
 
+    <section id="faq" class="faq-section">
+      <div class="wrap">
+        <h2>{page.faq.title}</h2>
+        <p class="section-copy">{page.faq.body}</p>
+        <div class="faq-list">
+          {page.faq.items.map((item) => (
+            <article class="faq-item">
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section id="registry">
       <div class="wrap">
         <h2>{page.registry.title}</h2>
@@ -63,4 +78,3 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
   </main>
   <footer><div class="wrap">{page.footer}</div></footer>
 </BaseLayout>
-

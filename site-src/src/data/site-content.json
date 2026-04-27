@@ -63,9 +63,9 @@
       },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "A research atlas for civil-resistance methods and agent skills.",
-        "lead": "Civil Resistance Skills turns public method taxonomies into a source-linked atlas for study, simulation, and careful preparation with AI agents.",
-        "boundary": "This is research, education, simulation, and planning infrastructure. It is not a campaign organizer. Higher-risk methods remain descriptive records for analysis rather than operational guidance.",
+        "title": "A research atlas for civil-resistance methods and AI-agent workflows.",
+        "lead": "Civil Resistance Skills turns public classifications of civil-resistance methods into a source-linked atlas for study, simulation, and careful AI-assisted preparation.",
+        "boundary": "This is research, education, simulation, and planning infrastructure for lawful, public, nonviolent contexts. It is not a campaign organizer. Higher-risk methods remain descriptive records for analysis rather than operational guidance.",
         "actions": {
           "browse": "Browse the atlas",
           "operational": "View applied skills",
@@ -80,7 +80,7 @@
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 methods / 6 domains / risk-reviewed AI skills",
+        "kicker": "Civic Research Atlas / 347 methods / 6 domains / risk-reviewed AI-agent skills",
         "domainWord": "Domain",
         "recordWord": "records",
         "notes": [
@@ -98,11 +98,11 @@
       },
       "why": {
         "title": "Why this exists",
-        "body": "Civil-resistance methods are often published as prose taxonomies. AI agents need a clearer structure: source provenance, risk boundaries, availability, references, and completion criteria.",
+        "body": "Civil-resistance methods are often published as narrative catalogs. AI agents need a clearer structure: source basis, risk boundaries, availability, references, and completion criteria.",
         "cards": [
           {
             "title": "Source-linked registry",
-            "body": "The atlas crosswalks the Beer/NVI/ICNC tactic universe with Sharp's method taxonomy. Primary sources identify methods; secondary training sources inform low-risk preparation patterns."
+            "body": "The atlas maps Beer/NVI/ICNC method records against Sharp's taxonomy. Primary sources identify methods; secondary training sources inform careful preparation patterns for lower-risk skills."
           },
           {
             "title": "Risk-reviewed transformation",
@@ -110,11 +110,11 @@
           },
           {
             "title": "Audience",
-            "body": "For researchers, civic educators, agent builders, simulation designers, movement-support analysts, and careful practitioners who need structured learning rather than slogans."
+            "body": "For researchers, civic-education practitioners, AI-agent builders, simulation designers, movement-support analysts, and careful practitioners who need structured learning rather than slogans."
           },
           {
             "title": "Simulation path",
-            "body": "Skills are shaped as structured artifacts: phases, outputs, checks, risk flags, and readiness judgments. That makes them useful for future sandbox and game agents."
+            "body": "Skills are shaped as structured working materials: phases, outputs, checks, risk flags, and readiness judgments. That makes them useful for future simulation environments and game agents."
           }
         ]
       },
@@ -146,6 +146,40 @@
       "footer": {
         "text": "Civil Resistance Skills - research and simulation infrastructure.",
         "sources": "Sources"
+      },
+      "faq": {
+        "title": "Project FAQ",
+        "body": "Short answers for readers and AI agents that need the project boundary before using the atlas.",
+        "items": [
+          {
+            "question": "What is Civil Resistance Skills?",
+            "answer": "Civil Resistance Skills is a public research atlas that turns source-linked civil-resistance method records into structured material for study, simulation, and careful AI-assisted preparation."
+          },
+          {
+            "question": "Is this a campaign organizer?",
+            "answer": "No. The site does not organize campaigns or issue calls to action. It documents methods, marks risk boundaries, and keeps higher-risk records descriptive for research, education, and simulation."
+          },
+          {
+            "question": "Who is the site for?",
+            "answer": "It is for researchers, civic-education practitioners, AI-agent builders, simulation designers, analysts who study movements, and careful practitioners who need structured learning rather than slogans."
+          },
+          {
+            "question": "What is an applied skill?",
+            "answer": "An applied skill is a low-risk method that has been reviewed enough to include planning support, source references, working artifacts, risk review, and completion criteria."
+          },
+          {
+            "question": "Why are some methods analysis-only?",
+            "answer": "Higher-risk methods remain analysis-only when turning them into instructions could create legal, safety, coercion, deception, or physical-risk concerns."
+          },
+          {
+            "question": "How should simulation or game agents use this material?",
+            "answer": "Agents should treat skills as bounded workflows with phases, artifacts, guards, and readiness judgments. They should preserve safety limits and avoid inventing operational guidance from descriptive registry rows."
+          },
+          {
+            "question": "Where is the canonical source?",
+            "answer": "The repository is canonical. The website is a readable presentation layer; detailed method records and skill instructions live in the methods registry and skills catalog."
+          }
+        ]
       }
     },
     "communication": {
@@ -194,7 +228,33 @@
           "high": "High"
         }
       },
-      "footer": "Civil Resistance Skills - communication domain atlas."
+      "footer": "Civil Resistance Skills - communication domain atlas.",
+      "faq": {
+        "title": "Operational Skills FAQ",
+        "body": "How agents should interpret the two applied communication skills now available in the atlas.",
+        "items": [
+          {
+            "question": "What can Public Speeches produce?",
+            "answer": "Public Speeches can produce a preparation package: research notes, a speech brief, outline choice, risk review, rehearsal or delivery notes, and in application mode a full speech package with short version and quote-safe line."
+          },
+          {
+            "question": "Why can Public Speeches have application mode?",
+            "answer": "A speech is a communication artifact an agent can help complete directly. The skill still requires source labeling, risk review, attribution care, and a readiness judgment."
+          },
+          {
+            "question": "Why is Marches planning-only?",
+            "answer": "A march is a real-world assembly. An agent can prepare a planning package, surface legal and safety questions, and produce a readiness verdict, but it cannot execute the event."
+          },
+          {
+            "question": "What is a readiness judgment?",
+            "answer": "A readiness judgment summarizes whether the plan is ready, ready with assumptions, or blocked, and lists unresolved assumptions, skipped phases, and risk flags."
+          },
+          {
+            "question": "Are these skills legal advice or campaign commands?",
+            "answer": "No. They are research and planning materials for lawful, public, nonviolent contexts. Users remain responsible for local law, safety decisions, and real-world judgment."
+          }
+        ]
+      }
     }
   },
   "es": {
@@ -261,9 +321,9 @@
       },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "Un atlas de investigación para métodos de resistencia civil y habilidades para agentes.",
-        "lead": "Civil Resistance Skills convierte taxonomías públicas de métodos en un registro con fuentes: para estudiar, simular y preparar con cuidado con agentes de IA.",
-        "boundary": "Esta es infraestructura para investigación, educación, simulación y planificación. No organiza campañas. Los métodos de alto riesgo permanecen como registros descriptivos para análisis, no como guía práctica.",
+        "title": "Un atlas de investigación sobre métodos de resistencia civil y flujos de trabajo para agentes de IA.",
+        "lead": "Civil Resistance Skills reúne clasificaciones públicas de métodos de resistencia civil en un atlas con fuentes: para estudiar, simular y preparar con cuidado, con apoyo de agentes de IA.",
+        "boundary": "Es infraestructura para investigación, educación, simulación y planificación en contextos legales, públicos y no violentos. No organiza campañas. Los métodos de alto riesgo se mantienen como registros descriptivos para análisis, no como guías prácticas.",
         "actions": {
           "browse": "Explorar el atlas",
           "operational": "Ver habilidades aplicadas",
@@ -278,7 +338,7 @@
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 métodos / 6 secciones / habilidades de IA con revisión de riesgo",
+        "kicker": "Civic Research Atlas / 347 métodos / 6 secciones / habilidades para agentes de IA con revisión de riesgos",
         "domainWord": "Sección",
         "recordWord": "registros",
         "notes": [
@@ -296,29 +356,29 @@
       },
       "why": {
         "title": "Por qué existe",
-        "body": "Los métodos de resistencia civil suelen publicarse como taxonomías narrativas. Los agentes de IA necesitan una estructura más explícita: procedencia, límites de riesgo, estado de aplicación, fuentes y criterios de finalización.",
+        "body": "Los métodos de resistencia civil suelen publicarse como catálogos narrativos. Para trabajar con agentes de IA hace falta una estructura más clara: base documental, límites de riesgo, estado de uso, fuentes y criterios de cierre.",
         "cards": [
           {
             "title": "Registro con fuentes",
-            "body": "El atlas cruza el universo táctico Beer/NVI/ICNC con la taxonomía de métodos de Sharp. Las fuentes primarias identifican el método; los materiales formativos secundarios ayudan a describir prácticas prudentes para métodos de bajo riesgo."
+            "body": "El atlas relaciona los registros de Beer/NVI/ICNC con la taxonomía de métodos de Sharp. Las fuentes primarias identifican cada método; los materiales formativos secundarios ayudan a describir prácticas prudentes para habilidades de menor riesgo."
           },
           {
-            "title": "Paso por revisión de riesgo",
+            "title": "Revisión de riesgos",
             "body": "Los métodos de bajo riesgo pueden convertirse en habilidades aplicadas con planificación, investigación, revisión y evaluación posterior. Los métodos de alto riesgo permanecen descriptivos para educación, análisis y simulación hasta una revisión específica."
           },
           {
             "title": "Para quién",
-            "body": "Para investigadores, educadores cívicos, constructores de agentes, diseñadores de simulación, analistas de apoyo a movimientos y practicantes que necesitan aprendizaje estructurado, no consignas."
+            "body": "Para investigadores, docentes de educación cívica, personas que desarrollan agentes de IA, diseñadores de simulación, analistas que apoyan el estudio de movimientos sociales y practicantes que necesitan aprendizaje estructurado, no consignas."
           },
           {
             "title": "Camino hacia la simulación",
-            "body": "Las habilidades se diseñan como artefactos estructurados: fases, resultados, controles, señales de riesgo y evaluación de preparación. Esa forma las hace útiles para futuros entornos sandbox y agentes de juego."
+            "body": "Las habilidades se diseñan como materiales de trabajo estructurados: fases, resultados, controles, señales de riesgo y evaluación de preparación. Ese formato las hace útiles para futuros entornos de prueba y agentes de juego."
           }
         ]
       },
       "install": {
         "title": "Opciones de instalación",
-        "body": "Las habilidades canónicas viven en este repositorio. Claude Code y Codex usan superficies de plugin separadas para que cada agente descubra las habilidades en su formato nativo.",
+        "body": "Las habilidades canónicas están en este repositorio. Claude Code y Codex usan capas de plugin separadas para que cada agente las encuentre en su propio formato.",
         "claudeBody": "Añade el marketplace y después instala el plugin de comunicación.",
         "codexBody": "Añade el marketplace de Codex y luego elige plugins desde la interfaz nativa."
       },
@@ -344,6 +404,40 @@
       "footer": {
         "text": "Civil Resistance Skills - infraestructura de investigación y simulación.",
         "sources": "Fuentes"
+      },
+      "faq": {
+        "title": "Preguntas del proyecto",
+        "body": "Respuestas breves para lectores y agentes de IA que necesitan entender los límites del atlas antes de usarlo.",
+        "items": [
+          {
+            "question": "¿Qué es Civil Resistance Skills?",
+            "answer": "Civil Resistance Skills es un atlas público de investigación que convierte registros de métodos de resistencia civil, vinculados a fuentes, en material estructurado para estudio, simulación y preparación cuidadosa con apoyo de IA."
+          },
+          {
+            "question": "¿Organiza campañas?",
+            "answer": "No. El sitio no organiza campañas ni emite llamados a la acción. Documenta métodos, señala límites de riesgo y mantiene los registros de mayor riesgo como material descriptivo para investigación, educación y simulación."
+          },
+          {
+            "question": "¿Para quién es el sitio?",
+            "answer": "Es para investigadores, docentes de educación cívica, personas que desarrollan agentes de IA, diseñadores de simulación, analistas que estudian movimientos sociales y practicantes que necesitan aprendizaje estructurado, no consignas."
+          },
+          {
+            "question": "¿Qué es una habilidad aplicada?",
+            "answer": "Una habilidad aplicada es un método de bajo riesgo que ha sido revisado lo suficiente para incluir apoyo de planificación, fuentes, materiales de trabajo, revisión de riesgos y criterios de cierre."
+          },
+          {
+            "question": "¿Por qué algunos métodos son solo para análisis?",
+            "answer": "Los métodos de mayor riesgo quedan solo para análisis cuando convertirlos en instrucciones podría crear problemas legales, de seguridad, coerción, engaño o riesgo físico."
+          },
+          {
+            "question": "¿Cómo deberían usar esto los agentes de simulación o juego?",
+            "answer": "Los agentes deben tratar las habilidades como flujos de trabajo acotados, con fases, materiales, controles y evaluación de preparación. Deben respetar los límites de seguridad y no inventar guía práctica a partir de filas descriptivas del registro."
+          },
+          {
+            "question": "¿Dónde está la fuente canónica?",
+            "answer": "El repositorio es la fuente canónica. El sitio es una capa de presentación; los registros detallados y las instrucciones de habilidades viven en el registro de métodos y el catálogo de habilidades."
+          }
+        ]
       }
     },
     "communication": {
@@ -363,19 +457,19 @@
       },
       "operational": {
         "title": "Habilidades aplicadas",
-        "body": "Estas son las habilidades de ejemplo actuales. Incluyen referencias con fuentes, fases de trabajo, artefactos, revisión de riesgos y criterios de preparación.",
+        "body": "Estas son las habilidades de referencia actuales. Incluyen fuentes, fases de trabajo, materiales producidos, revisión de riesgos y criterios de preparación.",
         "canonical": "Habilidad canónica",
         "references": "Referencias",
         "skills": [
           {
             "id": "4104-public-speeches",
             "title": "Public Speeches",
-            "body": "Ayuda a preparar el método de discurso público. El modo de planificación produce un informe de investigación; el modo de aplicación puede preparar un paquete completo de discurso."
+            "body": "Ayuda a preparar un discurso público como método de comunicación. El modo de planificación produce un informe breve respaldado por investigación; el modo de aplicación puede llegar a un paquete completo de discurso."
           },
           {
             "id": "4004-marches",
             "title": "Marches",
-            "body": "Habilidad solo de planificación para una marcha: ruta, contexto legal, roles, seguridad, accesibilidad, comunicaciones, criterios de evaluación y juicio de preparación."
+            "body": "Habilidad solo de planificación para una marcha: ruta, contexto legal, roles, seguridad, accesibilidad, comunicaciones, criterios de evaluación posterior y evaluación de preparación."
           }
         ]
       },
@@ -392,7 +486,33 @@
           "high": "Alto"
         }
       },
-      "footer": "Civil Resistance Skills - atlas de la sección de comunicación."
+      "footer": "Civil Resistance Skills - atlas de la sección de comunicación.",
+      "faq": {
+        "title": "Preguntas sobre habilidades aplicadas",
+        "body": "Cómo deberían interpretar los agentes las dos habilidades de comunicación que ya están disponibles en el atlas.",
+        "items": [
+          {
+            "question": "¿Qué puede producir Public Speeches?",
+            "answer": "Public Speeches puede producir un paquete de preparación: notas de investigación, informe breve de discurso, elección de estructura, revisión de riesgos, notas de ensayo o entrega y, en modo de aplicación, un paquete completo con versión corta y frase segura para citas."
+          },
+          {
+            "question": "¿Por qué Public Speeches puede tener modo de aplicación?",
+            "answer": "Un discurso es un artefacto de comunicación que un agente puede ayudar a completar directamente. La habilidad sigue exigiendo etiquetar fuentes, revisar riesgos, cuidar la atribución y emitir una evaluación de preparación."
+          },
+          {
+            "question": "¿Por qué Marches es solo de planificación?",
+            "answer": "Una marcha es una reunión en el mundo real. Un agente puede preparar un paquete de planificación, señalar preguntas legales y de seguridad, y producir una evaluación de preparación, pero no puede ejecutar el evento."
+          },
+          {
+            "question": "¿Qué es una evaluación de preparación?",
+            "answer": "Es un resumen que indica si el plan está listo, listo con supuestos o bloqueado, e incluye supuestos pendientes, fases omitidas y señales de riesgo."
+          },
+          {
+            "question": "¿Estas habilidades son asesoría legal o instrucciones de campaña?",
+            "answer": "No. Son materiales de investigación y planificación para contextos legales, públicos y no violentos. Las personas usuarias siguen siendo responsables de la ley local, la seguridad y el juicio en el mundo real."
+          }
+        ]
+      }
     }
   },
   "pl": {
@@ -403,12 +523,12 @@
       "copied": "Skopiowano",
       "active": "Dostępne",
       "comingSoon": "W przygotowaniu",
-      "noOperational": "Nie ma jeszcze umiejętności stosowanych",
+      "noOperational": "Nie ma jeszcze umiejętności praktycznych",
       "openDomain": "Otwórz sekcję",
       "indexedMethods": "zindeksowanych metod",
-      "highRiskRecords": "rekordów wysokiego ryzyka",
+      "highRiskRecords": "wpisów wysokiego ryzyka",
       "status": {
-        "operational": "Stosowana",
+        "operational": "Praktyczna",
         "coming_soon": "W przygotowaniu"
       },
       "risk": {
@@ -438,7 +558,7 @@
         },
         "intv": {
           "label": "Interwencja",
-          "description": "Rekordy bezpośredniej interwencji, w tym metody wymagające ściślejszego przeglądu."
+          "description": "Wpisy o bezpośredniej interwencji, w tym metody wymagające ściślejszej oceny."
         }
       },
       "table": {
@@ -459,81 +579,81 @@
       },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "Atlas badawczy metod oporu obywatelskiego i umiejętności dla agentów.",
-        "lead": "Civil Resistance Skills przekształca publiczne taksonomie metod w rejestr ze źródłami: do badań, symulacji i ostrożnego przygotowania z agentami AI.",
-        "boundary": "To infrastruktura do badań, edukacji, symulacji i planowania. Nie organizuje kampanii. Metody wysokiego ryzyka pozostają opisowymi rekordami do analizy, a nie praktycznymi instrukcjami.",
+        "title": "Atlas badawczy metod obywatelskiego oporu bez przemocy i materiałów dla agentów AI.",
+        "lead": "Civil Resistance Skills porządkuje publiczne klasyfikacje metod w atlas ze źródłami: do badań, symulacji i ostrożnego przygotowania z udziałem agentów sztucznej inteligencji.",
+        "boundary": "To infrastruktura do badań, edukacji, symulacji i planowania w legalnych, publicznych i bezprzemocowych kontekstach. Nie organizuje kampanii. Metody wysokiego ryzyka pozostają opisowymi wpisami do analizy, a nie praktycznymi instrukcjami.",
         "actions": {
           "browse": "Otwórz atlas",
-          "operational": "Zobacz umiejętności stosowane",
+          "operational": "Zobacz umiejętności praktyczne",
           "repo": "Repozytorium",
           "safety": "Polityka bezpieczeństwa"
         },
         "stats": [
           "zindeksowanych metod",
           "sekcji badawczych",
-          "umiejętności stosowane niskiego ryzyka",
-          "rekordy wysokiego ryzyka pozostają opisowe"
+          "umiejętności praktyczne niskiego ryzyka",
+          "wpisy wysokiego ryzyka pozostają opisowe"
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 metod / 6 sekcji / umiejętności AI z przeglądem ryzyka",
+        "kicker": "Civic Research Atlas / 347 metod / 6 sekcji / umiejętności dla agentów AI z oceną ryzyka",
         "domainWord": "Sekcja",
-        "recordWord": "rekordów",
+        "recordWord": "wpisów",
         "notes": [
           {
             "kind": "operational",
-            "title": "Przykłady stosowane: 4104-public-speeches / 4004-marches",
-            "body": "Każda opublikowana umiejętność zawiera fazy pracy, artefakty, kryteria przeglądu i ocenę gotowości."
+            "title": "Przykłady praktyczne: 4104-public-speeches / 4004-marches",
+            "body": "Każda opublikowana umiejętność zawiera fazy pracy, materiały robocze, kryteria oceny i ocenę gotowości."
           },
           {
             "kind": "risk",
-            "title": "Rekordy wysokiego ryzyka: 54 dla edukacji i symulacji",
-            "body": "Praktyczne opracowanie zależy od źródeł, prawa, bezpieczeństwa i wyraźnego przeglądu."
+            "title": "Wpisy wysokiego ryzyka: 54 dla edukacji i symulacji",
+            "body": "Praktyczne opracowanie zależy od źródeł, prawa, bezpieczeństwa i wyraźnej oceny."
           }
         ]
       },
       "why": {
         "title": "Po co to istnieje",
-        "body": "Metody oporu obywatelskiego często są publikowane jako opisowe taksonomie. Agenci AI potrzebują jaśniejszej struktury: pochodzenia rekordu, granic ryzyka, statusu zastosowania, źródeł i kryteriów zakończenia.",
+        "body": "Metody obywatelskiego oporu bez przemocy często są publikowane jako opisowe katalogi. Agenci AI potrzebują jaśniejszej struktury: podstawy źródłowej, granic ryzyka, statusu użycia, źródeł i kryteriów zakończenia.",
         "cards": [
           {
             "title": "Rejestr ze źródłami",
-            "body": "Atlas zestawia taktyczny zbiór Beer/NVI/ICNC z taksonomią metod Sharp. Źródła pierwotne identyfikują metodę; wtórne materiały szkoleniowe pomagają opisać ostrożne praktyki dla metod niskiego ryzyka."
+            "body": "Atlas zestawia wpisy Beer/NVI/ICNC z taksonomią metod Sharp. Źródła pierwotne identyfikują metodę; wtórne materiały szkoleniowe pomagają opisać ostrożne praktyki dla umiejętności niższego ryzyka."
           },
           {
-            "title": "Przegląd ryzyka",
-            "body": "Metody niskiego ryzyka mogą stać się umiejętnościami stosowanymi z planowaniem, badaniem, przeglądem i omówieniem wyników. Metody wysokiego ryzyka pozostają opisowe do edukacji, analizy i symulacji do czasu osobnego przeglądu."
+            "title": "Ocena ryzyka",
+            "body": "Metody niskiego ryzyka mogą stać się umiejętnościami praktycznymi z planowaniem, badaniem, oceną i omówieniem wyników. Metody wysokiego ryzyka pozostają opisowe do edukacji, analizy i symulacji do czasu osobnej oceny."
           },
           {
             "title": "Dla kogo",
-            "body": "Dla badaczy, edukatorów obywatelskich, twórców agentów, projektantów symulacji, analityków wspierających ruchy społeczne i praktyków, którzy potrzebują struktury, a nie haseł."
+            "body": "Dla badaczy, osób prowadzących edukację obywatelską, twórców agentów AI, projektantów symulacji, analityków badających ruchy społeczne i praktyków, którzy potrzebują struktury, a nie haseł."
           },
           {
             "title": "Droga do symulacji",
-            "body": "Umiejętności są zapisywane jako uporządkowane artefakty: fazy, rezultaty, kontrole, sygnały ryzyka i ocena gotowości. Taka forma pasuje do przyszłych środowisk sandbox i agentów w grach."
+            "body": "Umiejętności są zapisywane jako uporządkowane materiały robocze: fazy, rezultaty, kontrole, sygnały ryzyka i ocena gotowości. Taka forma pasuje do przyszłych środowisk testowych i agentów w grach."
           }
         ]
       },
       "install": {
         "title": "Opcje instalacji",
-        "body": "Kanoniczne umiejętności znajdują się w tym repozytorium. Claude Code i Codex używają osobnych powierzchni pluginów, aby każdy agent mógł odkrywać umiejętności w swoim natywnym formacie.",
+        "body": "Kanoniczne umiejętności znajdują się w tym repozytorium. Claude Code i Codex używają osobnych warstw pluginów, aby każdy agent mógł znaleźć je w swoim formacie.",
         "claudeBody": "Dodaj marketplace, a potem zainstaluj plugin komunikacyjny.",
         "codexBody": "Dodaj marketplace dla Codex i wybierz pluginy w natywnym interfejsie."
       },
       "domainsSection": {
         "title": "Sekcje",
-        "body": "Sześć sekcji porządkuje 347 metod. Komunikacja jest pierwszą aktywną sekcją; pozostałe są już zindeksowane i pozostają w przygotowaniu, dopóki nie powstaną dla nich umiejętności stosowane."
+        "body": "Sześć sekcji porządkuje 347 metod. Komunikacja jest pierwszą aktywną sekcją; pozostałe są już zindeksowane i pozostają w przygotowaniu, dopóki nie powstaną dla nich umiejętności praktyczne."
       },
       "catalog": {
         "title": "Atlas metod",
-        "body": "Wdrożone wiersze prowadzą do opublikowanych plików umiejętności. Wiersze „w przygotowaniu” są już w rejestrze, ale nie stały się jeszcze umiejętnościami. Rekordy wysokiego ryzyka pozostają tylko do analizy.",
+        "body": "Gotowe wiersze prowadzą do opublikowanych plików umiejętności. Wiersze „w przygotowaniu” są już w rejestrze, ale nie stały się jeszcze umiejętnościami. Wpisy wysokiego ryzyka pozostają tylko do analizy.",
         "detail": "Sekcja komunikacji",
         "filters": {
           "search": "Szukaj metody, ID lub podgrupy...",
           "allDomains": "Wszystkie sekcje",
           "allStatuses": "Wszystkie statusy",
           "allRisks": "Wszystkie poziomy ryzyka",
-          "operational": "Stosowana",
+          "operational": "Praktyczna",
           "comingSoon": "W przygotowaniu",
           "review": "Przegląd",
           "high": "Wysoki"
@@ -542,33 +662,67 @@
       "footer": {
         "text": "Civil Resistance Skills - infrastruktura badań i symulacji.",
         "sources": "Źródła"
+      },
+      "faq": {
+        "title": "Pytania o projekt",
+        "body": "Krótkie odpowiedzi dla czytelników i agentów AI, którzy przed użyciem atlasu muszą zrozumieć jego granice.",
+        "items": [
+          {
+            "question": "Czym jest Civil Resistance Skills?",
+            "answer": "Civil Resistance Skills to publiczny atlas badawczy, który przekształca wpisy o metodach obywatelskiego oporu bez przemocy, powiązane ze źródłami, w uporządkowane materiały do badań, symulacji i ostrożnego przygotowania z pomocą AI."
+          },
+          {
+            "question": "Czy to narzędzie do organizowania kampanii?",
+            "answer": "Nie. Strona nie organizuje kampanii i nie publikuje wezwań do działania. Dokumentuje metody, pokazuje granice ryzyka i pozostawia wpisy wyższego ryzyka jako opisowy materiał do badań, edukacji i symulacji."
+          },
+          {
+            "question": "Dla kogo jest ta strona?",
+            "answer": "Dla badaczy, osób prowadzących edukację obywatelską, twórców agentów AI, projektantów symulacji, analityków badających ruchy społeczne i praktyków, którzy potrzebują struktury, a nie haseł."
+          },
+          {
+            "question": "Czym jest umiejętność praktyczna?",
+            "answer": "Umiejętność praktyczna to metoda niskiego ryzyka, która została oceniona na tyle, aby zawierać wsparcie planowania, źródła, materiały robocze, ocenę ryzyka i kryteria zakończenia."
+          },
+          {
+            "question": "Dlaczego część metod pozostaje tylko do analizy?",
+            "answer": "Metody wyższego ryzyka pozostają tylko do analizy, gdy zamiana ich w instrukcje mogłaby tworzyć ryzyka prawne, bezpieczeństwa, przymusu, wprowadzania w błąd lub zagrożenia fizycznego."
+          },
+          {
+            "question": "Jak powinni używać tego agenci symulacyjni lub w grach?",
+            "answer": "Agenci powinni traktować umiejętności jako ograniczone przepływy pracy z fazami, materiałami, kontrolami i oceną gotowości. Powinni zachować granice bezpieczeństwa i nie tworzyć praktycznych wskazówek z opisowych wierszy rejestru."
+          },
+          {
+            "question": "Gdzie jest źródło kanoniczne?",
+            "answer": "Źródłem kanonicznym jest repozytorium. Strona jest warstwą prezentacyjną; szczegółowe wpisy metod i instrukcje umiejętności znajdują się w rejestrze metod i katalogu umiejętności."
+          }
+        ]
       }
     },
     "communication": {
       "nav": {
-        "operational": "Umiejętności stosowane",
+        "operational": "Umiejętności praktyczne",
         "registry": "Rejestr"
       },
       "back": "Powrót do atlasu",
       "hero": {
         "title": "Komunikacja, symbole, media i narracja publiczna.",
-        "lead": "To pierwsza aktywna sekcja. Jej umiejętności stosowane skupiają się na niskoryzykownych metodach komunikacji, które można przygotować, sprawdzić, zasymulować i omówić bez zamieniania atlasu w system zarządzania kampanią.",
+        "lead": "To pierwsza aktywna sekcja. Jej umiejętności praktyczne skupiają się na niskoryzykownych metodach komunikacji, które można przygotować, sprawdzić, zasymulować i omówić bez zamieniania atlasu w narzędzie prowadzenia kampanii.",
         "badges": [
-          "2 umiejętności stosowane",
+          "2 umiejętności praktyczne",
           "133 metody w rejestrze",
           "wiersze wysokiego ryzyka pozostają do analizy"
         ]
       },
       "operational": {
-        "title": "Umiejętności stosowane",
-        "body": "To obecne umiejętności wzorcowe. Zawierają źródła, fazy pracy, artefakty, przegląd ryzyka i kryteria gotowości.",
+        "title": "Umiejętności praktyczne",
+        "body": "To obecne umiejętności wzorcowe. Zawierają źródła, fazy pracy, materiały robocze, ocenę ryzyka i kryteria gotowości.",
         "canonical": "Umiejętność kanoniczna",
         "references": "Materiały",
         "skills": [
           {
             "id": "4104-public-speeches",
             "title": "Public Speeches",
-            "body": "Pomaga przygotować metodę przemówienia publicznego. Planning Mode tworzy badawczy speech brief; Application Mode może doprowadzić pracę do pełnego pakietu przemówienia."
+            "body": "Pomaga przygotować przemówienie publiczne jako metodę komunikacji. Tryb planowania tworzy krótki materiał badawczy; tryb zastosowania może doprowadzić pracę do pełnego pakietu przemówienia."
           },
           {
             "id": "4004-marches",
@@ -584,13 +738,39 @@
           "search": "Szukaj metod komunikacyjnych...",
           "allStatuses": "Wszystkie statusy",
           "allRisks": "Wszystkie poziomy ryzyka",
-          "operational": "Stosowana",
+          "operational": "Praktyczna",
           "comingSoon": "W przygotowaniu",
           "review": "Przegląd",
           "high": "Wysoki"
         }
       },
-      "footer": "Civil Resistance Skills - atlas sekcji komunikacji."
+      "footer": "Civil Resistance Skills - atlas sekcji komunikacji.",
+      "faq": {
+        "title": "Pytania o umiejętności praktyczne",
+        "body": "Jak agenci powinni rozumieć dwie umiejętności komunikacyjne dostępne już w atlasie.",
+        "items": [
+          {
+            "question": "Co może przygotować Public Speeches?",
+            "answer": "Public Speeches może przygotować pakiet pracy: notatki badawcze, krótki materiał do przemówienia, wybór struktury, ocenę ryzyka, notatki do próby lub wygłoszenia oraz, w trybie zastosowania, pełny pakiet przemówienia z krótką wersją i zdaniem bezpiecznym do cytowania."
+          },
+          {
+            "question": "Dlaczego Public Speeches ma tryb zastosowania?",
+            "answer": "Przemówienie jest artefaktem komunikacyjnym, który agent może pomóc bezpośrednio ukończyć. Umiejętność nadal wymaga oznaczania źródeł, oceny ryzyka, ostrożności w atrybucji i oceny gotowości."
+          },
+          {
+            "question": "Dlaczego Marches służy tylko do planowania?",
+            "answer": "Marsz jest zgromadzeniem w świecie rzeczywistym. Agent może przygotować pakiet planowania, wskazać pytania prawne i bezpieczeństwa oraz przygotować ocenę gotowości, ale nie może przeprowadzić wydarzenia."
+          },
+          {
+            "question": "Czym jest ocena gotowości?",
+            "answer": "To podsumowanie, czy plan jest gotowy, gotowy z założeniami albo zablokowany, wraz z nierozstrzygniętymi założeniami, pominiętymi fazami i sygnałami ryzyka."
+          },
+          {
+            "question": "Czy te umiejętności są poradą prawną albo poleceniami kampanii?",
+            "answer": "Nie. To materiały badawcze i planistyczne dla legalnych, publicznych i bezprzemocowych kontekstów. Użytkownicy odpowiadają za lokalne prawo, decyzje bezpieczeństwa i osąd w świecie rzeczywistym."
+          }
+        ]
+      }
     }
   },
   "ru": {
@@ -657,9 +837,9 @@
       },
       "hero": {
         "eyebrow": "Civic Research Atlas",
-        "title": "Исследовательский атлас методов гражданского сопротивления и навыков для агентов.",
-        "lead": "Civil Resistance Skills превращает публичные таксономии методов в реестр с источниками: для изучения, симуляции и осторожной подготовки с AI-агентами.",
-        "boundary": "Это инфраструктура для исследования, образования, симуляции и планирования. Она не организует кампании. Методы повышенного риска остаются описательными записями для анализа, а не практическими инструкциями.",
+        "title": "Исследовательский атлас методов гражданского сопротивления и материалов для агентов ИИ.",
+        "lead": "Civil Resistance Skills собирает публичные классификации методов гражданского сопротивления в атлас с источниками: для изучения, симуляции и осторожной подготовки с участием агентов ИИ.",
+        "boundary": "Это инфраструктура для исследования, образования, симуляции и планирования в законном, публичном и ненасильственном контексте. Она не организует кампании. Методы повышенного риска остаются описательными записями для анализа, а не практическими инструкциями.",
         "actions": {
           "browse": "Открыть атлас",
           "operational": "Смотреть прикладные навыки",
@@ -674,7 +854,7 @@
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 методов / 6 разделов / AI-навыки с проверкой риска",
+        "kicker": "Civic Research Atlas / 347 методов / 6 разделов / навыки для агентов ИИ с проверкой риска",
         "domainWord": "Раздел",
         "recordWord": "записей",
         "notes": [
@@ -692,11 +872,11 @@
       },
       "why": {
         "title": "Зачем это нужно",
-        "body": "Методы гражданского сопротивления часто опубликованы как текстовые таксономии. AI-агентам нужна более ясная структура: происхождение записи, границы риска, статус применения, источники и критерии завершения.",
+        "body": "Методы гражданского сопротивления часто опубликованы как описательные каталоги. Агентам ИИ нужна более ясная структура: источник записи, границы риска, статус применения, ссылки и критерии завершения работы.",
         "cards": [
           {
             "title": "Реестр с источниками",
-            "body": "Атлас сопоставляет тактическую базу Beer/NVI/ICNC с таксономией методов Sharp. Первичные источники определяют сам метод; вторичные обучающие материалы помогают описывать осторожные практики для низкорисковых методов."
+            "body": "Атлас сопоставляет записи Beer/NVI/ICNC с таксономией методов Sharp. Первичные источники определяют сам метод; вторичные обучающие материалы помогают описывать осторожные практики для навыков с более низким риском."
           },
           {
             "title": "Проверка уровня риска",
@@ -704,19 +884,19 @@
           },
           {
             "title": "Для кого",
-            "body": "Для исследователей, civic educators, разработчиков агентов, авторов симуляций, аналитиков поддержки движений и практиков, которым нужен структурированный материал, а не лозунги."
+            "body": "Для исследователей, преподавателей гражданского образования, разработчиков агентов ИИ, авторов симуляций, аналитиков, изучающих общественные движения, и практиков, которым нужен структурированный материал, а не лозунги."
           },
           {
             "title": "Путь к симуляции",
-            "body": "Навыки оформляются как структурированные артефакты: фазы, результаты, проверки, сигналы риска и оценка готовности. Такая форма пригодна для будущих sandbox-сред и игровых агентов."
+            "body": "Навыки оформляются как структурированные рабочие материалы: фазы, результаты, проверки, сигналы риска и оценка готовности. Такая форма пригодна для будущих экспериментальных сред и игровых агентов."
           }
         ]
       },
       "install": {
         "title": "Варианты установки",
-        "body": "Канонические навыки живут в этом репозитории. Claude Code и Codex используют разные поверхности плагинов, чтобы каждый агент находил навыки в своём нативном формате.",
-        "claudeBody": "Добавьте marketplace, затем установите коммуникационный плагин.",
-        "codexBody": "Добавьте marketplace для Codex и выберите плагины через нативный интерфейс."
+        "body": "Канонические навыки находятся в этом репозитории. Claude Code и Codex используют отдельные слои плагинов, чтобы каждый агент находил навыки в своём формате.",
+        "claudeBody": "Добавьте маркетплейс, затем установите коммуникационный плагин.",
+        "codexBody": "Добавьте маркетплейс для Codex и выберите плагины через интерфейс."
       },
       "domainsSection": {
         "title": "Разделы",
@@ -740,6 +920,40 @@
       "footer": {
         "text": "Civil Resistance Skills - инфраструктура для исследования и симуляции.",
         "sources": "Источники"
+      },
+      "faq": {
+        "title": "Вопросы о проекте",
+        "body": "Короткие ответы для читателей и агентов ИИ, которым нужно понять границы атласа перед использованием.",
+        "items": [
+          {
+            "question": "Что такое Civil Resistance Skills?",
+            "answer": "Civil Resistance Skills — публичный исследовательский атлас, который превращает записи о методах гражданского сопротивления с привязкой к источникам в структурированные материалы для изучения, симуляции и осторожной подготовки с помощью ИИ."
+          },
+          {
+            "question": "Это инструмент для организации кампаний?",
+            "answer": "Нет. Сайт не организует кампании и не публикует призывы к действию. Он документирует методы, показывает границы риска и оставляет записи повышенного риска описательными материалами для исследования, образования и симуляции."
+          },
+          {
+            "question": "Для кого этот сайт?",
+            "answer": "Для исследователей, преподавателей гражданского образования, разработчиков агентов ИИ, авторов симуляций, аналитиков, изучающих общественные движения, и практиков, которым нужен структурированный материал, а не лозунги."
+          },
+          {
+            "question": "Что такое прикладной навык?",
+            "answer": "Прикладной навык — это метод низкого риска, который прошёл достаточную проверку, чтобы включать поддержку планирования, источники, рабочие материалы, проверку риска и критерии завершения."
+          },
+          {
+            "question": "Почему часть методов доступна только для анализа?",
+            "answer": "Методы повышенного риска остаются только для анализа, если превращение их в инструкции может создать юридические, физические или репутационные риски, а также риски принуждения или обмана."
+          },
+          {
+            "question": "Как использовать это в симуляциях или игровых агентах?",
+            "answer": "Агенты должны воспринимать навыки как ограниченные рабочие процессы с фазами, материалами, проверками и оценкой готовности. Они должны сохранять границы безопасности и не придумывать практические инструкции из описательных строк реестра."
+          },
+          {
+            "question": "Где находится канонический источник?",
+            "answer": "Канонический источник — репозиторий. Сайт является презентационным слоем; подробные записи методов и инструкции навыков находятся в реестре методов и каталоге навыков."
+          }
+        ]
       }
     },
     "communication": {
@@ -759,14 +973,14 @@
       },
       "operational": {
         "title": "Прикладные навыки",
-        "body": "Это текущие эталонные навыки. В них есть ссылки на источники, рабочие фазы, артефакты, проверка риска и критерии готовности.",
+        "body": "Это текущие эталонные навыки. В них есть ссылки на источники, рабочие фазы, рабочие материалы, проверка риска и критерии готовности.",
         "canonical": "Канонический навык",
         "references": "Материалы",
         "skills": [
           {
             "id": "4104-public-speeches",
             "title": "Public Speeches",
-            "body": "Помогает подготовить метод публичной речи. Planning Mode создаёт исследовательский speech brief; Application Mode может довести работу до полного пакета речи."
+            "body": "Помогает подготовить публичную речь как коммуникационный метод. Режим планирования создаёт краткий исследовательский бриф; режим применения может довести работу до полного пакета речи."
           },
           {
             "id": "4004-marches",
@@ -788,7 +1002,33 @@
           "high": "Повышенный"
         }
       },
-      "footer": "Civil Resistance Skills - атлас раздела коммуникации."
+      "footer": "Civil Resistance Skills - атлас раздела коммуникации.",
+      "faq": {
+        "title": "Вопросы о прикладных навыках",
+        "body": "Как агентам понимать два коммуникационных навыка, которые уже доступны в атласе.",
+        "items": [
+          {
+            "question": "Что может подготовить Public Speeches?",
+            "answer": "Public Speeches может подготовить пакет работы: исследовательские заметки, краткий бриф речи, выбор структуры, проверку риска, заметки для репетиции или подачи и, в режиме применения, полный пакет речи с короткой версией и фразой, безопасной для цитирования."
+          },
+          {
+            "question": "Почему у Public Speeches есть режим применения?",
+            "answer": "Речь — это коммуникационный материал, который агент может помочь довести до готового текста. Навык всё равно требует маркировать источники, проверять риски, аккуратно работать с атрибуцией и давать оценку готовности."
+          },
+          {
+            "question": "Почему Marches работает только для планирования?",
+            "answer": "Марш — это событие в реальном мире. Агент может подготовить план, подсветить правовые и безопасностные вопросы и дать оценку готовности, но не может провести само мероприятие."
+          },
+          {
+            "question": "Что такое оценка готовности?",
+            "answer": "Это итог: план готов, готов с допущениями или заблокирован. В нём перечисляются нерешённые допущения, пропущенные фазы и сигналы риска."
+          },
+          {
+            "question": "Это юридическая консультация или команды для кампании?",
+            "answer": "Нет. Это исследовательские и планировочные материалы для законного, публичного и ненасильственного контекста. Ответственность за местное право, безопасность и решения в реальном мире остаётся на пользователях."
+          }
+        ]
+      }
     }
   }
 }

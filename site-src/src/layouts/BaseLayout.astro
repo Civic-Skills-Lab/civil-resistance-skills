@@ -15,6 +15,8 @@ import {
   themeColor,
   type Language
 } from "../data/siteMeta";
+import content from "../data/site-content.json";
+import registry from "../data/registry.json";
 
 interface Props {
   lang: Language;
@@ -31,6 +33,60 @@ const alternateOgLocales = languages.filter((language) => language !== lang).map
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
 const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
 const languageStorageKey = "civil-resistance-skills:language";
+const localizedContent = content as Record<string, any>;
+const registryData = registry as any;
+const pageContent = localizedContent[lang][page];
+const domainLabels = localizedContent[lang].common.domains as Record<string, { label: string; description: string }>;
+const faqItems = (pageContent.faq?.items ?? []) as Array<{ question: string; answer: string }>;
+const faqGraph = faqItems.length
+  ? [
+      {
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        url: canonicalUrl,
+        inLanguage: lang,
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      }
+    ]
+  : [];
+const itemListGraph =
+  page === "home"
+    ? [
+        {
+          "@type": "ItemList",
+          "@id": `${canonicalUrl}#domains`,
+          name: "Civil Resistance Skills research domains",
+          numberOfItems: registryData.domains.length,
+          itemListElement: registryData.domains.map((domain: { key: string }, index: number) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: domainLabels[domain.key].label,
+            description: domainLabels[domain.key].description
+          }))
+        }
+      ]
+    : [
+        {
+          "@type": "ItemList",
+          "@id": `${canonicalUrl}#applied-skills`,
+          name: "Applied communication skills",
+          numberOfItems: pageContent.operational.skills.length,
+          itemListElement: pageContent.operational.skills.map((skill: { id: string; title: string; body: string }, index: number) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: skill.title,
+            url: `${repoUrl}/blob/main/skills-catalog/${skill.id}/SKILL.md`,
+            description: skill.body
+          }))
+        }
+      ];
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -83,7 +139,9 @@ const structuredData = {
       },
       inLanguage: languages,
       license: `${repoUrl}/blob/main/LICENSE`
-    }
+    },
+    ...faqGraph,
+    ...itemListGraph
   ]
 };
 ---

@@ -50,12 +50,45 @@ for (const locale of ["es", "pl", "ru"]) {
 
 for (const [sourceName, raw] of [[contentPath, rawContent], ...seoSurfacePaths.map((filePath) => [filePath, fs.readFileSync(filePath, "utf8")])]) {
   if (mojibakePattern.test(raw)) fail(`${sourceName} contains mojibake or replacement characters`);
-  if (corruptedQuestionPattern.test(raw)) fail(`${sourceName} contains likely question-mark encoding damage`);
+  if (sourceName === contentPath && corruptedQuestionPattern.test(raw)) {
+    fail(`${sourceName} contains likely question-mark encoding damage`);
+  }
 }
 
 const ruText = flattenStrings(content.ru).map((item) => item.value).join("\n");
 const esText = flattenStrings(content.es).map((item) => item.value).join("\n");
 const plText = flattenStrings(content.pl).map((item) => item.value).join("\n");
+const forbiddenPublicTerms = {
+  es: [
+    /\bPlanning Mode\b/i,
+    /\bApplication Mode\b/i,
+    /\bspeech brief\b/i,
+    /\bcivic educators\b/i,
+    /\bsandbox\b/i,
+    /constructores de agentes/i,
+    /Paso por revisión de riesgo/i,
+    /estado de aplicación/i
+  ],
+  pl: [
+    /\bPlanning Mode\b/i,
+    /\bApplication Mode\b/i,
+    /\bspeech brief\b/i,
+    /\bcivic educators\b/i,
+    /\bsandbox\b/i,
+    /rekord(?:y|ów|ami)?\b/i,
+    /umiejętnoś(?:ć|ci) stosowan/i
+  ],
+  ru: [
+    /\bPlanning Mode\b/i,
+    /\bApplication Mode\b/i,
+    /\bspeech brief\b/i,
+    /\bcivic educators\b/i,
+    /\bsandbox/i,
+    /AI-агент/i,
+    /AI-навы/i,
+    /нативн/i
+  ]
+};
 
 if (!/[А-Яа-яЁё]/.test(ruText)) fail("Russian content does not contain Cyrillic text");
 if (!/[áéíóúñÁÉÍÓÚÑ¿]/.test(esText)) fail("Spanish content does not contain expected accented characters");
@@ -63,8 +96,11 @@ if (!/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/.test(plText)) fail("Polish content
 
 for (const locale of ["es", "pl", "ru"]) {
   for (const { path, value } of flattenStrings(content[locale])) {
-    if (value.includes("?")) fail(`${locale} string contains '?': ${path}`);
+    if (/\?{2,}|[\p{L}]\?[\p{L}]/u.test(value)) fail(`${locale} string contains likely question-mark encoding damage: ${path}`);
     if (/\bagent skills\b/i.test(value)) fail(`${locale} string contains raw 'agent skills': ${path}`);
+    for (const pattern of forbiddenPublicTerms[locale]) {
+      if (pattern.test(value)) fail(`${locale} string contains raw or calqued public term '${pattern}': ${path}`);
+    }
   }
 }
 

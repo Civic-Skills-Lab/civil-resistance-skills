@@ -75,9 +75,9 @@ export const pageMeta = {
     ru: {
       title: "Civil Resistance Skills - исследовательский атлас",
       description:
-        "Исследовательский атлас для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с AI-агентами.",
+        "Исследовательский атлас для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с агентами ИИ.",
       ogDescription:
-        "Навыки по методам гражданского сопротивления для Claude, Codex, образования и симуляции."
+        "Материалы по методам гражданского сопротивления для Claude, Codex, образования и симуляции."
     },
     es: {
       title: "Civil Resistance Skills - atlas de investigación",
@@ -89,9 +89,9 @@ export const pageMeta = {
     pl: {
       title: "Civil Resistance Skills - atlas badawczy",
       description:
-        "Atlas badawczy ze źródłami do studiowania, symulowania i ostrożnego przygotowywania metod oporu obywatelskiego z agentami AI.",
+        "Atlas badawczy ze źródłami do studiowania, symulowania i ostrożnego przygotowywania metod obywatelskiego oporu bez przemocy z agentami AI.",
       ogDescription:
-        "Umiejętności dotyczące metod oporu obywatelskiego dla Claude, Codex, edukacji i symulacji."
+        "Materiały dotyczące metod obywatelskiego oporu bez przemocy dla Claude, Codex, edukacji i symulacji."
     }
   },
   communication: {
