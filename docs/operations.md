@@ -29,6 +29,8 @@ The public site is deployed from Astro source, not from committed build output.
 - GitHub Pages domain: `https://civic-skills-lab.org/`
 - GitHub Pages source: GitHub Actions
 - HTTPS: enforced in GitHub Pages settings
+- HTTPS certificate: approved for `civic-skills-lab.org` and `www.civic-skills-lab.org`
+- Certificate expiry observed through GitHub Pages API: `2026-07-27`
 
 The workflow exposes the GitHub repository variable `GA_MEASUREMENT_ID` to the Astro build as `PUBLIC_GA_MEASUREMENT_ID`.
 
@@ -36,10 +38,14 @@ Useful checks:
 
 ```powershell
 gh api repos/Civic-Skills-Lab/civil-resistance-skills/pages --jq '{html_url:.html_url, custom_domain:.cname, https_enforced:.https_enforced}'
+gh api repos/Civic-Skills-Lab/civil-resistance-skills/pages --jq '{cname:.cname, protected_domain_state:.protected_domain_state, pending_domain_unverified_at:.pending_domain_unverified_at, https_certificate:.https_certificate, https_enforced:.https_enforced}'
 gh run list --workflow pages.yml --repo Civic-Skills-Lab/civil-resistance-skills --limit 5
 npm run check
 npm run build
+npm run check:publication
 ```
+
+GitHub custom domain verification is a separate account/organization security control. GitHub recommends verifying the domain to reduce Pages takeover risk if a repository is deleted, disabled, or disconnected while DNS still points at GitHub Pages. Confirm this in the GitHub organization UI under Pages domain verification; the repository Pages API should not report `pending_domain_unverified_at`.
 
 ## Site Configuration
 
@@ -49,6 +55,8 @@ Astro is configured for the custom domain:
 - `site-src/src/data/siteMeta.ts`: canonical site URL and GitHub repository URL
 - Localized public pages: English, Russian, Spanish, and Polish
 - Agent-readable files: `/llms.txt` and `/llms-full.txt`
+- Search/agent files: `/robots.txt`, `/sitemap.xml`, `/llms.txt`, `/llms-full.txt`
+- Duplicate-content policy: all public pages use self-canonical URLs on `https://civic-skills-lab.org/`; `http`, `www`, and GitHub Pages host variants redirect to the apex HTTPS custom domain.
 
 Useful live checks:
 
@@ -68,6 +76,14 @@ foreach ($url in $urls) {
   "$($response.StatusCode) $url $($response.Content.Length)"
 }
 ```
+
+Publication health gate:
+
+```powershell
+npm run check:publication
+```
+
+This checks live URLs, redirects, canonical tags, `hreflang`, `robots.txt`, `sitemap.xml`, `llms.txt`, DNS, GitHub Pages state, the GA4 tag, and Cloudflare/email routing if `.env.local` contains a Cloudflare API token.
 
 ## Domain And DNS
 
@@ -98,6 +114,14 @@ Resolve-DnsName civic-skills-lab.org -Type A
 Resolve-DnsName www.civic-skills-lab.org -Type CNAME
 ```
 
+Expected redirect checks:
+
+```text
+http://civic-skills-lab.org/ -> https://civic-skills-lab.org/
+https://www.civic-skills-lab.org/ -> https://civic-skills-lab.org/
+https://civic-skills-lab.github.io/civil-resistance-skills/ -> https://civic-skills-lab.org/
+```
+
 ## Google Analytics
 
 Google Analytics details live in `docs/analytics.md`.
@@ -116,6 +140,38 @@ Useful checks:
 gh variable list --repo Civic-Skills-Lab/civil-resistance-skills
 $response = Invoke-WebRequest -Uri "https://civic-skills-lab.org/" -UseBasicParsing
 $response.Content -match "G-8PKLYL41JQ"
+```
+
+The Google Analytics Admin API currently sees the `Civil Resistance Skills` web stream under property `LevNikolaevich Insights`, with default URI `https://civic-skills-lab.org/` and Measurement ID `G-8PKLYL41JQ`.
+
+## Google Search Console
+
+Google Search Console is the remaining manual search-discovery step. The current local Google ADC credentials can reach Google Analytics APIs, but Search Console API access returned `403 Forbidden`, which usually means the OAuth token lacks the Search Console/Webmasters scope or the site property has not been added and verified for the account.
+
+Manual setup:
+
+1. Open Google Search Console.
+2. Add a URL-prefix property for `https://civic-skills-lab.org/`.
+3. Verify ownership. DNS verification is preferred because DNS is hosted in Cloudflare; HTML tag verification is also acceptable if added to Astro source deliberately.
+4. Submit sitemap: `https://civic-skills-lab.org/sitemap.xml`.
+5. Use URL Inspection for:
+   - `https://civic-skills-lab.org/`
+   - `https://civic-skills-lab.org/domains/communication/`
+   - `https://civic-skills-lab.org/llms.txt`
+
+If using the Search Console API locally, re-authenticate ADC with the Webmasters scope:
+
+```powershell
+gcloud auth application-default login --scopes="https://www.googleapis.com/auth/webmasters,https://www.googleapis.com/auth/analytics.readonly,https://www.googleapis.com/auth/cloud-platform"
+```
+
+Then list verified sites and submit the sitemap:
+
+```powershell
+$token = gcloud auth application-default print-access-token
+$headers = @{ Authorization = "Bearer $token" }
+Invoke-RestMethod -Uri "https://www.googleapis.com/webmasters/v3/sites" -Headers $headers
+Invoke-RestMethod -Method Put -Uri "https://www.googleapis.com/webmasters/v3/sites/https%3A%2F%2Fcivic-skills-lab.org%2F/sitemaps/https%3A%2F%2Fcivic-skills-lab.org%2Fsitemap.xml" -Headers $headers
 ```
 
 ## Email Routing

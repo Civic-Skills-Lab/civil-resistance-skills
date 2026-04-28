@@ -75,60 +75,60 @@ export const localizedPaths = {
 export const pageMeta = {
   home: {
     en: {
-      title: "Civil Resistance Skills - Research Atlas",
+      title: "Civil Resistance Skills — Research Atlas",
       description:
         "A source-linked research atlas for studying, simulating, and carefully preparing civil-resistance methods with AI agents.",
       ogDescription:
         "Civil-resistance method skills for Claude, Codex, education, and simulation."
     },
     ru: {
-      title: "Civil Resistance Skills - исследовательский атлас",
+      title: "Civil Resistance Skills — исследовательский атлас",
       description:
-        "Исследовательский атлас для изучения, симуляции и аккуратной подготовки методов гражданского сопротивления с агентами ИИ.",
+        "Исследовательский атлас с источниками — для изучения, симуляций и аккуратной подготовки методов гражданского сопротивления вместе с агентами ИИ.",
       ogDescription:
         "Материалы по методам гражданского сопротивления для Claude, Codex, образования и симуляции."
     },
     es: {
-      title: "Civil Resistance Skills - atlas de investigación",
+      title: "Civil Resistance Skills — atlas de investigación",
       description:
-        "Un atlas de investigación con fuentes para estudiar, simular y preparar con cuidado métodos de resistencia civil con agentes de IA.",
+        "Un atlas de investigación con fuentes — para estudiar, simular y preparar con cuidado métodos de resistencia civil junto a agentes de IA.",
       ogDescription:
-        "Habilidades sobre métodos de resistencia civil para Claude, Codex, educación y simulación."
+        "Habilidades para métodos de resistencia civil — Claude, Codex, educación y simulación."
     },
     pl: {
-      title: "Civil Resistance Skills - atlas badawczy",
+      title: "Civil Resistance Skills — atlas badawczy",
       description:
-        "Atlas badawczy ze źródłami do studiowania, symulowania i ostrożnego przygotowywania metod obywatelskiego oporu bez przemocy z agentami AI.",
+        "Atlas badawczy ze źródłami — do badań, symulacji i ostrożnego przygotowania metod obywatelskiego oporu bez przemocy razem z agentami AI.",
       ogDescription:
         "Materiały dotyczące metod obywatelskiego oporu bez przemocy dla Claude, Codex, edukacji i symulacji."
     }
   },
   communication: {
     en: {
-      title: "Communication Domain - Civil Resistance Skills",
+      title: "Communication Domain — Civil Resistance Skills",
       description:
         "Communication, symbols, media, and public narrative methods in the Civil Resistance Skills research atlas.",
       ogDescription:
         "Applied communication skills and indexed communication methods for civil-resistance research and simulation."
     },
     ru: {
-      title: "Домен коммуникации - Civil Resistance Skills",
+      title: "Раздел коммуникации — Civil Resistance Skills",
       description:
-        "Коммуникация, символы, медиа и публичный нарратив в исследовательском атласе Civil Resistance Skills.",
+        "Коммуникация, символы, медиа и общественные нарративы в исследовательском атласе Civil Resistance Skills.",
       ogDescription:
-        "Прикладные коммуникационные навыки и методы из реестра для исследования и симуляции гражданского сопротивления."
+        "Прикладные коммуникационные навыки и методы из реестра — для исследований и симуляций гражданского сопротивления."
     },
     es: {
-      title: "Dominio de comunicación - Civil Resistance Skills",
+      title: "Sección de comunicación — Civil Resistance Skills",
       description:
         "Comunicación, símbolos, medios y narrativa pública en el atlas de investigación Civil Resistance Skills.",
       ogDescription:
         "Habilidades aplicadas de comunicación y métodos indexados para investigación y simulación de resistencia civil."
     },
     pl: {
-      title: "Domena komunikacji - Civil Resistance Skills",
+      title: "Sekcja komunikacji — Civil Resistance Skills",
       description:
-        "Komunikacja, symbole, media i narracja publiczna w atlasie badawczym Civil Resistance Skills.",
+        "Komunikacja, symbole, media i narracje publiczne w atlasie badawczym Civil Resistance Skills.",
       ogDescription:
         "Praktyczne materiały komunikacyjne i zindeksowane metody do badań oraz symulacji obywatelskiego oporu bez przemocy."
     }

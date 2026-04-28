@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check && npm run check:localization",
-    "check:localization": "node scripts/check-localization.mjs"
+    "check:localization": "node scripts/check-localization.mjs",
+    "check:publication": "node scripts/check-publication-health.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
