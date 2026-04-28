@@ -19,8 +19,8 @@ const domainLabels = common.domains as Record<string, { label: string; descripti
 const commHref = pathFor(lang === "en" ? "/domains/communication/" : `/${lang}/domains/communication/`);
 const safetyHref = `${repoUrl}/blob/main/SAFETY.md`;
 const sourcesHref = `${repoUrl}/blob/main/methods-registry/03-sources-and-references.md`;
-const claudeCommand = "/plugin marketplace add levnikolaevich/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
-const codexCommand = "codex plugin marketplace add levnikolaevich/civil-resistance-skills\ncodex\n/plugins";
+const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
+const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
 ---
 
 <BaseLayout lang={lang} page="home">
@@ -103,12 +103,12 @@ const codexCommand = "codex plugin marketplace add levnikolaevich/civil-resistan
           <article class="card install">
             <h3>Claude Code</h3>
             <p>{page.install.claudeBody}</p>
-            <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add levnikolaevich/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
+            <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
           </article>
           <article class="card install">
             <h3>Codex</h3>
             <p>{page.install.codexBody}</p>
-            <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add levnikolaevich/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
+            <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
           </article>
         </div>
       </div>

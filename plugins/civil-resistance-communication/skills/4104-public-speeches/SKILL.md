@@ -118,7 +118,7 @@ The agent should preserve source discipline throughout: no invented citations, n
 - Beer NVI #104 / Sharp #001: the canonical entry for "Public Speeches" in Sharp's first category (Formal Statements).
 - Albert Einstein Institution, *198 Methods of Nonviolent Action*.
 - Michael Beer / ICNC, *Civil Resistance Tactics in the 21st Century*.
-- Full source index: [methods-registry/03-sources-and-references.md](https://github.com/levnikolaevich/civil-resistance-skills/blob/main/methods-registry/03-sources-and-references.md)
+- Full source index: [methods-registry/03-sources-and-references.md](https://github.com/Civic-Skills-Lab/civil-resistance-skills/blob/main/methods-registry/03-sources-and-references.md)
 
 **Secondary (preparatory, training-derived, paraphrased):**
 
@@ -126,7 +126,7 @@ The agent should preserve source discipline throughout: no invented citations, n
 - Campaign and media communication: [NDI Campaign Skills Trainer's Guide](https://www.ndi.org/sites/default/files/Campaign-Skills-Trainers-Guide-ENG.pdf), [The Commons media training](https://commonslibrary.org/making-messages-matter-media-training-masterclass/), and [The Commons campaign communications course](https://commonslibrary.org/campaign-communications-course/).
 - Pattern and speaking practice: [Beautiful Trouble toolbox guide](https://beautifultrouble.org/toolbox-guide), [Toastmasters speechwriting guidance](https://www.toastmasters.org/magazine/magazine-issues/2025/september/how-to-write-a-speech-with-purpose), CANVAS / ICNC training patterns, Swarthmore case observations, and standard movement media training.
 
-**Evidence caveat:** [civil-resistance-evidence-and-critique.md](https://github.com/levnikolaevich/civil-resistance-skills/blob/main/civil-resistance-evidence-and-critique.md): method-level effectiveness claims for speeches in isolation outrun the evidence base.
+**Evidence caveat:** [civil-resistance-evidence-and-critique.md](https://github.com/Civic-Skills-Lab/civil-resistance-skills/blob/main/civil-resistance-evidence-and-critique.md): method-level effectiveness claims for speeches in isolation outrun the evidence base.
 
 ## Definition of Done
 
