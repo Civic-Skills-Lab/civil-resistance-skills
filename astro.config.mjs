@@ -2,8 +2,8 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 
 export default defineConfig({
-  site: "https://civic-skills-lab.github.io",
-  base: "/civil-resistance-skills",
+  site: "https://civic-skills-lab.org",
+  base: "/",
   output: "static",
   trailingSlash: "always",
   srcDir: "./site-src/src",

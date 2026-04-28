@@ -1,6 +1,6 @@
-export const basePath = "/civil-resistance-skills";
+export const basePath = "";
 export const repoUrl = "https://github.com/Civic-Skills-Lab/civil-resistance-skills";
-export const siteUrl = "https://civic-skills-lab.github.io/civil-resistance-skills";
+export const siteUrl = "https://civic-skills-lab.org";
 export const siteName = "Civil Resistance Skills";
 export const themeColor = "#245d8f";
 

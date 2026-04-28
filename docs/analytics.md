@@ -7,7 +7,7 @@ This project uses Google Analytics 4 only for basic public-site traffic visibili
 - Analytics account: `LevNikolaevich`
 - Property: `LevNikolaevich Insights`
 - Web data stream: `Civil Resistance Skills`
-- Site URL: `https://civic-skills-lab.github.io/civil-resistance-skills/`
+- Site URL: `https://civic-skills-lab.org/`
 - Measurement ID: `G-8PKLYL41JQ`
 - GitHub repository variable: `GA_MEASUREMENT_ID`
 
@@ -32,7 +32,7 @@ The site does not hard-code the Measurement ID in source. GitHub Actions reads `
 3. Verify the live page contains the Google tag:
 
    ```powershell
-   $r = Invoke-WebRequest -Uri "https://civic-skills-lab.github.io/civil-resistance-skills/" -UseBasicParsing
+   $r = Invoke-WebRequest -Uri "https://civic-skills-lab.org/" -UseBasicParsing
    $r.Content -match "G-8PKLYL41JQ"
    ```
 
@@ -48,8 +48,8 @@ In Google Analytics:
 
 Useful URLs:
 
-- Site: `https://civic-skills-lab.github.io/civil-resistance-skills/`
-- Data stream default URI: `https://civic-skills-lab.github.io/civil-resistance-skills/`
+- Site: `https://civic-skills-lab.org/`
+- Data stream default URI: `https://civic-skills-lab.org/`
 
 ## What To Watch
 
