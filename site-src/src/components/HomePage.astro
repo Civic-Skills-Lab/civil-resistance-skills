@@ -6,7 +6,7 @@ import DomainGrid from "./DomainGrid";
 import CatalogTable from "./CatalogTable";
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
-import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+import { githubBlob, pathFor, repoUrl, type Language } from "../data/siteMeta";
 
 interface Props {
   lang: Language;
@@ -17,14 +17,22 @@ const page = content[lang].home;
 const common = content[lang].common;
 const domainLabels = common.domains as Record<string, { label: string; description: string }>;
 const commHref = pathFor(lang === "en" ? "/domains/communication/" : `/${lang}/domains/communication/`);
-const safetyHref = `${repoUrl}/blob/main/SAFETY.md`;
-const sourcesHref = `${repoUrl}/blob/main/methods-registry/03-sources-and-references.md`;
+const safetyHref = githubBlob("SAFETY.md");
+const sourcesHref = githubBlob("methods-registry/03-sources-and-references.md");
 const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
 const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
 ---
 
 <BaseLayout lang={lang} page="home">
-  <Header current={lang} page="home" nav={page.nav} />
+  <Header
+    current={lang}
+    page="home"
+    nav={page.nav}
+    brand={common.brand}
+    github={common.github}
+    primaryAria={common.aria.primary}
+    languageAria={common.aria.language}
+  />
   <main>
     <section class="hero">
       <div class="wrap">
@@ -38,7 +46,7 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
           <a class="button" href={repoUrl}>{page.hero.actions.repo}</a>
           <a class="button" href={safetyHref}>{page.hero.actions.safety}</a>
         </div>
-        <div class="stats" aria-label="Registry stats">
+        <div class="stats" aria-label={common.aria.registryStats}>
           <div class="stat"><div class="num">{registry.stats.methods}</div><div class="label">{page.hero.stats[0]}</div></div>
           <div class="stat"><div class="num">{registry.stats.domains}</div><div class="label">{page.hero.stats[1]}</div></div>
           <div class="stat"><div class="num">{registry.stats.operational}</div><div class="label">{page.hero.stats[2]}</div></div>
@@ -47,12 +55,12 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
       </div>
     </section>
 
-    <section class="visual-band" aria-label="Registry atlas preview">
+    <section class="visual-band" aria-label={common.aria.atlasPreview}>
       <div class="wrap">
         <div class="atlas-panel">
           <h2>{common.brand}</h2>
           <p class="atlas-kicker">{page.atlas.kicker}</p>
-          <div class="atlas-domains" aria-label="Domain counts">
+          <div class="atlas-domains" aria-label={common.aria.domainCounts}>
             {registry.domains.map((domain) => (
               <div class="atlas-domain">
                 <span>{page.atlas.domainWord} {domain.code}</span>
@@ -124,9 +132,18 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
     <section id="catalog">
       <div class="wrap">
         <div class="section-head"><div><h2>{page.catalog.title}</h2><p class="section-copy">{page.catalog.body}</p></div><a class="button" href={commHref}>{page.catalog.detail}</a></div>
-        <CatalogTable client:load methods={registry.methods} domains={registry.domains} labels={common} filterLabels={page.catalog.filters} repoUrl={repoUrl} storageKey="civil-resistance-skills:atlas-filters" mode="home" />
+        <CatalogTable
+          client:load
+          methods={registry.methods}
+          domains={registry.domains}
+          labels={common}
+          filterLabels={page.catalog.filters}
+          filtersAria={common.aria.catalogFilters}
+          storageKey="civil-resistance-skills:atlas-filters"
+          mode="home"
+        />
       </div>
     </section>
   </main>
-  <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>GitHub</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
+  <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>{common.github}</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
 </BaseLayout>

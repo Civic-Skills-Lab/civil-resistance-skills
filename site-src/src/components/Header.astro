@@ -6,9 +6,13 @@ interface Props {
   current: Language;
   page: "home" | "communication";
   nav: Record<string, string>;
+  brand: string;
+  github: string;
+  primaryAria: string;
+  languageAria: string;
 }
 
-const { current, page, nav } = Astro.props;
+const { current, page, nav, brand, github, primaryAria, languageAria } = Astro.props;
 const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
 const pageLinks =
   page === "home"
@@ -25,15 +29,16 @@ const pageLinks =
 ---
 
 <header class="topbar">
-  <nav class="wrap nav" aria-label="Primary">
-    <a class="brand" href={homeHref}>Civil Resistance Skills</a>
+  <nav class="wrap nav" aria-label={primaryAria}>
+    <a class="brand" href={homeHref}>
+      <img src={pathFor("/assets/logo-wordmark.svg")} alt={brand} width="820" height="160" />
+    </a>
     <div class="nav-right">
       <div class="links">
         {pageLinks.map(([href, label]) => <a href={href}>{label}</a>)}
-        <a href={repoUrl}>GitHub</a>
+        <a href={repoUrl}>{github}</a>
       </div>
-      <LanguageSwitch current={current} page={page} />
+      <LanguageSwitch current={current} page={page} ariaLabel={languageAria} />
     </div>
   </nav>
 </header>
-

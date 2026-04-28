@@ -1,21 +1,19 @@
 ---
-import { languages, langNames, localizedPaths, pathFor, type Language } from "../data/siteMeta";
+import { languages, localizedPaths, pathFor, type Language } from "../data/siteMeta";
 
 interface Props {
   current: Language;
   page: keyof typeof localizedPaths;
+  ariaLabel: string;
 }
 
-const { current, page } = Astro.props;
+const { current, page, ariaLabel } = Astro.props;
 ---
 
-<label class="lang-switch" aria-label="Language">
-  <span>Language</span>
-  <select data-language-switch aria-label="Language">
-    {languages.map((language) => (
-      <option value={pathFor(localizedPaths[page][language])} data-language={language} selected={language === current}>
-        {langNames[language]}
-      </option>
-    ))}
-  </select>
-</label>
+<select class="lang-switch" data-language-switch aria-label={ariaLabel}>
+  {languages.map((language) => (
+    <option value={pathFor(localizedPaths[page][language])} data-language={language} selected={language === current}>
+      {language.toUpperCase()}
+    </option>
+  ))}
+</select>

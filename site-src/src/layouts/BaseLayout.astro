@@ -4,6 +4,7 @@ import {
   absoluteUrl,
   basePath,
   defaultImage,
+  githubBlob,
   languages,
   localizedPaths,
   ogLocales,
@@ -56,13 +57,15 @@ const faqGraph = faqItems.length
       }
     ]
   : [];
+const homeSchema = (localizedContent[lang].home as any).schema as { domainsListName: string; atlasName: string; atlasDescription: string };
+const communicationSchema = (localizedContent[lang].communication as any).schema as { appliedSkillsListName: string };
 const itemListGraph =
   page === "home"
     ? [
         {
           "@type": "ItemList",
           "@id": `${canonicalUrl}#domains`,
-          name: "Civil Resistance Skills research domains",
+          name: homeSchema.domainsListName,
           numberOfItems: registryData.domains.length,
           itemListElement: registryData.domains.map((domain: { key: string }, index: number) => ({
             "@type": "ListItem",
@@ -76,13 +79,13 @@ const itemListGraph =
         {
           "@type": "ItemList",
           "@id": `${canonicalUrl}#applied-skills`,
-          name: "Applied communication skills",
+          name: communicationSchema.appliedSkillsListName,
           numberOfItems: pageContent.operational.skills.length,
           itemListElement: pageContent.operational.skills.map((skill: { id: string; title: string; body: string }, index: number) => ({
             "@type": "ListItem",
             position: index + 1,
             name: skill.title,
-            url: `${repoUrl}/blob/main/skills-catalog/${skill.id}/SKILL.md`,
+            url: githubBlob(`skills-catalog/${skill.id}/SKILL.md`),
             description: skill.body
           }))
         }
@@ -130,15 +133,14 @@ const structuredData = {
     {
       "@type": "CreativeWork",
       "@id": `${siteUrl}/#atlas`,
-      name: "Civil Resistance Skills research atlas",
+      name: homeSchema.atlasName,
       url: siteUrl,
-      description:
-        "A source-linked atlas of 347 civil-resistance method records across six research domains, with high-risk records kept descriptive and low-risk applied skills reviewed separately.",
+      description: homeSchema.atlasDescription,
       isPartOf: {
         "@id": `${siteUrl}/#website`
       },
       inLanguage: languages,
-      license: `${repoUrl}/blob/main/LICENSE`
+      license: githubBlob("LICENSE")
     },
     ...faqGraph,
     ...itemListGraph

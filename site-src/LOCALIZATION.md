@@ -47,11 +47,17 @@ Translate these terms naturally in public copy:
 | planning mode | modo de planificación | tryb planowania | режим планирования |
 | application mode | modo de aplicación | tryb zastosowania | режим применения |
 | speech brief | informe breve de discurso | krótki materiał badawczy do przemówienia | краткий бриф речи |
+| Civic Research Atlas | Atlas de investigación cívica | Atlas badań obywatelskich | Атлас гражданских исследований |
+| risk signals / risk flags | indicadores de riesgo | wskaźniki ryzyka | признаки риска |
+| plugin surfaces / plugin layers | formatos de plugin distintos | osobne formaty pluginów | разные форматы плагинов |
+| simulation | simulación | symulacja | симуляция (предпочтительный термин в IT-контексте) |
+| Domain (UI label) | Sección | Sekcja | Раздел |
 
 ## QA Checklist
 
 - ES/PL/RU pages should read as standalone public copy, not line-by-line translations.
 - Avoid raw English terms in ES/PL/RU unless they are listed as names or identifiers above.
-- Avoid public-facing calques such as `Planning Mode`, `Application Mode`, `speech brief`, `civic educators`, raw `sandbox`, `constructores de agentes`, `Paso por revisión de riesgo`, `rekordy`, and `umiejętności stosowane`.
+- Avoid public-facing calques such as `Planning Mode`, `Application Mode`, `speech brief`, `civic educators`, raw `sandbox`, `constructores de agentes`, `Paso por revisión de riesgo`, `rekordy`, `umiejętności stosowane`, `señales de riesgo` / `sygnały ryzyka` / `сигналы риска`, and `capas de plugin` / `warstw pluginów` / `слои плагинов`.
 - Check mobile layout for longer translated labels.
+- Use em dash `—` (not ASCII hyphen `-`) when separating clauses, brand names from taglines, or in footer copy.
 - Run `npm run check:localization` before publishing.

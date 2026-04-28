@@ -41,10 +41,10 @@ The site does not hard-code the Measurement ID in source. GitHub Actions reads `
 In Google Analytics:
 
 - Open property `LevNikolaevich Insights`.
-- Use **Reports → Realtime** to confirm current visits after a deployment.
-- Use **Reports → Engagement → Pages and screens** to see which localized pages and domain pages are being visited.
-- Use **Reports → Acquisition → Traffic acquisition** to understand source and medium.
-- Use **Admin → Data streams → Civil Resistance Skills** to confirm stream settings and the Measurement ID.
+- Use **Reports > Realtime** to confirm current visits after a deployment.
+- Use **Reports > Engagement > Pages and screens** to see which localized pages and domain pages are being visited.
+- Use **Reports > Acquisition > Traffic acquisition** to understand source and medium.
+- Use **Admin > Data streams > Civil Resistance Skills** to confirm stream settings, the Measurement ID, and the default URI.
 
 Useful URLs:
 
@@ -53,8 +53,8 @@ Useful URLs:
 
 ## What To Watch
 
-- Visits by language path: `/`, `/ru/`, `/es/`.
-- Visits to the communication domain pages: `/domains/communication/`, `/ru/domains/communication/`, `/es/domains/communication/`.
+- Visits by language path: `/`, `/ru/`, `/es/`, `/pl/`.
+- Visits to the communication domain pages: `/domains/communication/`, `/ru/domains/communication/`, `/es/domains/communication/`, `/pl/domains/communication/`.
 - Traffic sources after sharing the repository or site.
 - Whether users reach operational skill links from the communication page.
 

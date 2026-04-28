@@ -1,6 +1,6 @@
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
-import { aiResources, languages, localizedPaths, siteName, siteUrl } from "../data/siteMeta";
+import { aiResources, githubBlob, languages, localizedPaths, siteName, siteUrl } from "../data/siteMeta";
 
 function pageUrl(path: string) {
   return `${siteUrl}${path === "/" ? "/" : path}`;
@@ -18,7 +18,7 @@ const localizedLinks = languages
 const appliedSkills = communication.operational.skills
   .map(
     (skill) =>
-      `- ${skill.id} / ${skill.title}: ${skill.body}\n  Canonical: ${aiResources.repository}/blob/main/skills-catalog/${skill.id}/SKILL.md`
+      `- ${skill.id} / ${skill.title}: ${skill.body}\n  Canonical: ${githubBlob(`skills-catalog/${skill.id}/SKILL.md`)}`
   )
   .join("\n");
 

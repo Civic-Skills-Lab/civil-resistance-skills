@@ -11,6 +11,7 @@
       "openDomain": "Open domain",
       "indexedMethods": "indexed methods",
       "highRiskRecords": "higher-risk records",
+      "domainWord": "Domain",
       "status": {
         "operational": "Applied",
         "coming_soon": "Planned"
@@ -52,6 +53,58 @@
         "nviSharp": "NVI / Sharp",
         "risk": "Risk",
         "status": "Status"
+      },
+      "aria": {
+        "primary": "Primary",
+        "language": "Language",
+        "registryStats": "Registry stats",
+        "atlasPreview": "Registry atlas preview",
+        "domainCounts": "Domain counts",
+        "catalogFilters": "Catalog filters"
+      },
+      "subgroups": {
+        "11xx": "Authority, legitimacy, and resistance advocacy",
+        "12xx": "Elections, legislatures, and representative bodies",
+        "13xx": "Public institutions, administration, and parallel governance",
+        "14xx": "Civil disobedience and obedience alternatives",
+        "15xx": "State personnel, enforcement, and security-pillar noncooperation",
+        "16xx": "Diplomatic and international governance",
+        "17xx": "Legal, accountability, transparency, and anti-corruption pressure",
+        "21xx": "Consumer, tenant, and household economic pressure",
+        "22xx": "Producer, supplier, worker, and supply-chain boycotts",
+        "23xx": "Merchant, management, ownership, and corporate pressure",
+        "24xx": "Financial, fiscal, credit, and revenue noncooperation",
+        "25xx": "Trade, embargo, sanctions, and market exclusion pressure",
+        "26xx": "Constructive and alternative economic systems",
+        "27xx": "Property, land, resources, and asset intervention",
+        "28xx": "Divestment, standards, IP, and market-rule pressure",
+        "31xx": "Symbolic and short strikes",
+        "32xx": "Agricultural and rural labor action",
+        "33xx": "Special-group, professional, student, and withdrawal strikes",
+        "34xx": "Industrial, sectoral, sympathy, and broad shutdown strikes",
+        "35xx": "Restricted, selective, slowdown, and work-to-rule strikes",
+        "37xx": "Workplace occupation and constructive labor intervention",
+        "41xx": "Spoken, written, and declarative expression",
+        "42xx": "Media, publishing, broadcast, and communication channels",
+        "43xx": "Symbolic, visual, artistic, cultural, and humor expression",
+        "44xx": "Assemblies, processions, teach-ins, and public convenings",
+        "45xx": "Expressive withdrawal, silence, refusal, and renunciation",
+        "46xx": "Interpersonal pressure and direct communicative confrontation",
+        "47xx": "Data, mapping, documentation, archiving, and evidence communication",
+        "48xx": "Digital platform campaigns and network-native expression",
+        "51xx": "Ostracism, exclusion, and social boycott",
+        "52xx": "Social customs, events, schools, religion, and institutions",
+        "53xx": "Social withdrawal, sanctuary, migration, and disappearance",
+        "54xx": "Constructive social alternatives and parallel social institutions",
+        "58xx": "Identity, inclusion, solidarity, and cultural belonging",
+        "61xx": "Physical presence, occupation, obstruction, and place-based intervention",
+        "62xx": "Incursion-style, crossing, and entry intervention",
+        "63xx": "Self-exposure, fasting, moral pressure, and personal risk",
+        "64xx": "System overload, service disruption, and capacity pressure",
+        "65xx": "Protective presence, accompaniment, monitoring, and de-escalation",
+        "66xx": "Constructive physical and technical intervention",
+        "67xx": "Blockade, blockade-defiance, transport, and chokepoint intervention",
+        "68xx": "Digital/technical intervention and cyber-adjacent tactics"
       }
     },
     "home": {
@@ -144,7 +197,7 @@
         }
       },
       "footer": {
-        "text": "Civil Resistance Skills - research and simulation infrastructure.",
+        "text": "Civil Resistance Skills — research and simulation infrastructure.",
         "sources": "Sources"
       },
       "faq": {
@@ -180,6 +233,11 @@
             "answer": "The repository is canonical. The website is a readable presentation layer; detailed method records and skill instructions live in the methods registry and skills catalog."
           }
         ]
+      },
+      "schema": {
+        "domainsListName": "Civil Resistance Skills research domains",
+        "atlasName": "Civil Resistance Skills research atlas",
+        "atlasDescription": "A source-linked atlas of 347 civil-resistance method records across six research domains, with higher-risk records kept descriptive and low-risk applied skills reviewed separately."
       }
     },
     "communication": {
@@ -228,7 +286,7 @@
           "high": "High"
         }
       },
-      "footer": "Civil Resistance Skills - communication domain atlas.",
+      "footer": "Civil Resistance Skills — communication domain atlas.",
       "faq": {
         "title": "Operational Skills FAQ",
         "body": "How agents should interpret the two applied communication skills now available in the atlas.",
@@ -254,6 +312,9 @@
             "answer": "No. They are research and planning materials for lawful, public, nonviolent contexts. Users remain responsible for local law, safety decisions, and real-world judgment."
           }
         ]
+      },
+      "schema": {
+        "appliedSkillsListName": "Applied communication skills"
       }
     }
   },
@@ -269,6 +330,7 @@
       "openDomain": "Abrir sección",
       "indexedMethods": "métodos indexados",
       "highRiskRecords": "registros de alto riesgo",
+      "domainWord": "Sección",
       "status": {
         "operational": "Aplicada",
         "coming_soon": "En preparación"
@@ -310,6 +372,58 @@
         "nviSharp": "NVI / Sharp",
         "risk": "Riesgo",
         "status": "Estado"
+      },
+      "aria": {
+        "primary": "Navegación principal",
+        "language": "Idioma",
+        "registryStats": "Estadísticas del registro",
+        "atlasPreview": "Vista del atlas del registro",
+        "domainCounts": "Conteo por sección",
+        "catalogFilters": "Filtros del catálogo"
+      },
+      "subgroups": {
+        "11xx": "Autoridad, legitimidad y promoción de la resistencia",
+        "12xx": "Elecciones, legislaturas y órganos representativos",
+        "13xx": "Instituciones públicas, administración y gobernanza paralela",
+        "14xx": "Desobediencia civil y alternativas a la obediencia",
+        "15xx": "No cooperación del personal estatal, fuerzas del orden y sector de seguridad",
+        "16xx": "Diplomacia y gobernanza internacional",
+        "17xx": "Presión legal: rendición de cuentas, transparencia y lucha contra la corrupción",
+        "21xx": "Presión económica de consumidores, inquilinos y hogares",
+        "22xx": "Boicots de productores, proveedores, trabajadores y cadenas de suministro",
+        "23xx": "Presión sobre comerciantes, dirección, propietarios y empresas",
+        "24xx": "No cooperación financiera, fiscal, crediticia y de pagos",
+        "25xx": "Presión comercial: embargos, sanciones y exclusión del mercado",
+        "26xx": "Sistemas económicos constructivos y alternativos",
+        "27xx": "Intervención sobre propiedad, tierra, recursos y activos",
+        "28xx": "Desinversión, normas, propiedad intelectual y reglas de mercado",
+        "31xx": "Huelgas simbólicas y de corta duración",
+        "32xx": "Acciones laborales agrícolas y rurales",
+        "33xx": "Huelgas de grupos específicos, profesionales, estudiantes y de retirada",
+        "34xx": "Huelgas industriales, sectoriales, de solidaridad y generales",
+        "35xx": "Huelgas restringidas, selectivas, de baja productividad y de cumplimiento estricto",
+        "37xx": "Ocupación del lugar de trabajo e intervención laboral constructiva",
+        "41xx": "Expresión oral, escrita y declarativa",
+        "42xx": "Medios, edición, radiodifusión y canales de comunicación",
+        "43xx": "Expresión simbólica, visual, artística, cultural y humorística",
+        "44xx": "Asambleas, procesiones, jornadas educativas y encuentros públicos",
+        "45xx": "Retirada expresiva: silencio, rechazo y renuncia",
+        "46xx": "Presión interpersonal y confrontación comunicativa directa",
+        "47xx": "Datos, cartografía, documentación, archivo y comunicación de pruebas",
+        "48xx": "Campañas en plataformas digitales y expresión propia de las redes",
+        "51xx": "Ostracismo, exclusión y boicot social",
+        "52xx": "Costumbres sociales, eventos, escuelas, religión e instituciones",
+        "53xx": "Retirada social, refugio, migración y desaparición",
+        "54xx": "Alternativas sociales constructivas e instituciones sociales paralelas",
+        "58xx": "Identidad, inclusión, solidaridad y pertenencia cultural",
+        "61xx": "Presencia física, ocupación, obstrucción e intervención en el lugar",
+        "62xx": "Intervención de incursión, cruce y entrada",
+        "63xx": "Autoexposición, ayuno, presión moral y riesgo personal",
+        "64xx": "Sobrecarga de sistemas, interrupción de servicios y presión sobre la capacidad",
+        "65xx": "Presencia protectora, acompañamiento, monitoreo y desescalada",
+        "66xx": "Intervención física y técnica constructiva",
+        "67xx": "Bloqueo, ruptura del bloqueo, transporte e intervención en puntos críticos",
+        "68xx": "Intervención digital o técnica y tácticas relacionadas con el ciberespacio"
       }
     },
     "home": {
@@ -320,7 +434,7 @@
         "catalog": "Catálogo"
       },
       "hero": {
-        "eyebrow": "Civic Research Atlas",
+        "eyebrow": "Atlas de investigación cívica",
         "title": "Un atlas de investigación sobre métodos de resistencia civil y flujos de trabajo para agentes de IA.",
         "lead": "Civil Resistance Skills reúne clasificaciones públicas de métodos de resistencia civil en un atlas con fuentes: para estudiar, simular y preparar con cuidado, con apoyo de agentes de IA.",
         "boundary": "Es infraestructura para investigación, educación, simulación y planificación en contextos legales, públicos y no violentos. No organiza campañas. Los métodos de alto riesgo se mantienen como registros descriptivos para análisis, no como guías prácticas.",
@@ -338,7 +452,7 @@
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 métodos / 6 secciones / habilidades para agentes de IA con revisión de riesgos",
+        "kicker": "Atlas de investigación cívica / 347 métodos / 6 secciones / habilidades para agentes de IA con revisión de riesgo",
         "domainWord": "Sección",
         "recordWord": "registros",
         "notes": [
@@ -372,13 +486,13 @@
           },
           {
             "title": "Camino hacia la simulación",
-            "body": "Las habilidades se diseñan como materiales de trabajo estructurados: fases, resultados, controles, señales de riesgo y evaluación de preparación. Ese formato las hace útiles para futuros entornos de prueba y agentes de juego."
+            "body": "Las habilidades se diseñan como materiales de trabajo estructurados: fases, resultados, controles, indicadores de riesgo y evaluación de preparación. Ese formato las hace útiles para futuros entornos de prueba y agentes de juego."
           }
         ]
       },
       "install": {
         "title": "Opciones de instalación",
-        "body": "Las habilidades canónicas están en este repositorio. Claude Code y Codex usan capas de plugin separadas para que cada agente las encuentre en su propio formato.",
+        "body": "Las habilidades canónicas viven en este repositorio. Claude Code y Codex usan formatos de plugin distintos, de modo que cada agente las descubre en el formato que entiende.",
         "claudeBody": "Añade el marketplace y después instala el plugin de comunicación.",
         "codexBody": "Añade el marketplace de Codex y luego elige plugins desde la interfaz nativa."
       },
@@ -402,7 +516,7 @@
         }
       },
       "footer": {
-        "text": "Civil Resistance Skills - infraestructura de investigación y simulación.",
+        "text": "Civil Resistance Skills — infraestructura de investigación y simulación.",
         "sources": "Fuentes"
       },
       "faq": {
@@ -438,6 +552,11 @@
             "answer": "El repositorio es la fuente canónica. El sitio es una capa de presentación; los registros detallados y las instrucciones de habilidades viven en el registro de métodos y el catálogo de habilidades."
           }
         ]
+      },
+      "schema": {
+        "domainsListName": "Secciones de investigación de Civil Resistance Skills",
+        "atlasName": "Atlas de investigación Civil Resistance Skills",
+        "atlasDescription": "Atlas con fuentes que reúne 347 registros de métodos de resistencia civil en seis secciones de investigación; los registros de mayor riesgo se mantienen descriptivos y las habilidades aplicadas de bajo riesgo se revisan por separado."
       }
     },
     "communication": {
@@ -486,7 +605,7 @@
           "high": "Alto"
         }
       },
-      "footer": "Civil Resistance Skills - atlas de la sección de comunicación.",
+      "footer": "Civil Resistance Skills — atlas de la sección de comunicación.",
       "faq": {
         "title": "Preguntas sobre habilidades aplicadas",
         "body": "Cómo deberían interpretar los agentes las dos habilidades de comunicación que ya están disponibles en el atlas.",
@@ -505,13 +624,16 @@
           },
           {
             "question": "¿Qué es una evaluación de preparación?",
-            "answer": "Es un resumen que indica si el plan está listo, listo con supuestos o bloqueado, e incluye supuestos pendientes, fases omitidas y señales de riesgo."
+            "answer": "Es un resumen que indica si el plan está listo, listo con supuestos o bloqueado, e incluye supuestos pendientes, fases omitidas y indicadores de riesgo."
           },
           {
             "question": "¿Estas habilidades son asesoría legal o instrucciones de campaña?",
             "answer": "No. Son materiales de investigación y planificación para contextos legales, públicos y no violentos. Las personas usuarias siguen siendo responsables de la ley local, la seguridad y el juicio en el mundo real."
           }
         ]
+      },
+      "schema": {
+        "appliedSkillsListName": "Habilidades aplicadas de comunicación"
       }
     }
   },
@@ -527,6 +649,7 @@
       "openDomain": "Otwórz sekcję",
       "indexedMethods": "zindeksowanych metod",
       "highRiskRecords": "wpisów wysokiego ryzyka",
+      "domainWord": "Sekcja",
       "status": {
         "operational": "Praktyczna",
         "coming_soon": "W przygotowaniu"
@@ -568,6 +691,58 @@
         "nviSharp": "NVI / Sharp",
         "risk": "Ryzyko",
         "status": "Status"
+      },
+      "aria": {
+        "primary": "Nawigacja główna",
+        "language": "Język",
+        "registryStats": "Statystyki rejestru",
+        "atlasPreview": "Podgląd atlasu rejestru",
+        "domainCounts": "Liczba w sekcjach",
+        "catalogFilters": "Filtry katalogu"
+      },
+      "subgroups": {
+        "11xx": "Władza, legitymacja i rzecznictwo oporu",
+        "12xx": "Wybory, ciała ustawodawcze i przedstawicielskie",
+        "13xx": "Instytucje publiczne, administracja i równoległe zarządzanie",
+        "14xx": "Obywatelskie nieposłuszeństwo i alternatywy dla posłuszeństwa",
+        "15xx": "Niewspółpraca urzędników, służb porządkowych i służb bezpieczeństwa",
+        "16xx": "Dyplomacja i zarządzanie międzynarodowe",
+        "17xx": "Nacisk prawny: odpowiedzialność, przejrzystość i walka z korupcją",
+        "21xx": "Nacisk ekonomiczny konsumentów, najemców i gospodarstw domowych",
+        "22xx": "Bojkoty producentów, dostawców, pracowników i łańcuchów dostaw",
+        "23xx": "Nacisk na kupców, kierownictwo, właścicieli i firmy",
+        "24xx": "Niewspółpraca finansowa, podatkowa, kredytowa i płatnicza",
+        "25xx": "Nacisk handlowy: embarga, sankcje i wykluczenie z rynku",
+        "26xx": "Konstruktywne i alternatywne systemy gospodarcze",
+        "27xx": "Interwencja w majątek, ziemię, zasoby i aktywa",
+        "28xx": "Dezinwestycje, standardy, własność intelektualna i reguły rynku",
+        "31xx": "Strajki symboliczne i krótkoterminowe",
+        "32xx": "Akcje pracownicze rolne i wiejskie",
+        "33xx": "Strajki grup specjalnych, zawodowych, studenckich i wycofania",
+        "34xx": "Strajki przemysłowe, sektorowe, solidarnościowe i powszechne",
+        "35xx": "Strajki ograniczone, wybiórcze, spowalniające i z dokładnym przestrzeganiem reguł",
+        "37xx": "Okupacja miejsca pracy i konstruktywna interwencja pracownicza",
+        "41xx": "Wypowiedź ustna, pisemna i deklaratywna",
+        "42xx": "Media, wydawnictwa, nadawanie i kanały komunikacji",
+        "43xx": "Wypowiedź symboliczna, wizualna, artystyczna, kulturowa i humorystyczna",
+        "44xx": "Zgromadzenia, pochody, otwarte zajęcia i spotkania publiczne",
+        "45xx": "Wycofanie ekspresyjne: milczenie, odmowa i wyrzeczenie",
+        "46xx": "Nacisk interpersonalny i bezpośrednia konfrontacja komunikacyjna",
+        "47xx": "Dane, mapowanie, dokumentacja, archiwizacja i komunikacja dowodów",
+        "48xx": "Kampanie na platformach cyfrowych i wypowiedź właściwa sieciom",
+        "51xx": "Ostracyzm, wykluczenie i bojkot społeczny",
+        "52xx": "Zwyczaje społeczne, wydarzenia, szkoły, religia i instytucje",
+        "53xx": "Wycofanie społeczne, schronienie, migracja i zniknięcie",
+        "54xx": "Konstruktywne alternatywy społeczne i równoległe instytucje społeczne",
+        "58xx": "Tożsamość, włączanie, solidarność i przynależność kulturowa",
+        "61xx": "Obecność fizyczna, okupacja, blokowanie i interwencja w miejscu",
+        "62xx": "Wtargnięcie, przekraczanie granic i wejście na teren",
+        "63xx": "Samoekspozycja, głodówki, nacisk moralny i ryzyko osobiste",
+        "64xx": "Przeciążenie systemów, zakłócenie usług i nacisk na przepustowość",
+        "65xx": "Obecność ochronna, towarzyszenie, monitorowanie i deeskalacja",
+        "66xx": "Konstruktywna interwencja fizyczna i techniczna",
+        "67xx": "Blokada, łamanie blokady, transport i interwencja w punktach krytycznych",
+        "68xx": "Interwencja cyfrowa lub techniczna i taktyki związane z cyberprzestrzenią"
       }
     },
     "home": {
@@ -578,7 +753,7 @@
         "catalog": "Katalog"
       },
       "hero": {
-        "eyebrow": "Civic Research Atlas",
+        "eyebrow": "Atlas badań obywatelskich",
         "title": "Atlas badawczy metod obywatelskiego oporu bez przemocy i materiałów dla agentów AI.",
         "lead": "Civil Resistance Skills porządkuje publiczne klasyfikacje metod w atlas ze źródłami: do badań, symulacji i ostrożnego przygotowania z udziałem agentów sztucznej inteligencji.",
         "boundary": "To infrastruktura do badań, edukacji, symulacji i planowania w legalnych, publicznych i bezprzemocowych kontekstach. Nie organizuje kampanii. Metody wysokiego ryzyka pozostają opisowymi wpisami do analizy, a nie praktycznymi instrukcjami.",
@@ -596,7 +771,7 @@
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 metod / 6 sekcji / umiejętności dla agentów AI z oceną ryzyka",
+        "kicker": "Atlas badań obywatelskich / 347 metod / 6 sekcji / umiejętności dla agentów AI z oceną ryzyka",
         "domainWord": "Sekcja",
         "recordWord": "wpisów",
         "notes": [
@@ -630,13 +805,13 @@
           },
           {
             "title": "Droga do symulacji",
-            "body": "Umiejętności są zapisywane jako uporządkowane materiały robocze: fazy, rezultaty, kontrole, sygnały ryzyka i ocena gotowości. Taka forma pasuje do przyszłych środowisk testowych i agentów w grach."
+            "body": "Umiejętności są zapisywane jako uporządkowane materiały robocze: fazy, rezultaty, kontrole, wskaźniki ryzyka i ocena gotowości. Taka forma pasuje do przyszłych środowisk testowych i agentów w grach."
           }
         ]
       },
       "install": {
         "title": "Opcje instalacji",
-        "body": "Kanoniczne umiejętności znajdują się w tym repozytorium. Claude Code i Codex używają osobnych warstw pluginów, aby każdy agent mógł znaleźć je w swoim formacie.",
+        "body": "Kanoniczne umiejętności znajdują się w tym repozytorium. Claude Code i Codex korzystają z osobnych formatów pluginów, dzięki czemu każdy agent znajduje je w swoim natywnym formacie.",
         "claudeBody": "Dodaj marketplace, a potem zainstaluj plugin komunikacyjny.",
         "codexBody": "Dodaj marketplace dla Codex i wybierz pluginy w natywnym interfejsie."
       },
@@ -660,7 +835,7 @@
         }
       },
       "footer": {
-        "text": "Civil Resistance Skills - infrastruktura badań i symulacji.",
+        "text": "Civil Resistance Skills — infrastruktura badań i symulacji.",
         "sources": "Źródła"
       },
       "faq": {
@@ -696,6 +871,11 @@
             "answer": "Źródłem kanonicznym jest repozytorium. Strona jest warstwą prezentacyjną; szczegółowe wpisy metod i instrukcje umiejętności znajdują się w rejestrze metod i katalogu umiejętności."
           }
         ]
+      },
+      "schema": {
+        "domainsListName": "Sekcje badawcze Civil Resistance Skills",
+        "atlasName": "Atlas badawczy Civil Resistance Skills",
+        "atlasDescription": "Atlas ze źródłami, łączący 347 wpisów o metodach obywatelskiego oporu bez przemocy w sześciu sekcjach badawczych; wpisy wyższego ryzyka pozostają opisowe, a stosowane umiejętności niskiego ryzyka są oceniane osobno."
       }
     },
     "communication": {
@@ -744,7 +924,7 @@
           "high": "Wysoki"
         }
       },
-      "footer": "Civil Resistance Skills - atlas sekcji komunikacji.",
+      "footer": "Civil Resistance Skills — atlas sekcji komunikacji.",
       "faq": {
         "title": "Pytania o umiejętności praktyczne",
         "body": "Jak agenci powinni rozumieć dwie umiejętności komunikacyjne dostępne już w atlasie.",
@@ -770,6 +950,9 @@
             "answer": "Nie. To materiały badawcze i planistyczne dla legalnych, publicznych i bezprzemocowych kontekstów. Użytkownicy odpowiadają za lokalne prawo, decyzje bezpieczeństwa i osąd w świecie rzeczywistym."
           }
         ]
+      },
+      "schema": {
+        "appliedSkillsListName": "Stosowane umiejętności komunikacyjne"
       }
     }
   },
@@ -785,6 +968,7 @@
       "openDomain": "Открыть раздел",
       "indexedMethods": "методов в реестре",
       "highRiskRecords": "записей повышенного риска",
+      "domainWord": "Раздел",
       "status": {
         "operational": "Прикладной",
         "coming_soon": "В планах"
@@ -826,6 +1010,58 @@
         "nviSharp": "NVI / Sharp",
         "risk": "Риск",
         "status": "Статус"
+      },
+      "aria": {
+        "primary": "Основная навигация",
+        "language": "Язык",
+        "registryStats": "Статистика реестра",
+        "atlasPreview": "Превью атласа",
+        "domainCounts": "Количество по разделам",
+        "catalogFilters": "Фильтры каталога"
+      },
+      "subgroups": {
+        "11xx": "Власть, легитимность и продвижение сопротивления",
+        "12xx": "Выборы, законодательные и представительные органы",
+        "13xx": "Государственные институты, администрация и параллельное управление",
+        "14xx": "Гражданское неповиновение и альтернативы повиновению",
+        "15xx": "Несотрудничество служащих, силовых структур и сектора безопасности",
+        "16xx": "Дипломатия и международное управление",
+        "17xx": "Правовое давление: подотчётность, прозрачность и борьба с коррупцией",
+        "21xx": "Экономическое давление потребителей, арендаторов и домохозяйств",
+        "22xx": "Бойкоты производителей, поставщиков, работников и цепочек поставок",
+        "23xx": "Давление на торговцев, руководство, владельцев и компании",
+        "24xx": "Финансовое, налоговое, кредитное и платёжное несотрудничество",
+        "25xx": "Торговое давление: эмбарго, санкции и исключение с рынка",
+        "26xx": "Конструктивные и альтернативные экономические системы",
+        "27xx": "Вмешательство в имущество, землю, ресурсы и активы",
+        "28xx": "Дивестиции, стандарты, интеллектуальная собственность и рыночные правила",
+        "31xx": "Символические и краткосрочные забастовки",
+        "32xx": "Сельскохозяйственные и сельские трудовые акции",
+        "33xx": "Забастовки отдельных групп, профессионалов, студентов и уход с работы",
+        "34xx": "Промышленные, отраслевые, солидарные и всеобщие забастовки",
+        "35xx": "Ограниченные, выборочные забастовки, замедление и работа по правилам",
+        "37xx": "Занятие рабочих мест и конструктивное трудовое вмешательство",
+        "41xx": "Устное, письменное и декларативное выражение",
+        "42xx": "Медиа, издательства, вещание и каналы коммуникации",
+        "43xx": "Символическое, визуальное, художественное, культурное и юмористическое выражение",
+        "44xx": "Собрания, шествия, открытые лекции и публичные встречи",
+        "45xx": "Выразительный отказ: молчание, неучастие и отречение",
+        "46xx": "Межличностное давление и прямая коммуникативная конфронтация",
+        "47xx": "Данные, картирование, документирование, архивы и коммуникация доказательств",
+        "48xx": "Кампании на цифровых платформах и сетевые формы выражения",
+        "51xx": "Остракизм, исключение и социальный бойкот",
+        "52xx": "Социальные обычаи, события, школы, религия и институты",
+        "53xx": "Социальный уход, убежище, миграция и исчезновение",
+        "54xx": "Конструктивные социальные альтернативы и параллельные общественные институты",
+        "58xx": "Идентичность, инклюзия, солидарность и культурная принадлежность",
+        "61xx": "Физическое присутствие, занятие пространств, блокировка и пространственное вмешательство",
+        "62xx": "Проникновение, пересечение границ и вход на территорию",
+        "63xx": "Самоэкспонирование, голодовки, моральное давление и личный риск",
+        "64xx": "Перегрузка систем, нарушение работы служб и давление на инфраструктуру",
+        "65xx": "Защитное присутствие, сопровождение, мониторинг и деэскалация",
+        "66xx": "Конструктивное физическое и техническое вмешательство",
+        "67xx": "Блокада, прорыв блокады, транспорт и удары по узловым точкам",
+        "68xx": "Цифровое или техническое вмешательство и тактики, связанные с кибер-сферой"
       }
     },
     "home": {
@@ -836,10 +1072,10 @@
         "catalog": "Каталог"
       },
       "hero": {
-        "eyebrow": "Civic Research Atlas",
-        "title": "Исследовательский атлас методов гражданского сопротивления и материалов для агентов ИИ.",
-        "lead": "Civil Resistance Skills собирает публичные классификации методов гражданского сопротивления в атлас с источниками: для изучения, симуляции и осторожной подготовки с участием агентов ИИ.",
-        "boundary": "Это инфраструктура для исследования, образования, симуляции и планирования в законном, публичном и ненасильственном контексте. Она не организует кампании. Методы повышенного риска остаются описательными записями для анализа, а не практическими инструкциями.",
+        "eyebrow": "Атлас гражданских исследований",
+        "title": "Исследовательский атлас методов гражданского сопротивления и рабочих процессов для агентов ИИ.",
+        "lead": "Civil Resistance Skills объединяет публичные классификации методов гражданского сопротивления в атлас с источниками — для изучения, симуляции и аккуратной подготовки с участием агентов ИИ.",
+        "boundary": "Это инфраструктура для исследований, обучения, симуляций и планирования в законном, публичном и ненасильственном контексте. Сайт не организует кампании. Методы повышенного риска остаются описательными записями для анализа, а не практическими инструкциями.",
         "actions": {
           "browse": "Открыть атлас",
           "operational": "Смотреть прикладные навыки",
@@ -848,66 +1084,66 @@
         },
         "stats": [
           "методов в реестре",
-          "исследовательских разделов",
+          "разделов",
           "прикладных навыка низкого риска",
           "записи повышенного риска оставлены описательными"
         ]
       },
       "atlas": {
-        "kicker": "Civic Research Atlas / 347 методов / 6 разделов / навыки для агентов ИИ с проверкой риска",
+        "kicker": "Атлас гражданских исследований / 347 методов / 6 разделов / навыки для агентов ИИ с проверкой риска",
         "domainWord": "Раздел",
         "recordWord": "записей",
         "notes": [
           {
             "kind": "operational",
             "title": "Прикладные примеры: 4104-public-speeches / 4004-marches",
-            "body": "Каждый опубликованный навык включает рабочие фазы, артефакты, проверочные критерии и оценку готовности."
+            "body": "Каждый опубликованный навык включает рабочие фазы, рабочие материалы, проверочные критерии и оценку готовности."
           },
           {
             "kind": "risk",
             "title": "Записи повышенного риска: 54 для образования и симуляции",
-            "body": "Практическая проработка зависит от источников, законности, безопасности и явной проверки."
+            "body": "Возможность практической проработки зависит от источников, законности, безопасности и отдельной проверки."
           }
         ]
       },
       "why": {
         "title": "Зачем это нужно",
-        "body": "Методы гражданского сопротивления часто опубликованы как описательные каталоги. Агентам ИИ нужна более ясная структура: источник записи, границы риска, статус применения, ссылки и критерии завершения работы.",
+        "body": "Методы гражданского сопротивления обычно публикуются в виде описательных каталогов. Агентам ИИ нужна более ясная структура: источник записи, границы риска, статус применения, ссылки и критерии завершения работы.",
         "cards": [
           {
             "title": "Реестр с источниками",
-            "body": "Атлас сопоставляет записи Beer/NVI/ICNC с таксономией методов Sharp. Первичные источники определяют сам метод; вторичные обучающие материалы помогают описывать осторожные практики для навыков с более низким риском."
+            "body": "Атлас сопоставляет записи Beer/NVI/ICNC с таксономией методов Sharp. Первичные источники определяют сам метод; вторичные обучающие материалы помогают описывать аккуратные практики для навыков с более низким риском."
           },
           {
             "title": "Проверка уровня риска",
-            "body": "Методы низкого риска могут становиться прикладными навыками с планированием, исследованием, проверкой и разбором результатов. Методы повышенного риска остаются описательными для образования, анализа и симуляции до отдельной проверки."
+            "body": "Методы низкого риска можно превратить в прикладные навыки, добавив поддержку планирования, исследования, проверки и разбора результатов. Методы повышенного риска остаются описательными для образования, анализа и симуляции — до отдельной проверки."
           },
           {
             "title": "Для кого",
-            "body": "Для исследователей, преподавателей гражданского образования, разработчиков агентов ИИ, авторов симуляций, аналитиков, изучающих общественные движения, и практиков, которым нужен структурированный материал, а не лозунги."
+            "body": "Для исследователей, преподавателей гражданского образования, разработчиков агентов ИИ, авторов симуляций, аналитиков общественных движений и осторожных практиков, которым нужен структурированный материал, а не лозунги."
           },
           {
             "title": "Путь к симуляции",
-            "body": "Навыки оформляются как структурированные рабочие материалы: фазы, результаты, проверки, сигналы риска и оценка готовности. Такая форма пригодна для будущих экспериментальных сред и игровых агентов."
+            "body": "Навыки оформляются как структурированные рабочие материалы: фазы, результаты, проверки, признаки риска и оценка готовности. Такая форма пригодна для будущих экспериментальных сред и игровых агентов."
           }
         ]
       },
       "install": {
         "title": "Варианты установки",
-        "body": "Канонические навыки находятся в этом репозитории. Claude Code и Codex используют отдельные слои плагинов, чтобы каждый агент находил навыки в своём формате.",
+        "body": "Канонические навыки находятся в этом репозитории. Claude Code и Codex используют разные форматы плагинов — так каждый агент находит навыки в привычном для себя виде.",
         "claudeBody": "Добавьте маркетплейс, затем установите коммуникационный плагин.",
         "codexBody": "Добавьте маркетплейс для Codex и выберите плагины через интерфейс."
       },
       "domainsSection": {
         "title": "Разделы",
-        "body": "Шесть разделов организуют 347 методов. Коммуникация стала первым активным разделом; остальные уже есть в реестре и останутся в планах, пока для них не будут подготовлены прикладные навыки."
+        "body": "Шесть разделов охватывают 347 методов. Коммуникация стала первым активным разделом; остальные уже есть в реестре и остаются в планах, пока для них не подготовлены прикладные навыки."
       },
       "catalog": {
         "title": "Атлас методов",
         "body": "Реализованные строки ведут к опубликованным файлам навыков. Строки «в планах» уже есть в реестре, но ещё не превращены в навыки. Записи повышенного риска остаются только для анализа.",
         "detail": "Раздел коммуникации",
         "filters": {
-          "search": "Искать метод, ID или подгруппу...",
+          "search": "Поиск по методу, ID или подгруппе…",
           "allDomains": "Все разделы",
           "allStatuses": "Все статусы",
           "allRisks": "Все уровни риска",
@@ -918,7 +1154,7 @@
         }
       },
       "footer": {
-        "text": "Civil Resistance Skills - инфраструктура для исследования и симуляции.",
+        "text": "Civil Resistance Skills — инфраструктура для исследования и симуляции.",
         "sources": "Источники"
       },
       "faq": {
@@ -931,7 +1167,7 @@
           },
           {
             "question": "Это инструмент для организации кампаний?",
-            "answer": "Нет. Сайт не организует кампании и не публикует призывы к действию. Он документирует методы, показывает границы риска и оставляет записи повышенного риска описательными материалами для исследования, образования и симуляции."
+            "answer": "Нет. Сайт не организует кампании и не публикует призывов к действию. Он документирует методы, обозначает границы риска и оставляет записи повышенного риска описательными — для исследования, образования и симуляции."
           },
           {
             "question": "Для кого этот сайт?",
@@ -947,13 +1183,18 @@
           },
           {
             "question": "Как использовать это в симуляциях или игровых агентах?",
-            "answer": "Агенты должны воспринимать навыки как ограниченные рабочие процессы с фазами, материалами, проверками и оценкой готовности. Они должны сохранять границы безопасности и не придумывать практические инструкции из описательных строк реестра."
+            "answer": "Агенты должны работать с навыками как с ограниченными процессами: фазы, материалы, проверки и оценка готовности. Они обязаны соблюдать границы безопасности и не выдумывать практические инструкции из описательных строк реестра."
           },
           {
             "question": "Где находится канонический источник?",
-            "answer": "Канонический источник — репозиторий. Сайт является презентационным слоем; подробные записи методов и инструкции навыков находятся в реестре методов и каталоге навыков."
+            "answer": "Канонический источник — репозиторий. Сайт — лишь презентационный слой; подробные записи методов и инструкции навыков лежат в реестре методов и каталоге навыков."
           }
         ]
+      },
+      "schema": {
+        "domainsListName": "Исследовательские разделы Civil Resistance Skills",
+        "atlasName": "Исследовательский атлас Civil Resistance Skills",
+        "atlasDescription": "Атлас с привязкой к источникам объединяет 347 записей о методах гражданского сопротивления в шести исследовательских разделах: записи повышенного риска остаются описательными, а низкорисковые прикладные навыки проходят отдельную проверку."
       }
     },
     "communication": {
@@ -964,7 +1205,7 @@
       "back": "Назад к атласу",
       "hero": {
         "title": "Коммуникация, символы, медиа и публичный нарратив.",
-        "lead": "Это первый активный раздел. Его прикладные навыки посвящены низкорисковым коммуникационным методам, которые можно подготовить, проверить, смоделировать и разобрать без превращения атласа в систему управления кампанией.",
+        "lead": "Это первый активный раздел. Его прикладные навыки посвящены коммуникационным методам с низким риском, которые можно подготовить, проверить, смоделировать и разобрать — без превращения атласа в систему управления кампанией.",
         "badges": [
           "2 прикладных навыка",
           "133 метода в реестре",
@@ -993,7 +1234,7 @@
         "title": "Реестр коммуникационных методов",
         "body": "Все коммуникационные методы остаются видимыми, чтобы исследовательская картина была полной. Строки без файла навыка помечены как «в планах»; строки повышенного риска остаются только для анализа.",
         "filters": {
-          "search": "Искать коммуникационные методы...",
+          "search": "Поиск по коммуникационным методам…",
           "allStatuses": "Все статусы",
           "allRisks": "Все уровни риска",
           "operational": "Прикладной",
@@ -1002,7 +1243,7 @@
           "high": "Повышенный"
         }
       },
-      "footer": "Civil Resistance Skills - атлас раздела коммуникации.",
+      "footer": "Civil Resistance Skills — атлас раздела коммуникации.",
       "faq": {
         "title": "Вопросы о прикладных навыках",
         "body": "Как агентам понимать два коммуникационных навыка, которые уже доступны в атласе.",
@@ -1021,13 +1262,16 @@
           },
           {
             "question": "Что такое оценка готовности?",
-            "answer": "Это итог: план готов, готов с допущениями или заблокирован. В нём перечисляются нерешённые допущения, пропущенные фазы и сигналы риска."
+            "answer": "Это итоговый вердикт: план готов, готов с допущениями или заблокирован. В нём перечисляются открытые допущения, пропущенные фазы и признаки риска."
           },
           {
             "question": "Это юридическая консультация или команды для кампании?",
-            "answer": "Нет. Это исследовательские и планировочные материалы для законного, публичного и ненасильственного контекста. Ответственность за местное право, безопасность и решения в реальном мире остаётся на пользователях."
+            "answer": "Нет. Это исследовательские и плановые материалы для законного, публичного и ненасильственного контекста. Ответственность за местное право, безопасность и решения в реальном мире остаётся на пользователях."
           }
         ]
+      },
+      "schema": {
+        "appliedSkillsListName": "Прикладные коммуникационные навыки"
       }
     }
   }

@@ -4,7 +4,7 @@ import Header from "./Header.astro";
 import CatalogTable from "./CatalogTable";
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
-import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+import { githubBlob, githubTree, pathFor, type Language } from "../data/siteMeta";
 
 interface Props {
   lang: Language;
@@ -18,7 +18,15 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
 ---
 
 <BaseLayout lang={lang} page="communication">
-  <Header current={lang} page="communication" nav={page.nav} />
+  <Header
+    current={lang}
+    page="communication"
+    nav={page.nav}
+    brand={common.brand}
+    github={common.github}
+    primaryAria={common.aria.primary}
+    languageAria={common.aria.language}
+  />
   <main>
     <section class="domain-hero">
       <div class="wrap">
@@ -44,8 +52,8 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
               <h3>{skill.title}</h3>
               <p>{skill.body}</p>
               <div class="links-list">
-                <a class="link-pill" href={`${repoUrl}/blob/main/skills-catalog/${skill.id}/SKILL.md`}>{page.operational.canonical}</a>
-                <a class="link-pill" href={`${repoUrl}/tree/main/skills-catalog/${skill.id}/references`}>{page.operational.references}</a>
+                <a class="link-pill" href={githubBlob(`skills-catalog/${skill.id}/SKILL.md`)}>{page.operational.canonical}</a>
+                <a class="link-pill" href={githubTree(`skills-catalog/${skill.id}/references`)}>{page.operational.references}</a>
               </div>
             </article>
           ))}
@@ -72,7 +80,15 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
       <div class="wrap">
         <h2>{page.registry.title}</h2>
         <p class="section-copy">{page.registry.body}</p>
-        <CatalogTable client:load methods={communicationMethods} labels={common} filterLabels={page.registry.filters} repoUrl={repoUrl} storageKey="civil-resistance-skills:communication-filters" mode="communication" />
+        <CatalogTable
+          client:load
+          methods={communicationMethods}
+          labels={common}
+          filterLabels={page.registry.filters}
+          filtersAria={common.aria.catalogFilters}
+          storageKey="civil-resistance-skills:communication-filters"
+          mode="communication"
+        />
       </div>
     </section>
   </main>

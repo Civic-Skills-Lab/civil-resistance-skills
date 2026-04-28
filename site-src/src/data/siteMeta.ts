@@ -1,8 +1,17 @@
 export const basePath = "";
 export const repoUrl = "https://github.com/Civic-Skills-Lab/civil-resistance-skills";
+export const repoBranch = "master";
 export const siteUrl = "https://civic-skills-lab.org";
 export const siteName = "Civil Resistance Skills";
 export const themeColor = "#245d8f";
+
+export function githubBlob(path: string) {
+  return `${repoUrl}/blob/${repoBranch}/${path}`;
+}
+
+export function githubTree(path: string) {
+  return `${repoUrl}/tree/${repoBranch}/${path}`;
+}
 
 export const defaultImage = {
   path: "/assets/social-preview.png",
@@ -38,14 +47,14 @@ export const aiResources = {
   llms: `${siteUrl}/llms.txt`,
   sitemap: `${siteUrl}/sitemap.xml`,
   repository: repoUrl,
-  readme: `${repoUrl}/blob/main/README.md`,
-  safety: `${repoUrl}/blob/main/SAFETY.md`,
-  registry: `${repoUrl}/tree/main/methods-registry`,
-  taxonomy: `${repoUrl}/blob/main/methods-registry/00-naming-and-taxonomy.md`,
-  sources: `${repoUrl}/blob/main/methods-registry/03-sources-and-references.md`,
-  skillsCatalog: `${repoUrl}/tree/main/skills-catalog`,
-  claudeMarketplace: `${repoUrl}/blob/main/.claude-plugin/marketplace.json`,
-  codexMarketplace: `${repoUrl}/blob/main/.agents/plugins/marketplace.json`
+  readme: githubBlob("README.md"),
+  safety: githubBlob("SAFETY.md"),
+  registry: githubTree("methods-registry"),
+  taxonomy: githubBlob("methods-registry/00-naming-and-taxonomy.md"),
+  sources: githubBlob("methods-registry/03-sources-and-references.md"),
+  skillsCatalog: githubTree("skills-catalog"),
+  claudeMarketplace: githubBlob(".claude-plugin/marketplace.json"),
+  codexMarketplace: githubBlob(".agents/plugins/marketplace.json")
 } as const;
 
 export const localizedPaths = {
@@ -121,7 +130,7 @@ export const pageMeta = {
       description:
         "Komunikacja, symbole, media i narracja publiczna w atlasie badawczym Civil Resistance Skills.",
       ogDescription:
-        "Stosowane umiejętności komunikacyjne i zindeksowane metody do badań oraz symulacji oporu obywatelskiego."
+        "Praktyczne materiały komunikacyjne i zindeksowane metody do badań oraz symulacji obywatelskiego oporu bez przemocy."
     }
   }
 } as const;

@@ -2,7 +2,7 @@
   "name": "Civil Resistance Skills",
   "short_name": "CRS Atlas",
   "description": "Research-grade civil-resistance method skills for education, simulation, and careful preparation.",
-  "start_url": "/civil-resistance-skills/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f7f6",
   "theme_color": "#245d8f",

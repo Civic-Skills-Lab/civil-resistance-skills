@@ -14,6 +14,7 @@ interface Labels {
   highRiskRecords: string;
   openDomain: string;
   noOperational: string;
+  domainWord: string;
   domains: Record<string, { label: string; description: string }>;
 }
 
@@ -35,7 +36,7 @@ export default function DomainGrid({ domains, labels, communicationHref }: Props
               <div className="domain-top">
                 <div>
                   <div className="domain-code">
-                    Domain {domain.code} / {domain.plugin}
+                    {labels.domainWord} {domain.code} / {domain.plugin}
                   </div>
                   <h3>{localized.label}</h3>
                 </div>
@@ -57,4 +58,3 @@ export default function DomainGrid({ domains, labels, communicationHref }: Props
     </div>
   );
 }
-

@@ -67,7 +67,9 @@ const forbiddenPublicTerms = {
     /\bsandbox\b/i,
     /constructores de agentes/i,
     /Paso por revisión de riesgo/i,
-    /estado de aplicación/i
+    /estado de aplicación/i,
+    /señales de riesgo/i,
+    /capas de plugin/i
   ],
   pl: [
     /\bPlanning Mode\b/i,
@@ -76,7 +78,9 @@ const forbiddenPublicTerms = {
     /\bcivic educators\b/i,
     /\bsandbox\b/i,
     /rekord(?:y|ów|ami)?\b/i,
-    /umiejętnoś(?:ć|ci) stosowan/i
+    /umiejętnoś(?:ć|ci) stosowan/i,
+    /sygnały ryzyka/i,
+    /warstw[ya]? plugin/i
   ],
   ru: [
     /\bPlanning Mode\b/i,
@@ -86,7 +90,9 @@ const forbiddenPublicTerms = {
     /\bsandbox/i,
     /AI-агент/i,
     /AI-навы/i,
-    /нативн/i
+    /(?:^|[^А-Яа-яЁё])нативн/i,
+    /сигналы риска/i,
+    /слои плагинов/i
   ]
 };
 

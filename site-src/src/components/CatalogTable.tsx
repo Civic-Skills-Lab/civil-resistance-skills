@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { githubBlob } from "../data/siteMeta";
 
 interface Method {
   id: string;
@@ -21,6 +22,7 @@ interface Labels {
   status: Record<string, string>;
   risk: Record<string, string>;
   domains: Record<string, { label: string }>;
+  subgroups: Record<string, string>;
   table: {
     method: string;
     domain: string;
@@ -47,7 +49,7 @@ interface Props {
   domains?: Domain[];
   labels: Labels;
   filterLabels: FilterLabels;
-  repoUrl: string;
+  filtersAria: string;
   storageKey: string;
   mode: "home" | "communication";
 }
@@ -68,7 +70,7 @@ function RiskBadge({ risk, labels }: { risk: Method["risk"]; labels: Labels }) {
   return <span className={`badge risk ${risk === "high" ? "high" : "review"}`}>{labels.risk[risk]}</span>;
 }
 
-export default function CatalogTable({ methods, domains = [], labels, filterLabels, repoUrl, storageKey, mode }: Props) {
+export default function CatalogTable({ methods, domains = [], labels, filterLabels, filtersAria, storageKey, mode }: Props) {
   const [search, setSearch] = useState("");
   const [domain, setDomain] = useState("");
   const [status, setStatus] = useState("");
@@ -91,21 +93,23 @@ export default function CatalogTable({ methods, domains = [], labels, filterLabe
     localStorage.setItem(storageKey, JSON.stringify(payload));
   }, [domain, hasLoadedStoredFilters, mode, risk, search, status, storageKey]);
 
+  const subgroupLabel = (method: Method) => labels.subgroups[method.subgroup] ?? method.subgroupLabel;
+
   const rows = useMemo(() => {
     const q = search.trim().toLowerCase();
     return methods.filter((method) => {
       const domainText = labels.domains[method.domain]?.label || method.domainLabel;
-      const haystack = `${method.id} ${method.method} ${domainText} ${method.subgroup} ${method.subgroupLabel}`.toLowerCase();
+      const haystack = `${method.id} ${method.method} ${domainText} ${method.subgroup} ${subgroupLabel(method)}`.toLowerCase();
       return (!q || haystack.includes(q)) &&
         (mode !== "home" || !domain || method.domain === domain) &&
         (!status || method.status === status) &&
         (!risk || method.risk === risk);
     });
-  }, [domain, labels.domains, methods, mode, risk, search, status]);
+  }, [domain, labels.domains, labels.subgroups, methods, mode, risk, search, status]);
 
   return (
     <>
-      <div className={`filters ${mode === "communication" ? "domain-filters" : ""}`} aria-label="Catalog filters">
+      <div className={`filters ${mode === "communication" ? "domain-filters" : ""}`} aria-label={filtersAria}>
         <input id="search" value={search} onChange={(event) => setSearch(event.target.value)} type="search" placeholder={filterLabels.search} />
         {mode === "home" && (
           <select id="domainFilter" value={domain} onChange={(event) => setDomain(event.target.value)} aria-label={filterLabels.allDomains}>
@@ -163,20 +167,20 @@ export default function CatalogTable({ methods, domains = [], labels, filterLabe
               <tr key={method.id}>
                 <td data-label={labels.table.method}>
                   {method.status === "operational" ? (
-                    <a className="method-id" href={`${repoUrl}/blob/main/skills-catalog/${method.id}/SKILL.md`}>
+                    <a className="method-id" href={githubBlob(`skills-catalog/${method.id}/SKILL.md`)}>
                       {method.id}
                     </a>
                   ) : (
                     <span className="method-id">{method.id}</span>
                   )}
                   <div className="method-name">{method.method}</div>
-                  {mode === "home" && <div className="meta">{method.subgroup} - {method.subgroupLabel}</div>}
+                  {mode === "home" && <div className="meta">{method.subgroup} - {subgroupLabel(method)}</div>}
                 </td>
                 <td data-label={mode === "home" ? labels.table.domain : labels.table.subgroup}>
                   {mode === "home" ? labels.domains[method.domain].label : (
                     <>
                       {method.subgroup}
-                      <div className="meta">{method.subgroupLabel}</div>
+                      <div className="meta">{subgroupLabel(method)}</div>
                     </>
                   )}
                 </td>
