@@ -1,0 +1,66 @@
+---
+import { localizedPaths, pathFor, type Language } from "../data/siteMeta";
+import type { CollectionEntry } from "astro:content";
+
+interface CardLabels {
+  labelType: string;
+  labelGeography: string;
+  labelFocus: string;
+  labelConfidence: string;
+  moreLabel: string;
+  types: Record<string, string>;
+  confidence: Record<string, string>;
+}
+
+interface Props {
+  entry: CollectionEntry<"organizations">;
+  lang: Language;
+  labels: CardLabels;
+}
+
+const { entry, lang, labels } = Astro.props;
+const data = entry.data;
+const profilePath = pathFor(`${localizedPaths.organizations[lang]}${entry.id}/`);
+const typeLabel = labels.types[data.type] ?? data.type;
+const confidenceLabel = labels.confidence[data.confidence] ?? data.confidence;
+const focusPreview = data.focus_areas.slice(0, 3);
+const focusOverflow = data.focus_areas.length - focusPreview.length;
+---
+
+<article
+  class="card org-card"
+  aria-labelledby={`org-${entry.id}-name`}
+>
+  <header class="org-card__header">
+    <h3 id={`org-${entry.id}-name`} class="org-card__name">
+      <a href={profilePath}>{data.name}</a>
+    </h3>
+    <span
+      class:list={["confidence-pill", `confidence-pill--${data.confidence}`]}
+      aria-label={`${labels.labelConfidence}: ${confidenceLabel}`}
+    >
+      <span class="confidence-pill__mark" aria-hidden="true"></span>
+      <span class="confidence-pill__label">{confidenceLabel}</span>
+    </span>
+  </header>
+  <dl class="org-card__meta">
+    <div class="org-card__row">
+      <dt>{labels.labelType}</dt>
+      <dd>{typeLabel}</dd>
+    </div>
+    <div class="org-card__row">
+      <dt>{labels.labelGeography}</dt>
+      <dd>{data.geography}</dd>
+    </div>
+    <div class="org-card__row">
+      <dt>{labels.labelFocus}</dt>
+      <dd>
+        <ul class="org-card__focus" aria-label={labels.labelFocus}>
+          {focusPreview.map((tag) => <li>{tag}</li>)}
+          {focusOverflow > 0 && <li class="org-card__focus-more">+{focusOverflow}</li>}
+        </ul>
+      </dd>
+    </div>
+  </dl>
+  <p class="org-card__action"><a href={profilePath}>{labels.moreLabel}</a></p>
+</article>

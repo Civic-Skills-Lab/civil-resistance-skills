@@ -2,11 +2,17 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "./Header.astro";
 import CopyButton from "./CopyButton";
-import DomainGrid from "./DomainGrid";
-import CatalogTable from "./CatalogTable";
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
-import { githubBlob, pathFor, repoUrl, type Language } from "../data/siteMeta";
+import {
+  githubBlob,
+  localizedPaths,
+  pathFor,
+  repoUrl,
+  sectionsFor,
+  type Language,
+  type SectionKey
+} from "../data/siteMeta";
 
 interface Props {
   lang: Language;
@@ -15,19 +21,21 @@ interface Props {
 const { lang } = Astro.props;
 const page = content[lang].home;
 const common = content[lang].common;
-const domainLabels = common.domains as Record<string, { label: string; description: string }>;
-const commHref = pathFor(lang === "en" ? "/domains/communication/" : `/${lang}/domains/communication/`);
+const sections = sectionsFor(lang, common.sections);
 const safetyHref = githubBlob("SAFETY.md");
 const sourcesHref = githubBlob("methods-registry/03-sources-and-references.md");
 const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
 const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
+const exploreCardOrder: SectionKey[] = ["methods", "domains", "skills", "organizations"];
+const methodsHref = pathFor(localizedPaths.methods[lang]);
+const domainLabels = common.domains as Record<string, { label: string; description: string }>;
 ---
 
 <BaseLayout lang={lang} page="home">
   <Header
     current={lang}
     page="home"
-    nav={page.nav}
+    sections={sections}
     brand={common.brand}
     github={common.github}
     primaryAria={common.aria.primary}
@@ -41,8 +49,8 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
         <p class="lead">{page.hero.lead}</p>
         <div class="boundary">{page.hero.boundary}</div>
         <div class="actions">
-          <a class="button primary" href="#catalog">{page.hero.actions.browse}</a>
-          <a class="button" href={commHref}>{page.hero.actions.operational}</a>
+          <a class="button primary" href={methodsHref}>{page.hero.actions.browse}</a>
+          <a class="button" href={pathFor(localizedPaths.skills[lang])}>{page.hero.actions.operational}</a>
           <a class="button" href={repoUrl}>{page.hero.actions.repo}</a>
           <a class="button" href={safetyHref}>{page.hero.actions.safety}</a>
         </div>
@@ -77,6 +85,25 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore" aria-labelledby="explore-heading">
+      <div class="wrap">
+        <div class="section-head"><div><h2 id="explore-heading">{page.explore.title}</h2><p class="section-copy">{page.explore.body}</p></div></div>
+        <div class="callout explore-grid">
+          {exploreCardOrder.map((key) => {
+            const card = page.explore.cards[key];
+            const href = pathFor(localizedPaths[key][lang]);
+            return (
+              <article class="card explore-card">
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+                <p class="card-action"><a href={href}>{card.action}</a></p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -121,29 +148,30 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
         </div>
       </div>
     </section>
-
-    <section id="domains">
+    <section id="domains" class="legacy-anchor" aria-labelledby="legacy-domains-heading">
       <div class="wrap">
-        <div class="section-head"><div><h2>{page.domainsSection.title}</h2><p class="section-copy">{page.domainsSection.body}</p></div></div>
-        <DomainGrid domains={registry.domains} labels={common} communicationHref={commHref} />
+        <article class="card legacy-anchor__card">
+          <h2 id="legacy-domains-heading">{page.legacyAnchors.domains.title}</h2>
+          <p>{page.legacyAnchors.domains.body}</p>
+          <p class="card-action">
+            <a href={pathFor(localizedPaths.domains[lang])}>{page.legacyAnchors.domains.action}</a>
+          </p>
+        </article>
       </div>
     </section>
 
-    <section id="catalog">
+    <section id="catalog" class="legacy-anchor" aria-labelledby="legacy-catalog-heading">
       <div class="wrap">
-        <div class="section-head"><div><h2>{page.catalog.title}</h2><p class="section-copy">{page.catalog.body}</p></div><a class="button" href={commHref}>{page.catalog.detail}</a></div>
-        <CatalogTable
-          client:load
-          methods={registry.methods}
-          domains={registry.domains}
-          labels={common}
-          filterLabels={page.catalog.filters}
-          filtersAria={common.aria.catalogFilters}
-          storageKey="civil-resistance-skills:atlas-filters"
-          mode="home"
-        />
+        <article class="card legacy-anchor__card">
+          <h2 id="legacy-catalog-heading">{page.legacyAnchors.catalog.title}</h2>
+          <p>{page.legacyAnchors.catalog.body}</p>
+          <p class="card-action">
+            <a href={pathFor(localizedPaths.methods[lang])}>{page.legacyAnchors.catalog.action}</a>
+          </p>
+        </article>
       </div>
     </section>
   </main>
   <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>{common.github}</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
+
 </BaseLayout>

@@ -26,16 +26,24 @@ The site is research, education, simulation, and planning infrastructure. It is 
 
 ## Canonical Site Pages
 
-- [Home](${siteUrl}/): public project overview, domain summary, installation commands, and method atlas.
+- [Home](${siteUrl}/): public project overview, scannable entry point to the four sections.
+- [Methods section](${siteUrl}/methods/): the indexed catalogue of civil-resistance methods with search and filters.
+- [Domains section](${siteUrl}/domains/): the grid of research areas with link-throughs to per-domain pages.
+- [Skills section](${siteUrl}/skills/): applied skills paired with the method catalogue, including marketplace install instructions.
+- [Organizations section](${siteUrl}/organizations/): the source-cited registry of organizations whose civil-resistance work appears in the public record.
 - [Communication domain](${siteUrl}/domains/communication/): applied low-risk communication skills and indexed communication methods.
-- [Spanish home](${siteUrl}/es/): localized Spanish overview.
-- [Polish home](${siteUrl}/pl/): localized Polish overview.
-- [Russian home](${siteUrl}/ru/): localized Russian overview.
-- [Spanish communication domain](${siteUrl}/es/domains/communication/): localized communication domain page.
-- [Polish communication domain](${siteUrl}/pl/domains/communication/): localized communication domain page.
-- [Russian communication domain](${siteUrl}/ru/domains/communication/): localized communication domain page.
-- [Sitemap](${aiResources.sitemap}): canonical URL and hreflang discovery.
-- [Full agent summary](${siteUrl}/llms-full.txt): fuller Markdown snapshot of site identity, FAQs, and applied skills.
+- [Spanish home](${siteUrl}/es/), [Polish home](${siteUrl}/pl/), [Russian home](${siteUrl}/ru/): localized homepages.
+- [Localized methods](${siteUrl}/es/methods/), [Localized domains](${siteUrl}/es/domains/), [Localized skills](${siteUrl}/es/skills/), [Localized organizations](${siteUrl}/es/organizations/): the same section landings under es, pl, and ru locale prefixes (slugs do not translate).
+- [Spanish communication domain](${siteUrl}/es/domains/communication/), [Polish communication domain](${siteUrl}/pl/domains/communication/), [Russian communication domain](${siteUrl}/ru/domains/communication/): localized communication domain page.
+- [Sitemap](${aiResources.sitemap}): canonical URL and hreflang discovery, including any published organization profile pages.
+- [Full agent summary](${siteUrl}/llms-full.txt): fuller Markdown snapshot of site identity, FAQs, applied skills, and registry posture.
+
+## Organization Registry
+
+- The registry surface lives at /organizations/ and per-locale prefixes.
+- Profiles are published in English first; a profile renders only at locale paths where its reviewed translation is complete. Locales without a reviewed translation return 404 for that profile path.
+- Each profile renders identity (name, type, geography, founded, active status), observed activities, public positions, and a sources block. Every claim cites at least one source. Profiles include a confidence tier (well documented / partially documented / sparse) that reflects the source base, not editorial opinion.
+- The registry does not rank organizations, does not endorse, and does not present itself as comprehensive. It is research-adjacent reference material.
 
 ## Repository Sources
 

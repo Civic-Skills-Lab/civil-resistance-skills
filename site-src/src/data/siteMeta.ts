@@ -57,12 +57,41 @@ export const aiResources = {
   codexMarketplace: githubBlob(".agents/plugins/marketplace.json")
 } as const;
 
+export type SectionKey = "methods" | "domains" | "skills" | "organizations";
+
+// Section slugs are English-uniform across locales by design — only the
+// locale prefix changes. New section paths must also be added to the
+// `groups` array in src/pages/sitemap.xml.ts.
 export const localizedPaths = {
   home: {
     en: "/",
     pl: "/pl/",
     ru: "/ru/",
     es: "/es/"
+  },
+  methods: {
+    en: "/methods/",
+    pl: "/pl/methods/",
+    ru: "/ru/methods/",
+    es: "/es/methods/"
+  },
+  domains: {
+    en: "/domains/",
+    pl: "/pl/domains/",
+    ru: "/ru/domains/",
+    es: "/es/domains/"
+  },
+  skills: {
+    en: "/skills/",
+    pl: "/pl/skills/",
+    ru: "/ru/skills/",
+    es: "/es/skills/"
+  },
+  organizations: {
+    en: "/organizations/",
+    pl: "/pl/organizations/",
+    ru: "/ru/organizations/",
+    es: "/es/organizations/"
   },
   communication: {
     en: "/domains/communication/",
@@ -71,6 +100,27 @@ export const localizedPaths = {
     es: "/es/domains/communication/"
   }
 } as const;
+
+export interface SectionNavLink {
+  key: SectionKey;
+  label: string;
+  href: string;
+}
+
+export function sectionsFor(
+  lang: Language,
+  labels: Record<SectionKey, string>
+): SectionNavLink[] {
+  return (Object.keys(localizedPaths) as Array<keyof typeof localizedPaths>)
+    .filter((k): k is SectionKey =>
+      k === "methods" || k === "domains" || k === "skills" || k === "organizations"
+    )
+    .map((k) => ({
+      key: k,
+      label: labels[k],
+      href: pathFor(localizedPaths[k][lang])
+    }));
+}
 
 export const pageMeta = {
   home: {
@@ -101,6 +151,126 @@ export const pageMeta = {
         "Atlas badawczy ze źródłami — do badań, symulacji i ostrożnego przygotowania metod obywatelskiego oporu bez przemocy razem z agentami AI.",
       ogDescription:
         "Materiały dotyczące metod obywatelskiego oporu bez przemocy dla Claude, Codex, edukacji i symulacji."
+    }
+  },
+  methods: {
+    en: {
+      title: "Methods — Civil Resistance Skills",
+      description:
+        "An indexed catalogue of civil-resistance methods linked to their public taxonomic sources.",
+      ogDescription:
+        "Indexed civil-resistance methods linked to public sources."
+    },
+    ru: {
+      title: "Методы — Civil Resistance Skills",
+      description:
+        "Каталог методов гражданского сопротивления — индексированный и связанный с публичными источниками.",
+      ogDescription:
+        "Каталог методов гражданского сопротивления, со ссылками на публичные источники."
+    },
+    es: {
+      title: "Métodos — Civil Resistance Skills",
+      description:
+        "Catálogo indexado de métodos de resistencia civil con enlaces a sus fuentes taxonómicas públicas.",
+      ogDescription:
+        "Catálogo de métodos de resistencia civil con fuentes públicas."
+    },
+    pl: {
+      title: "Metody — Civil Resistance Skills",
+      description:
+        "Zindeksowany katalog metod obywatelskiego oporu bez przemocy z odnośnikami do publicznych źródeł taksonomicznych.",
+      ogDescription:
+        "Katalog metod obywatelskiego oporu bez przemocy z publicznymi źródłami."
+    }
+  },
+  domains: {
+    en: {
+      title: "Domains — Civil Resistance Skills",
+      description:
+        "Domain pages bring together methods, applied skills, and notes within a single research area.",
+      ogDescription:
+        "Research domains across the civil-resistance method atlas."
+    },
+    ru: {
+      title: "Разделы — Civil Resistance Skills",
+      description:
+        "Разделы по областям исследования — методы, прикладные навыки и заметки собраны в одной точке.",
+      ogDescription:
+        "Разделы атласа методов гражданского сопротивления."
+    },
+    es: {
+      title: "Áreas — Civil Resistance Skills",
+      description:
+        "Las páginas de área reúnen métodos, habilidades aplicadas y notas dentro de un mismo terreno de investigación.",
+      ogDescription:
+        "Áreas del atlas de métodos de resistencia civil."
+    },
+    pl: {
+      title: "Obszary — Civil Resistance Skills",
+      description:
+        "Strony obszarów łączą metody, praktyczne materiały oraz notatki w obrębie jednego pola badawczego.",
+      ogDescription:
+        "Obszary badawcze atlasu metod obywatelskiego oporu bez przemocy."
+    }
+  },
+  skills: {
+    en: {
+      title: "Skills — Civil Resistance Skills",
+      description:
+        "Applied skills built on top of the method catalogue, ready for use with Claude and Codex agents.",
+      ogDescription:
+        "Applied skills paired with the civil-resistance method catalogue."
+    },
+    ru: {
+      title: "Навыки — Civil Resistance Skills",
+      description:
+        "Прикладные навыки на основе каталога методов — готовые к использованию вместе с агентами Claude и Codex.",
+      ogDescription:
+        "Прикладные навыки, связанные с каталогом методов."
+    },
+    es: {
+      title: "Habilidades — Civil Resistance Skills",
+      description:
+        "Habilidades aplicadas construidas sobre el catálogo de métodos, listas para usarse con agentes Claude y Codex.",
+      ogDescription:
+        "Habilidades aplicadas vinculadas al catálogo de métodos."
+    },
+    pl: {
+      title: "Materiały — Civil Resistance Skills",
+      description:
+        "Praktyczne materiały zbudowane wokół katalogu metod, gotowe do użycia razem z agentami Claude i Codex.",
+      ogDescription:
+        "Praktyczne materiały powiązane z katalogiem metod."
+    }
+  },
+  organizations: {
+    en: {
+      title: "Organizations — Civil Resistance Skills",
+      description:
+        "A registry of organizations whose civil-resistance work appears in the public record. Profiles describe documented activity and cite their sources.",
+      ogDescription:
+        "Source-cited registry of organizations linked to civil-resistance work."
+    },
+    ru: {
+      title: "Организации — Civil Resistance Skills",
+      description:
+        "Справочник организаций, чья работа в сфере гражданского сопротивления отражена в публичных источниках. Каждая запись опирается на ссылки и цитаты.",
+      ogDescription:
+        "Справочник организаций со ссылками на публичные источники."
+    },
+    es: {
+      title: "Organizaciones — Civil Resistance Skills",
+      description:
+        "Un registro de organizaciones cuyo trabajo en resistencia civil aparece en fuentes públicas. Cada perfil describe actividad documentada y cita sus fuentes.",
+      ogDescription:
+        "Registro de organizaciones con perfiles citando fuentes públicas."
+    },
+    pl: {
+      title: "Organizacje — Civil Resistance Skills",
+      description:
+        "Zestawienie organizacji, których działalność w zakresie obywatelskiego oporu bez przemocy została odnotowana w źródłach publicznych. Profile opisują udokumentowaną działalność i podają źródła.",
+      ogDescription:
+        "Zestawienie organizacji z profilami cytującymi źródła publiczne."
     }
   },
   communication: {

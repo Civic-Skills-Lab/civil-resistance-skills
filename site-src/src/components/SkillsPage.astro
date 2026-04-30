@@ -1,0 +1,37 @@
+---
+import SectionPage from "./SectionPage.astro";
+import CopyButton from "./CopyButton";
+import content from "../data/site-content.json";
+import type { Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const page = content[lang].skills;
+const common = content[lang].common;
+const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
+const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
+---
+
+<SectionPage lang={lang} section="skills">
+  <section id="install">
+    <div class="wrap">
+      <div class="section-head"><div><h2>{page.install.title}</h2><p class="section-copy">{page.install.body}</p></div></div>
+      <div class="install-grid">
+        <article class="card install">
+          <h3>Claude Code</h3>
+          <p>{page.install.claudeBody}</p>
+          <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
+        </article>
+        <article class="card install">
+          <h3>Codex</h3>
+          <p>{page.install.codexBody}</p>
+          <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
+        </article>
+      </div>
+      <p class="section-copy">{page.registryNote}</p>
+    </div>
+  </section>
+</SectionPage>
