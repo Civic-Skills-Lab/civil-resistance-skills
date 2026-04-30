@@ -43,7 +43,12 @@ a:hover { color: var(--blue-deep); text-decoration: underline; }
 .nav-right { display: flex; align-items: center; gap: 18px; min-width: 0; }
 .links { display: flex; gap: 18px; align-items: center; font-size: 14px; }
 .links a { color: var(--ink-soft); }
+.links a[aria-current="page"] { color: var(--blue-deep); font-weight: 700; }
 select.lang-switch { width: auto; min-width: 64px; min-height: 36px; padding: 6px 28px 6px 10px; border-radius: 8px; font-size: 13px; font-weight: 700; color: var(--ink-soft); background-color: rgba(255, 255, 255, 0.84); }
+
+/* Mobile burger trigger — hidden on desktop, drawer toggle on mobile */
+.burger { display: none; }
+.burger:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 .hero { padding: 74px 0 34px; }
 .domain-hero { padding: 64px 0 34px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #ffffff 0%, var(--paper) 100%); }
 .back { display: inline-block; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
@@ -151,7 +156,77 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
 }
 @media (max-width: 720px) {
   .brand img { width: clamp(170px, 52vw, 230px); max-height: 38px; }
-  .links { display: none; }
+  /* Section nav becomes a slide-down drawer anchored to the topbar; the
+     burger toggles its data-state attribute. Hidden by default until
+     the user taps the burger. */
+  .topbar { position: sticky; }
+  .nav { position: relative; flex-wrap: nowrap; align-items: center; padding: 8px 0; }
+  .nav-right { flex-wrap: nowrap; gap: 10px; }
+  .links {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-width: 240px;
+    max-width: calc(100vw - 24px);
+    padding: 6px 0;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-top: 0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow);
+    transform: translateY(-6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.18s ease, opacity 0.18s ease, visibility 0.18s ease;
+    z-index: 11;
+  }
+  .links[data-state="open"] {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .links a {
+    padding: 14px 18px;
+    font-size: 16px;
+    color: var(--ink);
+    border-top: 1px solid var(--line);
+  }
+  .links a:first-child { border-top: 0; }
+  .links a:hover, .links a:focus-visible { background: var(--paper-deep); text-decoration: none; }
+  .links a[aria-current="page"] { color: var(--blue-deep); background: var(--paper-deep); font-weight: 700; }
+  .burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    cursor: pointer;
+    position: relative;
+  }
+  .burger__icon, .burger__icon::before, .burger__icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, opacity 0.18s ease, background-color 0.18s ease;
+  }
+  .burger__icon::before { transform: translate(-50%, calc(-50% - 7px)); }
+  .burger__icon::after  { transform: translate(-50%, calc(-50% + 7px)); }
+  .burger[aria-expanded="true"] .burger__icon { background: transparent; }
+  .burger[aria-expanded="true"] .burger__icon::before { transform: translate(-50%, -50%) rotate(45deg); }
+  .burger[aria-expanded="true"] .burger__icon::after  { transform: translate(-50%, -50%) rotate(-45deg); }
   select.lang-switch { min-width: 60px; }
   .table-wrap { overflow-x: visible; }
   table { display: block; min-width: 0; }
@@ -219,6 +294,11 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
   .explore-grid { grid-template-columns: 1fr; }
   .org-grid { grid-template-columns: 1fr; }
   .org-card__row { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* Respect reduced-motion preference for the mobile burger and drawer */
+@media (prefers-reduced-motion: reduce) {
+  .links, .burger__icon, .burger__icon::before, .burger__icon::after { transition: none; }
 }
 
 /* Legacy homepage anchors — visible "moved" sections at preserved ids */
