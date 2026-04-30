@@ -220,3 +220,32 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
   .org-grid { grid-template-columns: 1fr; }
   .org-card__row { grid-template-columns: 1fr; gap: 2px; }
 }
+
+/* Organization profile page */
+.org-hero-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 8px 0 4px; }
+.org-aka { margin: 0 0 8px; color: var(--muted); font-style: italic; }
+.org-profile__meta { display: grid; gap: 10px; margin: 0; }
+.org-profile__row { display: grid; grid-template-columns: minmax(150px, max-content) 1fr; gap: 14px; align-items: start; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.org-profile__row:last-child { border-bottom: 0; }
+.org-profile__row dt { font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.02em; font-size: 12px; padding-top: 3px; }
+.org-profile__row dd { margin: 0; color: var(--ink); }
+.org-profile__focus { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.org-profile__focus li { background: var(--paper-deep); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; font-size: 12px; }
+.org-profile__claims { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.org-profile__claims li { padding: 14px 16px; background: rgba(255, 255, 255, 0.86); border: 1px solid var(--line); border-radius: 8px; }
+.org-profile__claims li p { margin: 0; }
+.org-profile__cites { margin-top: 8px !important; font-size: 13px; }
+.org-profile__cites a { font-family: var(--mono); color: var(--blue); padding: 0 2px; }
+.org-profile__empty { color: var(--ink-soft); font-style: italic; }
+.org-profile__sources { padding-left: 20px; margin: 0; display: grid; gap: 12px; }
+.org-profile__sources li { padding-left: 8px; }
+.org-profile__source-meta { color: var(--muted); font-size: 13px; margin-left: 8px; }
+.source-tag { display: inline-block; min-width: 78px; text-align: center; padding: 2px 8px; margin-right: 10px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; border: 1px solid var(--line); }
+.source-tag--primary { color: var(--blue-deep); background: #dfeef8; border-color: rgba(23, 69, 108, 0.3); }
+.source-tag--secondary { color: #5a3b00; background: #f5e8c8; border-color: rgba(90, 59, 0, 0.3); }
+.org-profile__notes { color: var(--ink-soft); white-space: pre-line; max-width: 720px; }
+
+@media (max-width: 700px) {
+  .org-profile__row { grid-template-columns: 1fr; gap: 4px; }
+  .org-hero-head { gap: 10px; }
+}

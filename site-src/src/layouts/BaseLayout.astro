@@ -19,18 +19,31 @@ import {
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
 
+interface DynamicPageOverrides {
+  pathPerLocale: Partial<Record<Language, string>>;
+  metaPerLocale: Partial<Record<Language, { title: string; description: string; ogDescription: string }>>;
+  extraSchemaGraph?: Array<Record<string, unknown>>;
+}
+
 interface Props {
   lang: Language;
   page: keyof typeof localizedPaths;
+  dynamic?: DynamicPageOverrides;
 }
 
-const { lang, page } = Astro.props;
-const meta = pageMeta[page][lang];
-const canonicalPath = localizedPaths[page][lang];
+const { lang, page, dynamic } = Astro.props;
+const dynamicLocales = dynamic
+  ? (Object.keys(dynamic.pathPerLocale) as Language[]).filter((l) => dynamic.pathPerLocale[l])
+  : null;
+const meta = dynamic?.metaPerLocale[lang] ?? pageMeta[page][lang];
+const canonicalPath = dynamic?.pathPerLocale[lang] ?? localizedPaths[page][lang];
 const canonicalUrl = absoluteUrl(canonicalPath);
 const imageUrl = absoluteUrl(defaultImage.path);
 const imageAlt = defaultImage.alt[lang];
-const alternateOgLocales = languages.filter((language) => language !== lang).map((language) => ogLocales[language]);
+const hreflangLocales = dynamicLocales ?? [...languages];
+const xDefaultLocale: Language = hreflangLocales.includes("en") ? "en" : hreflangLocales[0];
+const xDefaultPath = dynamic?.pathPerLocale[xDefaultLocale] ?? localizedPaths[page][xDefaultLocale];
+const alternateOgLocales = hreflangLocales.filter((l) => l !== lang).map((l) => ogLocales[l]);
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID?.trim() || "";
 const hasGoogleAnalytics = /^G-[A-Z0-9]+$/.test(gaMeasurementId);
 const languageStorageKey = "civil-resistance-skills:language";
@@ -145,7 +158,8 @@ const structuredData = {
       license: githubBlob("LICENSE")
     },
     ...faqGraph,
-    ...itemListGraph
+    ...itemListGraph,
+    ...(dynamic?.extraSchemaGraph ?? [])
   ]
 };
 ---
@@ -160,8 +174,11 @@ const structuredData = {
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content={themeColor} />
     <link rel="canonical" href={canonicalUrl} />
-    {languages.map((language) => <link rel="alternate" hreflang={language} href={absoluteUrl(localizedPaths[page][language])} />)}
-    <link rel="alternate" hreflang="x-default" href={absoluteUrl(localizedPaths[page].en)} />
+    {hreflangLocales.map((language) => {
+      const href = dynamic?.pathPerLocale[language] ?? localizedPaths[page][language];
+      return <link rel="alternate" hreflang={language} href={absoluteUrl(href)} />;
+    })}
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl(xDefaultPath)} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.ogDescription} />
     <meta property="og:type" content="website" />

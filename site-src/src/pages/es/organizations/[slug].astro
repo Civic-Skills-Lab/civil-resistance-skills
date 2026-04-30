@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import OrganizationProfile from "../../../components/OrganizationProfile.astro";
+import { languages, type Language } from "../../../data/siteMeta";
+
+export async function getStaticPaths() {
+  const profiles = await getCollection("organizations");
+  const lang: Language = "es";
+  return profiles
+    .filter((entry) => entry.data.translations[lang])
+    .map((entry) => {
+      const availableLocales = languages.filter((l) => entry.data.translations[l]);
+      return {
+        params: { slug: entry.id },
+        props: { entry, availableLocales }
+      };
+    });
+}
+
+const { entry, availableLocales } = Astro.props;
+---
+
+<OrganizationProfile lang="es" entry={entry} availableLocales={availableLocales} />

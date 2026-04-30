@@ -433,6 +433,38 @@
       "emptyTranslation": {
         "title": "No profile is published in this language yet",
         "body": "Profiles are published in English first; translations are added when an editorial review is complete and a translator can preserve the wording posture. Open the registry in English to see what is currently available."
+      },
+      "profile": {
+        "backToList": "Back to organizations",
+        "sections": {
+          "identity": "Identity",
+          "observed": "Observed activities",
+          "positions": "Public positions",
+          "sources": "Sources",
+          "notes": "Editor notes"
+        },
+        "fields": {
+          "name": "Name",
+          "alsoKnownAs": "Also known as",
+          "type": "Type",
+          "geography": "Where",
+          "founded": "Founded",
+          "activeStatus": "Status",
+          "lastReviewed": "Last reviewed"
+        },
+        "activeStatus": {
+          "active": "Active",
+          "dormant": "Dormant",
+          "dissolved": "Dissolved",
+          "unknown": "Unknown"
+        },
+        "foundedUnknown": "Unknown",
+        "sourceTypeLabel": {
+          "primary": "Primary",
+          "secondary": "Secondary"
+        },
+        "sourceAccessed": "Accessed",
+        "positionsEmpty": "No public position is documented in the source base for this profile."
       }
     }
   },
@@ -870,6 +902,38 @@
       "emptyTranslation": {
         "title": "Aún no hay perfil publicado en este idioma",
         "body": "Los perfiles se publican primero en inglés; las traducciones llegan cuando la revisión editorial está cerrada y un traductor puede mantener la manera cuidadosa del texto. Abra el registro en inglés para ver lo que ya está disponible."
+      },
+      "profile": {
+        "backToList": "Volver a organizaciones",
+        "sections": {
+          "identity": "Identidad",
+          "observed": "Actividad documentada",
+          "positions": "Posiciones públicas",
+          "sources": "Fuentes",
+          "notes": "Notas editoriales"
+        },
+        "fields": {
+          "name": "Nombre",
+          "alsoKnownAs": "También conocida como",
+          "type": "Tipo",
+          "geography": "Dónde",
+          "founded": "Fundación",
+          "activeStatus": "Estado",
+          "lastReviewed": "Última revisión"
+        },
+        "activeStatus": {
+          "active": "En activo",
+          "dormant": "En pausa",
+          "dissolved": "Disuelta",
+          "unknown": "Sin información"
+        },
+        "foundedUnknown": "Sin información",
+        "sourceTypeLabel": {
+          "primary": "Primaria",
+          "secondary": "Secundaria"
+        },
+        "sourceAccessed": "Consulta",
+        "positionsEmpty": "En las fuentes disponibles no se documenta ninguna posición pública de esta organización."
       }
     }
   },
@@ -1307,6 +1371,38 @@
       "emptyTranslation": {
         "title": "W tym języku nie ma jeszcze opublikowanego profilu",
         "body": "Profile publikowane są najpierw po angielsku; tłumaczenia pojawiają się, gdy redakcja zamknie sprawdzanie, a tłumacz może zachować ostrożny styl. Otwórz zestawienie po angielsku, żeby zobaczyć, co jest już dostępne."
+      },
+      "profile": {
+        "backToList": "Wróć do organizacji",
+        "sections": {
+          "identity": "Tożsamość",
+          "observed": "Udokumentowana działalność",
+          "positions": "Publiczne stanowiska",
+          "sources": "Źródła",
+          "notes": "Notatki redakcyjne"
+        },
+        "fields": {
+          "name": "Nazwa",
+          "alsoKnownAs": "Inne nazwy",
+          "type": "Typ",
+          "geography": "Gdzie",
+          "founded": "Założenie",
+          "activeStatus": "Stan",
+          "lastReviewed": "Ostatnia weryfikacja"
+        },
+        "activeStatus": {
+          "active": "Aktywna",
+          "dormant": "W zawieszeniu",
+          "dissolved": "Rozwiązana",
+          "unknown": "Brak danych"
+        },
+        "foundedUnknown": "Brak danych",
+        "sourceTypeLabel": {
+          "primary": "Pierwotne",
+          "secondary": "Wtórne"
+        },
+        "sourceAccessed": "Wgląd",
+        "positionsEmpty": "W dostępnych źródłach nie odnotowano publicznego stanowiska tej organizacji."
       }
     }
   },
@@ -1744,6 +1840,38 @@
       "emptyTranslation": {
         "title": "На этом языке записей пока нет",
         "body": "Записи сначала публикуются на английском; переводы появляются, когда редакторская проверка завершена и переводчик может сохранить осторожную манеру изложения. Откройте справочник на английском, чтобы посмотреть, что уже доступно."
+      },
+      "profile": {
+        "backToList": "Назад к организациям",
+        "sections": {
+          "identity": "Идентичность",
+          "observed": "Задокументированная деятельность",
+          "positions": "Публичные позиции",
+          "sources": "Источники",
+          "notes": "Редакторские заметки"
+        },
+        "fields": {
+          "name": "Название",
+          "alsoKnownAs": "Другие наименования",
+          "type": "Тип",
+          "geography": "Где",
+          "founded": "Основана",
+          "activeStatus": "Статус",
+          "lastReviewed": "Последняя проверка"
+        },
+        "activeStatus": {
+          "active": "Действует",
+          "dormant": "Приостановлена",
+          "dissolved": "Прекратила работу",
+          "unknown": "Не установлено"
+        },
+        "foundedUnknown": "Не установлено",
+        "sourceTypeLabel": {
+          "primary": "Первичный",
+          "secondary": "Вторичный"
+        },
+        "sourceAccessed": "Обращение",
+        "positionsEmpty": "Публичные позиции этой организации в доступных источниках не задокументированы."
       }
     }
   }
