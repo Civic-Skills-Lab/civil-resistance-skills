@@ -60,7 +60,8 @@
         "registryStats": "Registry stats",
         "atlasPreview": "Registry atlas preview",
         "domainCounts": "Domain counts",
-        "catalogFilters": "Catalog filters"
+        "catalogFilters": "Catalog filters",
+        "menu": "Menu"
       },
       "subgroups": {
         "11xx": "Authority, legitimacy, and resistance advocacy",
@@ -541,7 +542,8 @@
         "registryStats": "Estadísticas del registro",
         "atlasPreview": "Vista del atlas del registro",
         "domainCounts": "Conteo por sección",
-        "catalogFilters": "Filtros del catálogo"
+        "catalogFilters": "Filtros del catálogo",
+        "menu": "Menú"
       },
       "subgroups": {
         "11xx": "Autoridad, legitimidad y promoción de la resistencia",
@@ -1022,7 +1024,8 @@
         "registryStats": "Statystyki rejestru",
         "atlasPreview": "Podgląd atlasu rejestru",
         "domainCounts": "Liczba w sekcjach",
-        "catalogFilters": "Filtry katalogu"
+        "catalogFilters": "Filtry katalogu",
+        "menu": "Menu"
       },
       "subgroups": {
         "11xx": "Władza, legitymacja i rzecznictwo oporu",
@@ -1503,7 +1506,8 @@
         "registryStats": "Статистика реестра",
         "atlasPreview": "Превью атласа",
         "domainCounts": "Количество по разделам",
-        "catalogFilters": "Фильтры каталога"
+        "catalogFilters": "Фильтры каталога",
+        "menu": "Меню"
       },
       "subgroups": {
         "11xx": "Власть, легитимность и продвижение сопротивления",

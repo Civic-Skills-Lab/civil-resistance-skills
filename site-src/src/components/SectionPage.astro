@@ -24,13 +24,14 @@ const homeHref = pathFor(lang === "en" ? "/" : `/${lang}/`);
 <BaseLayout lang={lang} page={section}>
   <Header
     current={lang}
-    page="home"
+    page={section}
     active={section}
     sections={sections}
     brand={common.brand}
     github={common.github}
     primaryAria={common.aria.primary}
     languageAria={common.aria.language}
+    menuAria={common.aria.menu}
   />
   <main>
     <section class="domain-hero">
