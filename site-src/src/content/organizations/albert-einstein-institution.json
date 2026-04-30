@@ -1,0 +1,61 @@
+{
+  "name": "Albert Einstein Institution",
+  "also_known_as": ["AEI-Boston"],
+  "type": "research",
+  "geography": "United States (Boston, Massachusetts)",
+  "founded": 1983,
+  "active_status": "active",
+  "focus_areas": [
+    "nonviolent action",
+    "strategic nonviolent struggle",
+    "civilian-based defense"
+  ],
+  "observed_activities": [
+    {
+      "text": "Publishes monographs and primers on nonviolent struggle, including the catalogue of 198 methods compiled by Gene Sharp.",
+      "source_ids": ["aei-self", "wp-aei"]
+    },
+    {
+      "text": "Distributes translations of Sharp's writings on strategic nonviolent action to researchers, educators, and activists internationally.",
+      "source_ids": ["aei-self", "nyt-sharp-obit-2018"]
+    }
+  ],
+  "public_positions": [
+    {
+      "text": "States its mission as advancing the worldwide study and strategic use of nonviolent action.",
+      "source_ids": ["aei-self"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "aei-self",
+      "type": "primary",
+      "url": "https://www.aeinstein.org/about/",
+      "accessed_on": "2026-04-30",
+      "citation": "Albert Einstein Institution — About page (organisation's own site)."
+    },
+    {
+      "id": "wp-aei",
+      "type": "secondary",
+      "url": "https://en.wikipedia.org/wiki/Albert_Einstein_Institution",
+      "accessed_on": "2026-04-30",
+      "citation": "Wikipedia — Albert Einstein Institution (encyclopedic overview, used for cross-checking founding year and self-described scope)."
+    },
+    {
+      "id": "nyt-sharp-obit-2018",
+      "type": "secondary",
+      "url": "https://www.nytimes.com/2018/01/30/world/europe/gene-sharp-dead.html",
+      "accessed_on": "2026-04-30",
+      "citation": "New York Times — Gene Sharp obituary (28 January 2018), describing the institution he founded and its dissemination of his work."
+    }
+  ],
+  "confidence": "partially_documented",
+  "last_reviewed": "2026-04-30",
+  "notes": "Seed profile for the data-model foundation. Activities described here are restricted to long-running, broadly attested public outputs; recent programming and finances are not yet reviewed and remain a documented gap.",
+  "translations": {
+    "en": true,
+    "ru": false,
+    "es": false,
+    "pl": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "International Center on Nonviolent Conflict",
+  "also_known_as": ["ICNC"],
+  "type": "research",
+  "geography": "United States (Washington, DC), with international programming",
+  "founded": 2002,
+  "active_status": "active",
+  "focus_areas": [
+    "civil resistance research",
+    "scholarship and education",
+    "training of practitioners and educators"
+  ],
+  "observed_activities": [
+    {
+      "text": "Publishes the ICNC Monograph and Special Report series on civil resistance movements and curricula for educators.",
+      "source_ids": ["icnc-self", "wp-icnc"]
+    },
+    {
+      "text": "Convenes academic workshops and online courses on the history and dynamics of civil resistance.",
+      "source_ids": ["icnc-self"]
+    }
+  ],
+  "public_positions": [
+    {
+      "text": "Describes itself as a private, independent foundation supporting the study and discussion of civil resistance.",
+      "source_ids": ["icnc-self"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "icnc-self",
+      "type": "primary",
+      "url": "https://www.nonviolent-conflict.org/about-icnc/",
+      "accessed_on": "2026-04-30",
+      "citation": "International Center on Nonviolent Conflict — About ICNC (organisation's own site)."
+    },
+    {
+      "id": "wp-icnc",
+      "type": "secondary",
+      "url": "https://en.wikipedia.org/wiki/International_Center_on_Nonviolent_Conflict",
+      "accessed_on": "2026-04-30",
+      "citation": "Wikipedia — International Center on Nonviolent Conflict (encyclopedic overview, used for cross-checking founding year and broad scope)."
+    }
+  ],
+  "confidence": "partially_documented",
+  "last_reviewed": "2026-04-30",
+  "notes": "Seed profile for the data-model foundation. Funding history, board composition, and programmatic details are not yet reviewed and remain a documented gap.",
+  "translations": {
+    "en": true,
+    "ru": false,
+    "es": false,
+    "pl": false
+  }
+}
