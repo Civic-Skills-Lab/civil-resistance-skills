@@ -1,0 +1,23 @@
+---
+import SectionPage from "./SectionPage.astro";
+import content from "../data/site-content.json";
+import type { Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const page = content[lang].organizations;
+---
+
+<SectionPage lang={lang} section="organizations">
+  <section id="organizations-empty">
+    <div class="wrap">
+      <article class="card">
+        <h2>{page.empty.title}</h2>
+        <p>{page.empty.body}</p>
+      </article>
+    </div>
+  </section>
+</SectionPage>

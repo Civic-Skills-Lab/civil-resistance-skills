@@ -1,6 +1,13 @@
 import { absoluteUrl, languages, localizedPaths } from "../data/siteMeta";
 
-const groups = [localizedPaths.home, localizedPaths.communication];
+const groups = [
+  localizedPaths.home,
+  localizedPaths.methods,
+  localizedPaths.domains,
+  localizedPaths.skills,
+  localizedPaths.organizations,
+  localizedPaths.communication
+];
 
 export function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8"?>

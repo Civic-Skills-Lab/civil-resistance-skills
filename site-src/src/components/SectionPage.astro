@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "./Header.astro";
+import {
+  pathFor,
+  sectionsFor,
+  type Language,
+  type SectionKey
+} from "../data/siteMeta";
+import content from "../data/site-content.json";
+
+interface Props {
+  lang: Language;
+  section: SectionKey;
+}
+
+const { lang, section } = Astro.props;
+const common = content[lang].common;
+const sectionContent = content[lang][section];
+const sections = sectionsFor(lang, common.sections);
+const homeHref = pathFor(lang === "en" ? "/" : `/${lang}/`);
+---
+
+<BaseLayout lang={lang} page={section}>
+  <Header
+    current={lang}
+    page="home"
+    active={section}
+    sections={sections}
+    brand={common.brand}
+    github={common.github}
+    primaryAria={common.aria.primary}
+    languageAria={common.aria.language}
+  />
+  <main>
+    <section class="domain-hero">
+      <div class="wrap">
+        <a class="back" href={homeHref}>{sectionContent.nav.back}</a>
+        <h1>{sectionContent.hero.title}</h1>
+        <p class="lead">{sectionContent.hero.lead}</p>
+      </div>
+    </section>
+    <slot />
+  </main>
+  <footer><div class="wrap">{sectionContent.footer}</div></footer>
+</BaseLayout>

@@ -1,31 +1,20 @@
 ---
 import LanguageSwitch from "./LanguageSwitch.astro";
-import { pathFor, repoUrl, type Language } from "../data/siteMeta";
+import { pathFor, repoUrl, type Language, type SectionKey, type SectionNavLink } from "../data/siteMeta";
 
 interface Props {
   current: Language;
   page: "home" | "communication";
-  nav: Record<string, string>;
+  active?: SectionKey;
+  sections: SectionNavLink[];
   brand: string;
   github: string;
   primaryAria: string;
   languageAria: string;
 }
 
-const { current, page, nav, brand, github, primaryAria, languageAria } = Astro.props;
+const { current, page, active, sections, brand, github, primaryAria, languageAria } = Astro.props;
 const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
-const pageLinks =
-  page === "home"
-    ? [
-        ["#why", nav.why],
-        ["#install", nav.install],
-        ["#domains", nav.domains],
-        ["#catalog", nav.catalog]
-      ]
-    : [
-        ["#operational", nav.operational],
-        ["#registry", nav.registry]
-      ];
 ---
 
 <header class="topbar">
@@ -35,7 +24,14 @@ const pageLinks =
     </a>
     <div class="nav-right">
       <div class="links">
-        {pageLinks.map(([href, label]) => <a href={href}>{label}</a>)}
+        {sections.map((link) => (
+          <a
+            href={link.href}
+            aria-current={active === link.key ? "page" : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
         <a href={repoUrl}>{github}</a>
       </div>
       <LanguageSwitch current={current} page={page} ariaLabel={languageAria} />

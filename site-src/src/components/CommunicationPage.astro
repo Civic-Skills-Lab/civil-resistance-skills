@@ -4,7 +4,7 @@ import Header from "./Header.astro";
 import CatalogTable from "./CatalogTable";
 import content from "../data/site-content.json";
 import registry from "../data/registry.json";
-import { githubBlob, githubTree, pathFor, type Language } from "../data/siteMeta";
+import { githubBlob, githubTree, pathFor, sectionsFor, type Language } from "../data/siteMeta";
 
 interface Props {
   lang: Language;
@@ -13,6 +13,7 @@ interface Props {
 const { lang } = Astro.props;
 const page = content[lang].communication;
 const common = content[lang].common;
+const sections = sectionsFor(lang, common.sections);
 const homeHref = pathFor(lang === "en" ? "/" : `/${lang}/`);
 const communicationMethods = registry.methods.filter((method) => method.domain === "comm");
 ---
@@ -21,7 +22,8 @@ const communicationMethods = registry.methods.filter((method) => method.domain =
   <Header
     current={lang}
     page="communication"
-    nav={page.nav}
+    active="domains"
+    sections={sections}
     brand={common.brand}
     github={common.github}
     primaryAria={common.aria.primary}

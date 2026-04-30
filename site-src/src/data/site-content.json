@@ -105,14 +105,19 @@
         "66xx": "Constructive physical and technical intervention",
         "67xx": "Blockade, blockade-defiance, transport, and chokepoint intervention",
         "68xx": "Digital/technical intervention and cyber-adjacent tactics"
-      }
+      },
+      "sections": {
+        "methods": "Methods",
+        "domains": "Domains",
+        "skills": "Skills",
+        "organizations": "Organizations"
+      },
+      "back": "Back to home"
     },
     "home": {
       "nav": {
         "why": "Why",
-        "install": "Install",
-        "domains": "Domains",
-        "catalog": "Catalog"
+        "install": "Install"
       },
       "hero": {
         "eyebrow": "Civic Research Atlas",
@@ -177,25 +182,6 @@
         "claudeBody": "Add the marketplace, then install the communication plugin.",
         "codexBody": "Add the Codex marketplace and select plugins from the native UI."
       },
-      "domainsSection": {
-        "title": "Domains",
-        "body": "Six domains organize the 347 methods. Communication is the first active domain; the others remain indexed and planned until applied skills are authored."
-      },
-      "catalog": {
-        "title": "Method atlas",
-        "body": "Implemented rows link to published skill files. Planned rows are indexed methods not yet turned into skills. Higher-risk rows remain analysis-only.",
-        "detail": "Communication detail",
-        "filters": {
-          "search": "Search method, ID, or subgroup...",
-          "allDomains": "All domains",
-          "allStatuses": "All statuses",
-          "allRisks": "All risk flags",
-          "operational": "Applied",
-          "comingSoon": "Planned",
-          "review": "Review",
-          "high": "High"
-        }
-      },
       "footer": {
         "text": "Civil Resistance Skills — research and simulation infrastructure.",
         "sources": "Sources"
@@ -238,6 +224,32 @@
         "domainsListName": "Civil Resistance Skills research domains",
         "atlasName": "Civil Resistance Skills research atlas",
         "atlasDescription": "A source-linked atlas of 347 civil-resistance method records across six research domains, with higher-risk records kept descriptive and low-risk applied skills reviewed separately."
+      },
+      "explore": {
+        "title": "Explore the site",
+        "body": "Four sections gather what the project publishes today. Each one points at the source material it builds on.",
+        "cards": {
+          "methods": {
+            "title": "Methods",
+            "body": "An indexed catalogue of civil-resistance methods linked to the public taxonomies they come from.",
+            "action": "Browse the methods"
+          },
+          "domains": {
+            "title": "Domains",
+            "body": "Domain pages bring together methods, applied skills, and notes within a single research area.",
+            "action": "Open the domains"
+          },
+          "skills": {
+            "title": "Skills",
+            "body": "Applied skills built on top of the method catalogue, ready for use with Claude and Codex agents.",
+            "action": "See the skills"
+          },
+          "organizations": {
+            "title": "Organizations",
+            "body": "A registry of organizations whose civil-resistance work appears in the public record, with each profile citing its sources.",
+            "action": "Read the registry"
+          }
+        }
       }
     },
     "communication": {
@@ -316,6 +328,81 @@
       "schema": {
         "appliedSkillsListName": "Applied communication skills"
       }
+    },
+    "methods": {
+      "nav": {
+        "back": "Back to home"
+      },
+      "hero": {
+        "title": "Methods",
+        "lead": "Civil-resistance methods, indexed from public taxonomies and linked to the sources they come from. Higher-risk rows remain analysis-only.",
+        "eyebrow": "Method atlas"
+      },
+      "stats": [
+        "indexed methods",
+        "research areas",
+        "applied low-risk records",
+        "higher-risk records kept descriptive"
+      ],
+      "catalog": {
+        "title": "Method atlas",
+        "body": "Implemented rows link to published skill files. Planned rows are indexed methods not yet turned into skills. Higher-risk rows remain analysis-only.",
+        "filters": {
+          "search": "Search method, ID, or subgroup...",
+          "allDomains": "All domains",
+          "allStatuses": "All statuses",
+          "allRisks": "All risk flags",
+          "operational": "Applied",
+          "comingSoon": "Planned",
+          "review": "Review",
+          "high": "High"
+        }
+      },
+      "footer": "Browse the catalogue, follow the sources, and pick a single domain when you want a closer read."
+    },
+    "domains": {
+      "nav": {
+        "back": "Back to home"
+      },
+      "hero": {
+        "title": "Domains",
+        "lead": "Each domain page brings together methods, applied skills, and notes within a single research area. Communication is open today; the others are indexed and being prepared.",
+        "eyebrow": "Research areas"
+      },
+      "footer": "Open a domain to see the methods grouped within it and the applied skills already published."
+    },
+    "skills": {
+      "nav": {
+        "back": "Back to home"
+      },
+      "hero": {
+        "title": "Skills",
+        "lead": "Applied skills paired with the method catalogue. They run inside Claude and Codex agents and stay grounded in the cited methods.",
+        "eyebrow": "Applied skills"
+      },
+      "install": {
+        "title": "Install",
+        "body": "Add the skills marketplace to a Claude or Codex agent and pull the domain pack you need.",
+        "claudeBody": "Inside Claude Code, run the marketplace and install commands.",
+        "codexBody": "Inside Codex CLI, add the marketplace and load the plugin from the menu."
+      },
+      "registryNote": "Today the published pack is the communication domain. Other domains have indexed methods that will become applied skills as the editorial review reaches them.",
+      "footer": "Open a domain to see which skills are already published and how they map back to the method catalogue."
+    },
+    "organizations": {
+      "nav": {
+        "back": "Back to home"
+      },
+      "hero": {
+        "title": "Organizations",
+        "lead": "A registry of organizations whose civil-resistance work appears in the public record. Profiles describe documented activity, distinguish primary and secondary sources, and cite each claim.",
+        "eyebrow": "Source-cited registry"
+      },
+      "empty": {
+        "title": "Listing in preparation",
+        "body": "The browsable listing of profiles is being prepared in a follow-up task. Until it is published, the registry begins as a small set of seed profiles in the repository."
+      },
+      "footer": "The registry is research-adjacent reference material — not a directory of recommended organizations."
     }
   },
   "es": {
@@ -424,14 +511,19 @@
         "66xx": "Intervención física y técnica constructiva",
         "67xx": "Bloqueo, ruptura del bloqueo, transporte e intervención en puntos críticos",
         "68xx": "Intervención digital o técnica y tácticas relacionadas con el ciberespacio"
-      }
+      },
+      "sections": {
+        "methods": "Métodos",
+        "domains": "Áreas",
+        "skills": "Materiales",
+        "organizations": "Organizaciones"
+      },
+      "back": "Volver al inicio"
     },
     "home": {
       "nav": {
         "why": "Por qué",
-        "install": "Instalación",
-        "domains": "Secciones",
-        "catalog": "Catálogo"
+        "install": "Instalación"
       },
       "hero": {
         "eyebrow": "Atlas de investigación cívica",
@@ -496,25 +588,6 @@
         "claudeBody": "Añade el marketplace y después instala el plugin de comunicación.",
         "codexBody": "Añade el marketplace de Codex y elige los plugins desde su propia interfaz."
       },
-      "domainsSection": {
-        "title": "Secciones",
-        "body": "Seis secciones organizan los 347 métodos. Comunicación es la primera sección activa; las demás ya están indexadas y quedan en preparación, hasta que se creen sus habilidades aplicadas."
-      },
-      "catalog": {
-        "title": "Atlas de métodos",
-        "body": "Las filas implementadas enlazan con los archivos de habilidad publicados. Las filas «en preparación» ya están indexadas, pero todavía no se han convertido en habilidad. Los registros de alto riesgo se quedan solo para análisis.",
-        "detail": "Sección de comunicación",
-        "filters": {
-          "search": "Buscar método, ID o subgrupo...",
-          "allDomains": "Todas las secciones",
-          "allStatuses": "Todos los estados",
-          "allRisks": "Todos los riesgos",
-          "operational": "Aplicada",
-          "comingSoon": "En preparación",
-          "review": "Revisión",
-          "high": "Alto"
-        }
-      },
       "footer": {
         "text": "Civil Resistance Skills — infraestructura de investigación y simulación.",
         "sources": "Fuentes"
@@ -557,6 +630,32 @@
         "domainsListName": "Secciones de investigación de Civil Resistance Skills",
         "atlasName": "Atlas de investigación Civil Resistance Skills",
         "atlasDescription": "Atlas con fuentes que reúne 347 registros de métodos de resistencia civil en seis secciones de investigación; los registros de mayor riesgo se mantienen descriptivos y las habilidades aplicadas de bajo riesgo se revisan por separado."
+      },
+      "explore": {
+        "title": "Recorrer el sitio",
+        "body": "Cuatro áreas reúnen lo que el proyecto publica hoy. En cada una se ve sobre qué fuentes está construido el material.",
+        "cards": {
+          "methods": {
+            "title": "Métodos",
+            "body": "Catálogo indexado de métodos de resistencia civil con enlaces a las taxonomías públicas de las que provienen.",
+            "action": "Recorrer los métodos"
+          },
+          "domains": {
+            "title": "Áreas",
+            "body": "Las páginas de área reúnen métodos, habilidades aplicadas y notas dentro de un mismo terreno de investigación.",
+            "action": "Abrir las áreas"
+          },
+          "skills": {
+            "title": "Materiales",
+            "body": "Materiales aplicados sobre el catálogo de métodos, listos para usarse con agentes Claude y Codex.",
+            "action": "Ver los materiales"
+          },
+          "organizations": {
+            "title": "Organizaciones",
+            "body": "Registro de organizaciones cuyo trabajo en resistencia civil aparece en fuentes públicas; cada perfil cita sus fuentes.",
+            "action": "Abrir el registro"
+          }
+        }
       }
     },
     "communication": {
@@ -635,6 +734,81 @@
       "schema": {
         "appliedSkillsListName": "Habilidades aplicadas de comunicación"
       }
+    },
+    "methods": {
+      "nav": {
+        "back": "Volver al inicio"
+      },
+      "hero": {
+        "title": "Métodos",
+        "lead": "Métodos de resistencia civil indexados a partir de taxonomías públicas y vinculados a sus fuentes. Las filas de mayor riesgo se mantienen como material analítico.",
+        "eyebrow": "Atlas de métodos"
+      },
+      "stats": [
+        "métodos indexados",
+        "áreas de investigación",
+        "registros aplicados de bajo riesgo",
+        "registros de mayor riesgo en clave descriptiva"
+      ],
+      "catalog": {
+        "title": "Atlas de métodos",
+        "body": "Las filas implementadas enlazan con los archivos de habilidad publicados. Las filas «en preparación» ya están indexadas, pero todavía no se han convertido en habilidad. Los registros de alto riesgo se quedan solo para análisis.",
+        "filters": {
+          "search": "Buscar método, ID o subgrupo...",
+          "allDomains": "Todas las secciones",
+          "allStatuses": "Todos los estados",
+          "allRisks": "Todos los riesgos",
+          "operational": "Aplicada",
+          "comingSoon": "En preparación",
+          "review": "Revisión",
+          "high": "Alto"
+        }
+      },
+      "footer": "Recorra el catálogo, siga las fuentes, abra un área cuando quiera una lectura más detallada."
+    },
+    "domains": {
+      "nav": {
+        "back": "Volver al inicio"
+      },
+      "hero": {
+        "title": "Áreas",
+        "lead": "Cada página de área reúne métodos, habilidades aplicadas y notas dentro de un mismo terreno de investigación. Comunicación está abierta hoy; las demás están indexadas y en preparación.",
+        "eyebrow": "Áreas de investigación"
+      },
+      "footer": "Abra un área para ver los métodos agrupados allí y los materiales aplicados ya publicados."
+    },
+    "skills": {
+      "nav": {
+        "back": "Volver al inicio"
+      },
+      "hero": {
+        "title": "Materiales",
+        "lead": "Materiales aplicados emparejados con el catálogo de métodos. Funcionan dentro de agentes Claude y Codex y se apoyan en las mismas fuentes que los métodos.",
+        "eyebrow": "Materiales aplicados"
+      },
+      "install": {
+        "title": "Instalación",
+        "body": "Conecte el catálogo de materiales a un agente Claude o Codex y traiga el paquete del área que necesita.",
+        "claudeBody": "Dentro de Claude Code, ejecute los comandos de catálogo e instalación.",
+        "codexBody": "Dentro de Codex CLI, conecte el catálogo y elija el paquete desde el menú de plugins."
+      },
+      "registryNote": "Hoy el paquete publicado es el del área de comunicación. En las otras áreas los métodos están indexados y pasan a materiales aplicados a medida que avanza la revisión editorial.",
+      "footer": "Abra un área para ver qué materiales ya están publicados y cómo se enlazan con los métodos del catálogo."
+    },
+    "organizations": {
+      "nav": {
+        "back": "Volver al inicio"
+      },
+      "hero": {
+        "title": "Organizaciones",
+        "lead": "Registro de organizaciones cuyo trabajo en resistencia civil aparece en fuentes públicas. Cada perfil describe actividad documentada, distingue fuentes primarias y secundarias y cita cada afirmación.",
+        "eyebrow": "Registro con cita de fuentes"
+      },
+      "empty": {
+        "title": "Listado en preparación",
+        "body": "La vitrina con los perfiles se está preparando como tarea siguiente. Hasta que se publique, el registro arranca con un pequeño conjunto de perfiles iniciales en el repositorio."
+      },
+      "footer": "El registro es material de referencia para investigación — no es una lista de organizaciones recomendadas."
     }
   },
   "pl": {
@@ -743,14 +917,19 @@
         "66xx": "Konstruktywna interwencja fizyczna i techniczna",
         "67xx": "Blokada, łamanie blokady, transport i interwencja w punktach krytycznych",
         "68xx": "Interwencja cyfrowa lub techniczna i taktyki związane z cyberprzestrzenią"
-      }
+      },
+      "sections": {
+        "methods": "Metody",
+        "domains": "Obszary",
+        "skills": "Materiały",
+        "organizations": "Organizacje"
+      },
+      "back": "Wróć na stronę główną"
     },
     "home": {
       "nav": {
         "why": "Po co",
-        "install": "Instalacja",
-        "domains": "Sekcje",
-        "catalog": "Katalog"
+        "install": "Instalacja"
       },
       "hero": {
         "eyebrow": "Atlas badań obywatelskich",
@@ -815,25 +994,6 @@
         "claudeBody": "Dodaj marketplace, a potem zainstaluj plugin komunikacyjny.",
         "codexBody": "Dodaj marketplace dla Codex i wybierz pluginy w jego własnym interfejsie."
       },
-      "domainsSection": {
-        "title": "Sekcje",
-        "body": "Sześć sekcji obejmuje 347 metod. Komunikacja jest pierwszą aktywną sekcją; pozostałe są już w rejestrze i czekają, aż powstaną dla nich umiejętności praktyczne."
-      },
-      "catalog": {
-        "title": "Atlas metod",
-        "body": "Gotowe wiersze prowadzą do opublikowanych plików umiejętności. Wiersze „w przygotowaniu” są już w rejestrze, ale nie stały się jeszcze umiejętnością. Wpisy wyższego ryzyka zostają tylko do analizy.",
-        "detail": "Sekcja komunikacji",
-        "filters": {
-          "search": "Szukaj metody, ID lub podgrupy...",
-          "allDomains": "Wszystkie sekcje",
-          "allStatuses": "Wszystkie statusy",
-          "allRisks": "Wszystkie poziomy ryzyka",
-          "operational": "Praktyczna",
-          "comingSoon": "W przygotowaniu",
-          "review": "Przegląd",
-          "high": "Wysoki"
-        }
-      },
       "footer": {
         "text": "Civil Resistance Skills — infrastruktura do badań i symulacji.",
         "sources": "Źródła"
@@ -876,6 +1036,32 @@
         "domainsListName": "Sekcje badawcze Civil Resistance Skills",
         "atlasName": "Atlas badawczy Civil Resistance Skills",
         "atlasDescription": "Atlas ze źródłami, łączący 347 wpisów o metodach obywatelskiego oporu bez przemocy w sześciu sekcjach badawczych; wpisy wyższego ryzyka pozostają opisowe, a stosowane umiejętności niskiego ryzyka są oceniane osobno."
+      },
+      "explore": {
+        "title": "Przejdź po stronie",
+        "body": "Cztery obszary zbierają to, co projekt już publikuje. Przy każdym widać, na jakich źródłach opiera się materiał.",
+        "cards": {
+          "methods": {
+            "title": "Metody",
+            "body": "Zindeksowany katalog metod obywatelskiego oporu bez przemocy z odnośnikami do publicznych taksonomii, z których pochodzą.",
+            "action": "Otwórz metody"
+          },
+          "domains": {
+            "title": "Obszary",
+            "body": "Strony obszarów łączą metody, praktyczne materiały oraz notatki w obrębie jednego pola badawczego.",
+            "action": "Otwórz obszary"
+          },
+          "skills": {
+            "title": "Materiały",
+            "body": "Praktyczne materiały zbudowane wokół katalogu metod — gotowe do pracy z agentami Claude i Codex.",
+            "action": "Zobacz materiały"
+          },
+          "organizations": {
+            "title": "Organizacje",
+            "body": "Zestawienie organizacji, których praca w zakresie obywatelskiego oporu bez przemocy została odnotowana w źródłach publicznych; każdy profil podaje swoje źródła.",
+            "action": "Otwórz zestawienie"
+          }
+        }
       }
     },
     "communication": {
@@ -954,6 +1140,81 @@
       "schema": {
         "appliedSkillsListName": "Stosowane umiejętności komunikacyjne"
       }
+    },
+    "methods": {
+      "nav": {
+        "back": "Wróć na stronę główną"
+      },
+      "hero": {
+        "title": "Metody",
+        "lead": "Metody obywatelskiego oporu bez przemocy — zindeksowane na podstawie publicznych taksonomii i połączone z ich źródłami. Pozycje wyższego ryzyka pozostają materiałem analitycznym.",
+        "eyebrow": "Atlas metod"
+      },
+      "stats": [
+        "zindeksowanych metod",
+        "obszarów badawczych",
+        "praktycznych pozycji niskiego ryzyka",
+        "pozycji wyższego ryzyka w trybie opisowym"
+      ],
+      "catalog": {
+        "title": "Atlas metod",
+        "body": "Gotowe wiersze prowadzą do opublikowanych plików umiejętności. Wiersze „w przygotowaniu” są już w rejestrze, ale nie stały się jeszcze umiejętnością. Wpisy wyższego ryzyka zostają tylko do analizy.",
+        "filters": {
+          "search": "Szukaj metody, ID lub podgrupy...",
+          "allDomains": "Wszystkie sekcje",
+          "allStatuses": "Wszystkie statusy",
+          "allRisks": "Wszystkie poziomy ryzyka",
+          "operational": "Praktyczna",
+          "comingSoon": "W przygotowaniu",
+          "review": "Przegląd",
+          "high": "Wysoki"
+        }
+      },
+      "footer": "Przeglądaj katalog, sięgaj do źródeł, otwieraj wybrany obszar, gdy potrzebujesz uważnego czytania."
+    },
+    "domains": {
+      "nav": {
+        "back": "Wróć na stronę główną"
+      },
+      "hero": {
+        "title": "Obszary",
+        "lead": "Każda strona obszaru łączy metody, praktyczne materiały oraz notatki w obrębie jednego pola badawczego. Komunikacja jest już dostępna; pozostałe są zindeksowane i w przygotowaniu.",
+        "eyebrow": "Obszary badawcze"
+      },
+      "footer": "Otwórz obszar, aby zobaczyć zgromadzone tam metody oraz opublikowane już praktyczne materiały."
+    },
+    "skills": {
+      "nav": {
+        "back": "Wróć na stronę główną"
+      },
+      "hero": {
+        "title": "Materiały",
+        "lead": "Praktyczne materiały zbudowane wokół katalogu metod. Działają wewnątrz agentów Claude i Codex i opierają się na tych samych źródłach co same metody.",
+        "eyebrow": "Praktyczne materiały"
+      },
+      "install": {
+        "title": "Instalacja",
+        "body": "Podłącz katalog materiałów do agenta Claude lub Codex i pobierz pakiet potrzebnego obszaru.",
+        "claudeBody": "W Claude Code uruchom polecenia podłączenia katalogu i instalacji.",
+        "codexBody": "W Codex CLI podłącz katalog i wybierz pakiet z menu wtyczek."
+      },
+      "registryNote": "Obecnie opublikowany jest pakiet dla obszaru komunikacji. W pozostałych obszarach metody są zindeksowane i stopniowo przechodzą do praktycznych materiałów w miarę postępu pracy redakcyjnej.",
+      "footer": "Otwórz obszar, aby zobaczyć, które materiały są już opublikowane i jak łączą się z metodami z katalogu."
+    },
+    "organizations": {
+      "nav": {
+        "back": "Wróć na stronę główną"
+      },
+      "hero": {
+        "title": "Organizacje",
+        "lead": "Zestawienie organizacji, których praca w zakresie obywatelskiego oporu bez przemocy została odnotowana w źródłach publicznych. Każdy profil opisuje udokumentowaną działalność, odróżnia źródła pierwotne od wtórnych i podaje odnośnik dla każdego stwierdzenia.",
+        "eyebrow": "Zestawienie z cytatami źródeł"
+      },
+      "empty": {
+        "title": "Witryna w przygotowaniu",
+        "body": "Witryna z profilami jest przygotowywana w kolejnym zadaniu. Do czasu publikacji zestawienie startuje z małym zbiorem profili początkowych w repozytorium."
+      },
+      "footer": "Zestawienie to materiał odniesienia do badań — nie jest spisem organizacji do polecenia."
     }
   },
   "ru": {
@@ -1062,14 +1323,19 @@
         "66xx": "Конструктивное физическое и техническое вмешательство",
         "67xx": "Блокада, прорыв блокады, транспорт и удары по узловым точкам",
         "68xx": "Цифровое или техническое вмешательство и тактики, связанные с кибер-сферой"
-      }
+      },
+      "sections": {
+        "methods": "Методы",
+        "domains": "Разделы",
+        "skills": "Материалы",
+        "organizations": "Организации"
+      },
+      "back": "На главную"
     },
     "home": {
       "nav": {
         "why": "Зачем",
-        "install": "Установка",
-        "domains": "Разделы",
-        "catalog": "Каталог"
+        "install": "Установка"
       },
       "hero": {
         "eyebrow": "Атлас гражданских исследований",
@@ -1134,25 +1400,6 @@
         "claudeBody": "Добавьте маркетплейс, затем установите коммуникационный плагин.",
         "codexBody": "Добавьте маркетплейс Codex и выберите плагины через его интерфейс."
       },
-      "domainsSection": {
-        "title": "Разделы",
-        "body": "Шесть разделов охватывают 347 методов. Коммуникация — первый активный раздел; остальные есть в реестре и ждут, когда для них подготовят прикладные навыки."
-      },
-      "catalog": {
-        "title": "Атлас методов",
-        "body": "Реализованные строки ведут к опубликованным файлам навыков. Строки «в планах» уже есть в реестре, но навыков по ним пока нет. Записи повышенного риска остаются только для анализа.",
-        "detail": "Раздел коммуникации",
-        "filters": {
-          "search": "Поиск по методу, ID или подгруппе…",
-          "allDomains": "Все разделы",
-          "allStatuses": "Все статусы",
-          "allRisks": "Все уровни риска",
-          "operational": "Прикладной",
-          "comingSoon": "В планах",
-          "review": "Проверка",
-          "high": "Повышенный"
-        }
-      },
       "footer": {
         "text": "Civil Resistance Skills — инфраструктура для исследования и симуляции.",
         "sources": "Источники"
@@ -1195,6 +1442,32 @@
         "domainsListName": "Исследовательские разделы Civil Resistance Skills",
         "atlasName": "Исследовательский атлас Civil Resistance Skills",
         "atlasDescription": "Атлас с привязкой к источникам объединяет 347 записей о методах гражданского сопротивления в шести исследовательских разделах: записи повышенного риска остаются описательными, а низкорисковые прикладные навыки проходят отдельную проверку."
+      },
+      "explore": {
+        "title": "Разделы сайта",
+        "body": "Четыре раздела собирают то, что у проекта уже опубликовано. В каждом видно, на какие источники опирается материал.",
+        "cards": {
+          "methods": {
+            "title": "Методы",
+            "body": "Индексированный каталог методов гражданского сопротивления со ссылками на публичные таксономии, из которых они взяты.",
+            "action": "Открыть методы"
+          },
+          "domains": {
+            "title": "Разделы",
+            "body": "Страницы разделов собирают методы, прикладные материалы и заметки в рамках одной области исследования.",
+            "action": "Открыть разделы"
+          },
+          "skills": {
+            "title": "Материалы",
+            "body": "Прикладные материалы поверх каталога методов — готовы к работе с агентами Claude и Codex.",
+            "action": "Открыть материалы"
+          },
+          "organizations": {
+            "title": "Организации",
+            "body": "Справочник организаций, чья работа в сфере гражданского сопротивления отражена в публичных источниках; каждая запись опирается на цитаты и ссылки.",
+            "action": "Открыть справочник"
+          }
+        }
       }
     },
     "communication": {
@@ -1273,6 +1546,81 @@
       "schema": {
         "appliedSkillsListName": "Прикладные коммуникационные навыки"
       }
+    },
+    "methods": {
+      "nav": {
+        "back": "На главную"
+      },
+      "hero": {
+        "title": "Методы",
+        "lead": "Методы гражданского сопротивления — индексированы по публичным таксономиям и снабжены ссылками на источники. Записи с повышенным риском остаются аналитическими.",
+        "eyebrow": "Атлас методов"
+      },
+      "stats": [
+        "индексированных методов",
+        "областей исследования",
+        "прикладных записей с низким риском",
+        "записей с повышенным риском — описательно"
+      ],
+      "catalog": {
+        "title": "Атлас методов",
+        "body": "Реализованные строки ведут к опубликованным файлам навыков. Строки «в планах» уже есть в реестре, но навыков по ним пока нет. Записи повышенного риска остаются только для анализа.",
+        "filters": {
+          "search": "Поиск по методу, ID или подгруппе…",
+          "allDomains": "Все разделы",
+          "allStatuses": "Все статусы",
+          "allRisks": "Все уровни риска",
+          "operational": "Прикладной",
+          "comingSoon": "В планах",
+          "review": "Проверка",
+          "high": "Повышенный"
+        }
+      },
+      "footer": "Просматривайте каталог, переходите к источникам, открывайте отдельный раздел, когда нужен подробный взгляд."
+    },
+    "domains": {
+      "nav": {
+        "back": "На главную"
+      },
+      "hero": {
+        "title": "Разделы",
+        "lead": "Каждая страница раздела собирает методы, прикладные материалы и заметки в одном поле исследования. Коммуникация уже открыта; остальные — индексированы и в работе.",
+        "eyebrow": "Области исследования"
+      },
+      "footer": "Откройте раздел, чтобы увидеть методы, сгруппированные внутри, и уже опубликованные прикладные материалы."
+    },
+    "skills": {
+      "nav": {
+        "back": "На главную"
+      },
+      "hero": {
+        "title": "Материалы",
+        "lead": "Прикладные материалы поверх каталога методов. Они работают внутри агентов Claude и Codex и опираются на те же источники, что и сами методы.",
+        "eyebrow": "Прикладные материалы"
+      },
+      "install": {
+        "title": "Установка",
+        "body": "Подключите каталог материалов к агенту Claude или Codex и подтяните нужный набор по разделу.",
+        "claudeBody": "В Claude Code выполните команды для подключения каталога и установки.",
+        "codexBody": "В Codex CLI подключите каталог и выберите набор из меню плагинов."
+      },
+      "registryNote": "Сегодня опубликован набор по разделу коммуникации. У остальных разделов методы индексированы и постепенно становятся прикладными материалами по мере редакторской работы.",
+      "footer": "Откройте раздел, чтобы увидеть, какие материалы уже опубликованы и как они связаны с методами."
+    },
+    "organizations": {
+      "nav": {
+        "back": "На главную"
+      },
+      "hero": {
+        "title": "Организации",
+        "lead": "Справочник организаций, чья работа в сфере гражданского сопротивления отражена в публичных источниках. Каждая запись описывает задокументированную деятельность, различает первичные и вторичные источники и цитирует каждое утверждение.",
+        "eyebrow": "Справочник со ссылками на источники"
+      },
+      "empty": {
+        "title": "Витрина в подготовке",
+        "body": "Открытая витрина записей готовится отдельной задачей. До её публикации справочник начинается с небольшого набора стартовых записей в репозитории."
+      },
+      "footer": "Справочник — это исследовательская опора, а не подборка рекомендованных организаций."
     }
   }
 }

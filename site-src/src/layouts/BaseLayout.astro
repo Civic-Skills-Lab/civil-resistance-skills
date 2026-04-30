@@ -59,37 +59,39 @@ const faqGraph = faqItems.length
   : [];
 const homeSchema = (localizedContent[lang].home as any).schema as { domainsListName: string; atlasName: string; atlasDescription: string };
 const communicationSchema = (localizedContent[lang].communication as any).schema as { appliedSkillsListName: string };
-const itemListGraph =
-  page === "home"
-    ? [
-        {
-          "@type": "ItemList",
-          "@id": `${canonicalUrl}#domains`,
-          name: homeSchema.domainsListName,
-          numberOfItems: registryData.domains.length,
-          itemListElement: registryData.domains.map((domain: { key: string }, index: number) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: domainLabels[domain.key].label,
-            description: domainLabels[domain.key].description
-          }))
-        }
-      ]
-    : [
-        {
-          "@type": "ItemList",
-          "@id": `${canonicalUrl}#applied-skills`,
-          name: communicationSchema.appliedSkillsListName,
-          numberOfItems: pageContent.operational.skills.length,
-          itemListElement: pageContent.operational.skills.map((skill: { id: string; title: string; body: string }, index: number) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: skill.title,
-            url: githubBlob(`skills-catalog/${skill.id}/SKILL.md`),
-            description: skill.body
-          }))
-        }
-      ];
+let itemListGraph: Array<Record<string, unknown>> = [];
+if (page === "home") {
+  itemListGraph = [
+    {
+      "@type": "ItemList",
+      "@id": `${canonicalUrl}#domains`,
+      name: homeSchema.domainsListName,
+      numberOfItems: registryData.domains.length,
+      itemListElement: registryData.domains.map((domain: { key: string }, index: number) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: domainLabels[domain.key].label,
+        description: domainLabels[domain.key].description
+      }))
+    }
+  ];
+} else if (page === "communication") {
+  itemListGraph = [
+    {
+      "@type": "ItemList",
+      "@id": `${canonicalUrl}#applied-skills`,
+      name: communicationSchema.appliedSkillsListName,
+      numberOfItems: pageContent.operational.skills.length,
+      itemListElement: pageContent.operational.skills.map((skill: { id: string; title: string; body: string }, index: number) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: skill.title,
+        url: githubBlob(`skills-catalog/${skill.id}/SKILL.md`),
+        description: skill.body
+      }))
+    }
+  ];
+}
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [

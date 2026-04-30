@@ -1,0 +1,23 @@
+---
+import SectionPage from "./SectionPage.astro";
+import DomainGrid from "./DomainGrid";
+import content from "../data/site-content.json";
+import registry from "../data/registry.json";
+import { localizedPaths, pathFor, type Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const common = content[lang].common;
+const communicationHref = pathFor(localizedPaths.communication[lang]);
+---
+
+<SectionPage lang={lang} section="domains">
+  <section id="domain-grid">
+    <div class="wrap">
+      <DomainGrid domains={registry.domains} labels={common} communicationHref={communicationHref} />
+    </div>
+  </section>
+</SectionPage>
