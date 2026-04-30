@@ -173,25 +173,5 @@ const domainLabels = common.domains as Record<string, { label: string; descripti
     </section>
   </main>
   <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>{common.github}</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
-  <script
-    is:inline
-    define:vars={{
-      domainsTarget: pathFor(localizedPaths.domains[lang]),
-      methodsTarget: pathFor(localizedPaths.methods[lang])
-    }}
-  >
-    // Legacy hash redirect — when a visitor arrives at the homepage with
-    // `#domains` or `#catalog`, scroll to the redirect notice (the section
-    // ids are preserved on the page) and then move them to the new section
-    // page after a short pause so they have time to read where the
-    // content went. Pure client-side: GitHub Pages cannot observe URL
-    // fragments at the server.
-    const moved = { "#domains": domainsTarget, "#catalog": methodsTarget };
-    const target = moved[window.location.hash];
-    if (target) {
-      window.setTimeout(() => {
-        window.location.replace(target);
-      }, 4000);
-    }
-  </script>
+
 </BaseLayout>
