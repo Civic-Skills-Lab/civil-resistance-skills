@@ -1,19 +1,20 @@
 ---
 import LanguageSwitch from "./LanguageSwitch.astro";
-import { pathFor, repoUrl, type Language, type SectionKey, type SectionNavLink } from "../data/siteMeta";
+import { localizedPaths, pathFor, repoUrl, type Language, type SectionKey, type SectionNavLink } from "../data/siteMeta";
 
 interface Props {
   current: Language;
-  page: "home" | "communication";
+  page: keyof typeof localizedPaths;
   active?: SectionKey;
   sections: SectionNavLink[];
   brand: string;
   github: string;
   primaryAria: string;
   languageAria: string;
+  menuAria: string;
 }
 
-const { current, page, active, sections, brand, github, primaryAria, languageAria } = Astro.props;
+const { current, page, active, sections, brand, github, primaryAria, languageAria, menuAria } = Astro.props;
 const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
 ---
 
@@ -23,7 +24,7 @@ const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
       <img src={pathFor("/assets/logo-wordmark.svg")} alt={brand} width="820" height="160" />
     </a>
     <div class="nav-right">
-      <div class="links">
+      <div id="primary-nav" class="links" data-state="closed">
         {sections.map((link) => (
           <a
             href={link.href}
@@ -35,6 +36,55 @@ const homeHref = pathFor(current === "en" ? "/" : `/${current}/`);
         <a href={repoUrl}>{github}</a>
       </div>
       <LanguageSwitch current={current} page={page} ariaLabel={languageAria} />
+      <button
+        class="burger"
+        type="button"
+        aria-label={menuAria}
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="burger__icon" aria-hidden="true"></span>
+      </button>
     </div>
   </nav>
 </header>
+
+<script is:inline>
+  (function () {
+    const button = document.querySelector(".burger");
+    const panel = document.getElementById("primary-nav");
+    if (!button || !panel) return;
+
+    const setOpen = (open) => {
+      button.setAttribute("aria-expanded", String(open));
+      panel.dataset.state = open ? "open" : "closed";
+    };
+
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      if (button.getAttribute("aria-expanded") !== "true") return;
+      setOpen(false);
+      button.focus();
+    });
+
+    document.addEventListener("click", (event) => {
+      if (button.getAttribute("aria-expanded") !== "true") return;
+      const target = event.target;
+      if (button.contains(target) || panel.contains(target)) return;
+      setOpen(false);
+    });
+
+    panel.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof Element && target.closest("a")) {
+        setOpen(false);
+      }
+    });
+  })();
+</script>
