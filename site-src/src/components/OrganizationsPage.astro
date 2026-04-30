@@ -1,6 +1,8 @@
 ---
 import SectionPage from "./SectionPage.astro";
+import OrganizationCard from "./OrganizationCard.astro";
 import content from "../data/site-content.json";
+import { getCollection } from "astro:content";
 import type { Language } from "../data/siteMeta";
 
 interface Props {
@@ -9,15 +11,52 @@ interface Props {
 
 const { lang } = Astro.props;
 const page = content[lang].organizations;
+
+const allProfiles = await getCollection("organizations");
+const visibleProfiles = allProfiles
+  .filter((entry) => entry.data.translations[lang])
+  .sort((a, b) => a.data.name.localeCompare(b.data.name, lang));
+const totalProfiles = allProfiles.length;
+const hasVisible = visibleProfiles.length > 0;
+const hasAnyProfile = totalProfiles > 0;
 ---
 
 <SectionPage lang={lang} section="organizations">
-  <section id="organizations-empty">
-    <div class="wrap">
-      <article class="card">
-        <h2>{page.empty.title}</h2>
-        <p>{page.empty.body}</p>
-      </article>
-    </div>
-  </section>
+  {hasVisible && (
+    <section id="org-listing" aria-labelledby="org-listing-heading">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="org-listing-heading">{page.listing.title}</h2>
+            <p class="section-copy">{page.listing.body}</p>
+          </div>
+        </div>
+        <div class="org-grid">
+          {visibleProfiles.map((entry) => (
+            <OrganizationCard entry={entry} lang={lang} labels={page.card} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+  {!hasVisible && hasAnyProfile && (
+    <section id="org-empty-translation" aria-labelledby="org-empty-translation-heading">
+      <div class="wrap">
+        <article class="card">
+          <h2 id="org-empty-translation-heading">{page.emptyTranslation.title}</h2>
+          <p>{page.emptyTranslation.body}</p>
+        </article>
+      </div>
+    </section>
+  )}
+  {!hasAnyProfile && (
+    <section id="org-empty" aria-labelledby="org-empty-heading">
+      <div class="wrap">
+        <article class="card">
+          <h2 id="org-empty-heading">{page.empty.title}</h2>
+          <p>{page.empty.body}</p>
+        </article>
+      </div>
+    </section>
+  )}
 </SectionPage>

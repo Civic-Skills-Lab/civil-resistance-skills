@@ -180,3 +180,43 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
   .links-list { display: grid; grid-template-columns: 1fr; }
   .link-pill { text-align: center; overflow-wrap: anywhere; }
 }
+
+/* Organization registry — explore band on the homepage */
+.explore-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.explore-card h3 { margin: 0 0 10px; font-size: 21px; }
+.explore-card p { margin: 0 0 12px; color: var(--ink-soft); font-size: 14px; }
+.explore-card .card-action { margin: 0; }
+.explore-card .card-action a { font-weight: 700; }
+
+/* Organization registry — listing cards */
+.org-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.org-card { display: flex; flex-direction: column; gap: 14px; }
+.org-card__header { display: flex; justify-content: space-between; align-items: start; gap: 14px; flex-wrap: wrap; }
+.org-card__name { margin: 0; font-size: 19px; line-height: 1.25; }
+.org-card__name a { color: var(--ink); }
+.org-card__meta { margin: 0; display: grid; gap: 8px; }
+.org-card__row { display: grid; grid-template-columns: minmax(110px, max-content) 1fr; gap: 10px; align-items: start; font-size: 14px; }
+.org-card__row dt { font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.02em; font-size: 11px; padding-top: 3px; }
+.org-card__row dd { margin: 0; color: var(--ink-soft); }
+.org-card__focus { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.org-card__focus li { background: var(--paper-deep); border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; font-size: 12px; color: var(--ink); }
+.org-card__focus-more { background: transparent; border-style: dashed; }
+.org-card__action { margin: 0; }
+.org-card__action a { font-weight: 700; }
+
+/* Confidence pill — colour + non-colour signal (filled-dot count) */
+.confidence-pill { display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; line-height: 1.15; border: 1px solid var(--line); background: var(--paper-deep); color: var(--ink); }
+.confidence-pill__mark { display: inline-block; font-family: var(--mono); letter-spacing: 1px; line-height: 1; }
+.confidence-pill__label { white-space: nowrap; }
+.confidence-pill--well-documented { color: #0a4f1c; background: var(--green-bg); border-color: rgba(10, 79, 28, 0.35); }
+.confidence-pill--well-documented .confidence-pill__mark::before { content: "\25CF\25CF\25CF"; }
+.confidence-pill--partially-documented { color: #6a4a00; background: var(--amber-bg); border-color: rgba(106, 74, 0, 0.35); }
+.confidence-pill--partially-documented .confidence-pill__mark::before { content: "\25CF\25CF\25CB"; }
+.confidence-pill--sparse { color: #41464a; background: var(--gray-bg); border-color: rgba(65, 70, 74, 0.35); }
+.confidence-pill--sparse .confidence-pill__mark::before { content: "\25CF\25CB\25CB"; }
+
+@media (max-width: 700px) {
+  .explore-grid { grid-template-columns: 1fr; }
+  .org-grid { grid-template-columns: 1fr; }
+  .org-card__row { grid-template-columns: 1fr; gap: 2px; }
+}

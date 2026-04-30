@@ -402,7 +402,38 @@
         "title": "Listing in preparation",
         "body": "The browsable listing of profiles is being prepared in a follow-up task. Until it is published, the registry begins as a small set of seed profiles in the repository."
       },
-      "footer": "The registry is research-adjacent reference material — not a directory of recommended organizations."
+      "footer": "The registry is research-adjacent reference material — not a directory of recommended organizations.",
+      "listing": {
+        "title": "Profiles",
+        "body": "Each card shows the organization's documented type, where its public footprint is, the focus areas attested in sources, and how well the source base supports the description."
+      },
+      "card": {
+        "labelType": "Type",
+        "labelGeography": "Where",
+        "labelFocus": "Focus",
+        "labelConfidence": "Source coverage",
+        "moreLabel": "Read profile",
+        "types": {
+          "research": "Research",
+          "training": "Training",
+          "education": "Education",
+          "archive": "Archive",
+          "journalism": "Journalism",
+          "legal_support": "Legal support",
+          "documentation": "Documentation",
+          "methodology": "Methodology",
+          "convening": "Convening"
+        },
+        "confidence": {
+          "well_documented": "Well documented",
+          "partially_documented": "Partially documented",
+          "sparse": "Sparse"
+        }
+      },
+      "emptyTranslation": {
+        "title": "No profile is published in this language yet",
+        "body": "Profiles are published in English first; translations are added when an editorial review is complete and a translator can preserve the wording posture. Open the registry in English to see what is currently available."
+      }
     }
   },
   "es": {
@@ -808,7 +839,38 @@
         "title": "Listado en preparación",
         "body": "La vitrina con los perfiles se está preparando como tarea siguiente. Hasta que se publique, el registro arranca con un pequeño conjunto de perfiles iniciales en el repositorio."
       },
-      "footer": "El registro es material de referencia para investigación — no es una lista de organizaciones recomendadas."
+      "footer": "El registro es material de referencia para investigación — no es una lista de organizaciones recomendadas.",
+      "listing": {
+        "title": "Perfiles",
+        "body": "Cada ficha muestra el tipo documentado de la organización, dónde se ubica su huella pública, las áreas de enfoque atestiguadas en las fuentes y cuánto las fuentes sostienen la descripción."
+      },
+      "card": {
+        "labelType": "Tipo",
+        "labelGeography": "Dónde",
+        "labelFocus": "Áreas",
+        "labelConfidence": "Cobertura de fuentes",
+        "moreLabel": "Abrir el perfil",
+        "types": {
+          "research": "Investigación",
+          "training": "Formación",
+          "education": "Educación",
+          "archive": "Archivo",
+          "journalism": "Periodismo",
+          "legal_support": "Apoyo legal",
+          "documentation": "Documentación",
+          "methodology": "Metodología",
+          "convening": "Encuentros"
+        },
+        "confidence": {
+          "well_documented": "Bien documentado",
+          "partially_documented": "Parcialmente documentado",
+          "sparse": "Poco documentado"
+        }
+      },
+      "emptyTranslation": {
+        "title": "Aún no hay perfil publicado en este idioma",
+        "body": "Los perfiles se publican primero en inglés; las traducciones llegan cuando la revisión editorial está cerrada y un traductor puede mantener la manera cuidadosa del texto. Abra el registro en inglés para ver lo que ya está disponible."
+      }
     }
   },
   "pl": {
@@ -1214,7 +1276,38 @@
         "title": "Witryna w przygotowaniu",
         "body": "Witryna z profilami jest przygotowywana w kolejnym zadaniu. Do czasu publikacji zestawienie startuje z małym zbiorem profili początkowych w repozytorium."
       },
-      "footer": "Zestawienie to materiał odniesienia do badań — nie jest spisem organizacji do polecenia."
+      "footer": "Zestawienie to materiał odniesienia do badań — nie jest spisem organizacji do polecenia.",
+      "listing": {
+        "title": "Profile",
+        "body": "Każda karta pokazuje udokumentowany typ organizacji, miejsce, w którym widoczna jest jej publiczna obecność, obszary działania potwierdzone w źródłach oraz to, jak mocno źródła podpierają opis."
+      },
+      "card": {
+        "labelType": "Typ",
+        "labelGeography": "Gdzie",
+        "labelFocus": "Obszary",
+        "labelConfidence": "Pokrycie źródłowe",
+        "moreLabel": "Otwórz profil",
+        "types": {
+          "research": "Badania",
+          "training": "Szkolenia",
+          "education": "Edukacja",
+          "archive": "Archiwum",
+          "journalism": "Dziennikarstwo",
+          "legal_support": "Wsparcie prawne",
+          "documentation": "Dokumentacja",
+          "methodology": "Metodologia",
+          "convening": "Spotkania środowiskowe"
+        },
+        "confidence": {
+          "well_documented": "Dobrze udokumentowane",
+          "partially_documented": "Częściowo udokumentowane",
+          "sparse": "Skąpo udokumentowane"
+        }
+      },
+      "emptyTranslation": {
+        "title": "W tym języku nie ma jeszcze opublikowanego profilu",
+        "body": "Profile publikowane są najpierw po angielsku; tłumaczenia pojawiają się, gdy redakcja zamknie sprawdzanie, a tłumacz może zachować ostrożny styl. Otwórz zestawienie po angielsku, żeby zobaczyć, co jest już dostępne."
+      }
     }
   },
   "ru": {
@@ -1620,7 +1713,38 @@
         "title": "Витрина в подготовке",
         "body": "Открытая витрина записей готовится отдельной задачей. До её публикации справочник начинается с небольшого набора стартовых записей в репозитории."
       },
-      "footer": "Справочник — это исследовательская опора, а не подборка рекомендованных организаций."
+      "footer": "Справочник — это исследовательская опора, а не подборка рекомендованных организаций.",
+      "listing": {
+        "title": "Записи",
+        "body": "На карточке указаны задокументированный тип организации, география публичного присутствия, направления, отражённые в источниках, и то, насколько прочно источники поддерживают описание."
+      },
+      "card": {
+        "labelType": "Тип",
+        "labelGeography": "Где",
+        "labelFocus": "Направления",
+        "labelConfidence": "Опора на источники",
+        "moreLabel": "Открыть запись",
+        "types": {
+          "research": "Исследования",
+          "training": "Обучение",
+          "education": "Образование",
+          "archive": "Архив",
+          "journalism": "Журналистика",
+          "legal_support": "Юридическая поддержка",
+          "documentation": "Документирование",
+          "methodology": "Методология",
+          "convening": "Встречи и сборы"
+        },
+        "confidence": {
+          "well_documented": "Хорошо подтверждено",
+          "partially_documented": "Подтверждено частично",
+          "sparse": "Мало подтверждений"
+        }
+      },
+      "emptyTranslation": {
+        "title": "На этом языке записей пока нет",
+        "body": "Записи сначала публикуются на английском; переводы появляются, когда редакторская проверка завершена и переводчик может сохранить осторожную манеру изложения. Откройте справочник на английском, чтобы посмотреть, что уже доступно."
+      }
     }
   }
 }
