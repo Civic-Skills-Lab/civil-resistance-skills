@@ -228,16 +228,48 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
   .burger[aria-expanded="true"] .burger__icon::before { transform: translate(-50%, -50%) rotate(45deg); }
   .burger[aria-expanded="true"] .burger__icon::after  { transform: translate(-50%, -50%) rotate(-45deg); }
   select.lang-switch { min-width: 60px; }
-  .table-wrap { overflow-x: visible; }
+  /* Catalog table on mobile: each tr renders as a card, each td as a
+     stacked block with the column label above its content. The desktop
+     grid layout (label-left, content-right) collapsed cells into wide
+     auto-sized grid tracks that produced large vertical voids when the
+     cell content was short. Stacking vertically is predictable and
+     mirrors common responsive table patterns. */
+  .table-wrap { overflow-x: visible; border: 0; background: transparent; box-shadow: none; }
   table { display: block; min-width: 0; }
   .catalog-table, .domain-table { min-width: 0; }
   colgroup, thead { display: none; }
-  tbody, tr, td { display: block; width: 100% !important; }
-  tr { padding: 6px 0; border-bottom: 1px solid var(--line); }
-  tr:last-child { border-bottom: 0; }
-  td { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 12px; align-items: start; padding: 8px 10px; border-bottom: 0; text-align: left !important; white-space: normal !important; }
-  td::before { content: attr(data-label); grid-column: 1; grid-row: 1 / span 10; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
-  td > * { grid-column: 2; }
+  tbody { display: block; }
+  tr {
+    display: block;
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    box-shadow: var(--shadow);
+  }
+  tr:last-child { margin-bottom: 0; }
+  td {
+    display: block;
+    width: 100% !important;
+    padding: 6px 0;
+    border-bottom: 0;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+  td:first-child { padding-top: 0; }
+  td:last-child { padding-bottom: 0; }
+  td + td { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 6px; }
+  td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
   .badge.status { min-width: 0; }
   .badge { white-space: normal; }
 }
