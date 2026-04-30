@@ -1,0 +1,47 @@
+---
+import SectionPage from "./SectionPage.astro";
+import CatalogTable from "./CatalogTable";
+import content from "../data/site-content.json";
+import registry from "../data/registry.json";
+import type { Language } from "../data/siteMeta";
+
+interface Props {
+  lang: Language;
+}
+
+const { lang } = Astro.props;
+const page = content[lang].methods;
+const common = content[lang].common;
+---
+
+<SectionPage lang={lang} section="methods">
+  <section class="visual-band" aria-label={common.aria.atlasPreview}>
+    <div class="wrap">
+      <div class="atlas-panel">
+        <h2>{page.hero.eyebrow}</h2>
+        <div class="stats" aria-label={common.aria.registryStats}>
+          <div class="stat"><div class="num">{registry.stats.methods}</div><div class="label">{page.stats[0]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.domains}</div><div class="label">{page.stats[1]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.operational}</div><div class="label">{page.stats[2]}</div></div>
+          <div class="stat"><div class="num">{registry.stats.highRisk}</div><div class="label">{page.stats[3]}</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="section-head"><div><h2>{page.catalog.title}</h2><p class="section-copy">{page.catalog.body}</p></div></div>
+      <CatalogTable
+        client:load
+        methods={registry.methods}
+        domains={registry.domains}
+        labels={common}
+        filterLabels={page.catalog.filters}
+        filtersAria={common.aria.catalogFilters}
+        storageKey="civil-resistance-skills:methods-filters"
+        mode="home"
+      />
+    </div>
+  </section>
+</SectionPage>

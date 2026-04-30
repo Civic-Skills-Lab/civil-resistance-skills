@@ -13,7 +13,10 @@ function faqBlock(title: string, items: Array<{ question: string; answer: string
 const home = content.en.home;
 const communication = content.en.communication;
 const localizedLinks = languages
-  .map((language) => `- ${language}: ${pageUrl(localizedPaths.home[language])} and ${pageUrl(localizedPaths.communication[language])}`)
+  .map(
+    (language) =>
+      `- ${language}: home ${pageUrl(localizedPaths.home[language])}, methods ${pageUrl(localizedPaths.methods[language])}, domains ${pageUrl(localizedPaths.domains[language])}, skills ${pageUrl(localizedPaths.skills[language])}, organizations ${pageUrl(localizedPaths.organizations[language])}, communication ${pageUrl(localizedPaths.communication[language])}`
+  )
   .join("\n");
 const appliedSkills = communication.operational.skills
   .map(
@@ -63,6 +66,21 @@ ${faqBlock(communication.faq.title, communication.faq.items)}
 - Skills catalog: ${aiResources.skillsCatalog}
 - Claude plugin marketplace: ${aiResources.claudeMarketplace}
 - Codex plugin marketplace: ${aiResources.codexMarketplace}
+
+## Site Sections
+
+- Methods (${pageUrl(localizedPaths.methods.en)}): the indexed catalogue of civil-resistance method records.
+- Domains (${pageUrl(localizedPaths.domains.en)}): the grid of research areas with link-throughs to per-domain pages.
+- Skills (${pageUrl(localizedPaths.skills.en)}): applied agent skills paired with the method catalogue and the marketplace install instructions.
+- Organizations (${pageUrl(localizedPaths.organizations.en)}): the source-cited registry of organizations whose civil-resistance work appears in the public record.
+
+## Organization Registry Posture
+
+- Profiles describe documented activity attributed to public sources.
+- Each profile renders identity, observed activities, public positions, and a sources block. Every claim cites at least one source from the profile's sources list.
+- Profiles include a confidence tier (well documented, partially documented, sparse) that reflects the source base — not editorial opinion of the organization.
+- Profiles publish in English first; a profile renders only at locale paths where its reviewed translation is complete. Locales without a reviewed translation return 404 for that profile path.
+- The registry is research-adjacent reference material. It does not rank organizations, does not endorse, and does not present itself as comprehensive.
 
 ## Localized Public Pages
 

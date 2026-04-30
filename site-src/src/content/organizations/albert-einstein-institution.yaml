@@ -1,0 +1,57 @@
+name: Albert Einstein Institution
+also_known_as:
+  - AEI
+type: research
+geography: United States
+founded: 1983
+active_status: active
+focus_areas:
+  - nonviolent action research
+  - civil resistance methods
+  - strategic nonviolent conflict
+observed_activities:
+  - text: >-
+      Publishes Gene Sharp's writings on nonviolent action methods and
+      strategic nonviolent conflict, including the catalogue commonly
+      cited as the 198 Methods of Nonviolent Action.
+    source_ids:
+      - aei-home
+      - icnc-library
+  - text: >-
+      Distributes free downloads of monographs and study guides on civil
+      resistance from its public site.
+    source_ids:
+      - aei-home
+public_positions:
+  - text: >-
+      States on its public site that it is dedicated to advancing the
+      worldwide study and strategic use of nonviolent action.
+    source_ids:
+      - aei-home
+sources:
+  - id: aei-home
+    type: primary
+    url: https://www.aeinstein.org/
+    accessed_on: 2026-04-30
+    citation: Albert Einstein Institution — public homepage
+  - id: icnc-library
+    type: secondary
+    url: https://www.nonviolent-conflict.org/
+    accessed_on: 2026-04-30
+    citation: >-
+      International Center on Nonviolent Conflict — public homepage and
+      resource library, an independent reference catalogue named in this
+      registry's editorial spec as a recognized taxonomic source.
+confidence: partially_documented
+last_reviewed: 2026-04-30
+notes: >-
+  Seed profile scope is intentionally narrow. Sources are limited to two
+  homepage-level references; broader secondary sourcing — peer-reviewed
+  reviews of Sharp's typology and established journalism on AEI's archive —
+  is a follow-up before any expansion of activities or public positions.
+  The active_status field reflects what the public site reports.
+translations:
+  en: true
+  ru: false
+  es: false
+  pl: false

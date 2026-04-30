@@ -1,0 +1,213 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "./Header.astro";
+import {
+  absoluteUrl,
+  languages,
+  localizedPaths,
+  pathFor,
+  sectionsFor,
+  type Language
+} from "../data/siteMeta";
+import content from "../data/site-content.json";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  lang: Language;
+  entry: CollectionEntry<"organizations">;
+  // Locales where this profile is published; used by BaseLayout for
+  // canonical, hreflang, and og:locale:alternate. The page component
+  // builds it from entry.data.translations and passes it explicitly so
+  // the layout does not have to re-derive the contract.
+  availableLocales: Language[];
+}
+
+const { lang, entry, availableLocales } = Astro.props;
+const data = entry.data;
+const common = content[lang].common;
+const orgContent = content[lang].organizations;
+const card = orgContent.card;
+const profile = orgContent.profile;
+const sections = sectionsFor(lang, common.sections);
+const listingHref = pathFor(localizedPaths.organizations[lang]);
+const profileSlug = entry.id;
+const pathPerLocale = Object.fromEntries(
+  availableLocales.map((l) => [l, pathFor(`${localizedPaths.organizations[l]}${profileSlug}/`)])
+) as Partial<Record<Language, string>>;
+const metaPerLocale = Object.fromEntries(
+  availableLocales.map((l) => [
+    l,
+    {
+      title: `${data.name} — Civil Resistance Skills`,
+      description: `${card.types[data.type] ?? data.type} · ${data.geography}`,
+      ogDescription: `${card.types[data.type] ?? data.type} · ${data.geography}`
+    }
+  ])
+);
+
+const canonicalUrl = absoluteUrl(pathPerLocale[lang]!);
+const orgSchema = {
+  "@type": "Organization",
+  "@id": `${canonicalUrl}#organization`,
+  name: data.name,
+  alternateName: data.also_known_as ?? [],
+  description: data.observed_activities[0]?.text ?? "",
+  url: data.sources.find((s) => s.type === "primary")?.url ?? canonicalUrl,
+  foundingDate: typeof data.founded === "number" ? String(data.founded) : undefined,
+  areaServed: data.geography,
+  knowsAbout: data.focus_areas,
+  inLanguage: availableLocales,
+  sameAs: data.sources.map((s) => s.url),
+  isPartOf: { "@id": `${absoluteUrl("/")}#website` }
+};
+
+const confidenceLabel = card.confidence[data.confidence] ?? data.confidence;
+const typeLabel = card.types[data.type] ?? data.type;
+const activeStatusLabel = profile.activeStatus[data.active_status] ?? data.active_status;
+const foundedLabel =
+  typeof data.founded === "number" ? String(data.founded) : profile.foundedUnknown;
+
+// Reference languages so the import is not flagged unused; keeps the
+// availableLocales typing aligned with the canonical Language list.
+void languages;
+---
+
+<BaseLayout
+  lang={lang}
+  page="organizations"
+  dynamic={{
+    pathPerLocale,
+    metaPerLocale,
+    extraSchemaGraph: [orgSchema]
+  }}
+>
+  <Header
+    current={lang}
+    page="home"
+    active="organizations"
+    sections={sections}
+    brand={common.brand}
+    github={common.github}
+    primaryAria={common.aria.primary}
+    languageAria={common.aria.language}
+  />
+  <main>
+    <section class="domain-hero">
+      <div class="wrap">
+        <a class="back" href={listingHref}>{profile.backToList}</a>
+        <div class="org-hero-head">
+          <h1>{data.name}</h1>
+          <span
+            class:list={["confidence-pill", `confidence-pill--${data.confidence}`]}
+            aria-label={`${card.labelConfidence}: ${confidenceLabel}`}
+          >
+            <span class="confidence-pill__mark" aria-hidden="true"></span>
+            <span class="confidence-pill__label">{confidenceLabel}</span>
+          </span>
+        </div>
+        {data.also_known_as && data.also_known_as.length > 0 && (
+          <p class="org-aka">{data.also_known_as.join(" · ")}</p>
+        )}
+        <p class="lead">{typeLabel} · {data.geography}</p>
+      </div>
+    </section>
+
+    <section id="identity" aria-labelledby="identity-heading">
+      <div class="wrap">
+        <h2 id="identity-heading">{profile.sections.identity}</h2>
+        <dl class="org-profile__meta">
+          <div class="org-profile__row"><dt>{profile.fields.type}</dt><dd>{typeLabel}</dd></div>
+          <div class="org-profile__row"><dt>{profile.fields.geography}</dt><dd>{data.geography}</dd></div>
+          <div class="org-profile__row"><dt>{profile.fields.founded}</dt><dd>{foundedLabel}</dd></div>
+          <div class="org-profile__row"><dt>{profile.fields.activeStatus}</dt><dd>{activeStatusLabel}</dd></div>
+          <div class="org-profile__row"><dt>{card.labelFocus}</dt>
+            <dd>
+              <ul class="org-profile__focus" aria-label={card.labelFocus}>
+                {data.focus_areas.map((tag) => <li>{tag}</li>)}
+              </ul>
+            </dd>
+          </div>
+          <div class="org-profile__row"><dt>{profile.fields.lastReviewed}</dt><dd>{data.last_reviewed}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="observed" aria-labelledby="observed-heading">
+      <div class="wrap">
+        <h2 id="observed-heading">{profile.sections.observed}</h2>
+        <ul class="org-profile__claims">
+          {data.observed_activities.map((claim) => (
+            <li>
+              <p>{claim.text}</p>
+              <p class="org-profile__cites">
+                {claim.source_ids.map((sid, idx) => (
+                  <>
+                    <a href={`#source-${sid}`} aria-label={`Source ${sid}`}>[{sid}]</a>
+                    {idx < claim.source_ids.length - 1 ? " " : ""}
+                  </>
+                ))}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section id="positions" aria-labelledby="positions-heading">
+      <div class="wrap">
+        <h2 id="positions-heading">{profile.sections.positions}</h2>
+        {data.public_positions.length > 0 ? (
+          <ul class="org-profile__claims">
+            {data.public_positions.map((claim) => (
+              <li>
+                <p>{claim.text}</p>
+                <p class="org-profile__cites">
+                  {claim.source_ids.map((sid, idx) => (
+                    <>
+                      <a href={`#source-${sid}`} aria-label={`Source ${sid}`}>[{sid}]</a>
+                      {idx < claim.source_ids.length - 1 ? " " : ""}
+                    </>
+                  ))}
+                </p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="org-profile__empty">{profile.positionsEmpty}</p>
+        )}
+      </div>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-heading">
+      <div class="wrap">
+        <h2 id="sources-heading">{profile.sections.sources}</h2>
+        <ol class="org-profile__sources">
+          {data.sources.map((source) => (
+            <li id={`source-${source.id}`}>
+              <span
+                class:list={["source-tag", `source-tag--${source.type}`]}
+                aria-label={profile.sourceTypeLabel[source.type]}
+              >
+                {profile.sourceTypeLabel[source.type]}
+              </span>
+              <a href={source.url} rel="noopener noreferrer">
+                {source.citation ?? source.url}
+              </a>
+              <span class="org-profile__source-meta">{profile.sourceAccessed} {source.accessed_on}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    {data.notes && (
+      <section id="notes" aria-labelledby="notes-heading">
+        <div class="wrap">
+          <h2 id="notes-heading">{profile.sections.notes}</h2>
+          <p class="org-profile__notes">{data.notes}</p>
+        </div>
+      </section>
+    )}
+  </main>
+  <footer><div class="wrap">{orgContent.footer}</div></footer>
+</BaseLayout>
