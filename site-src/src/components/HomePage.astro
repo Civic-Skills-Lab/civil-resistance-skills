@@ -148,6 +148,50 @@ const domainLabels = common.domains as Record<string, { label: string; descripti
         </div>
       </div>
     </section>
+    <section id="domains" class="legacy-anchor" aria-labelledby="legacy-domains-heading">
+      <div class="wrap">
+        <article class="card legacy-anchor__card">
+          <h2 id="legacy-domains-heading">{page.legacyAnchors.domains.title}</h2>
+          <p>{page.legacyAnchors.domains.body}</p>
+          <p class="card-action">
+            <a href={pathFor(localizedPaths.domains[lang])}>{page.legacyAnchors.domains.action}</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="catalog" class="legacy-anchor" aria-labelledby="legacy-catalog-heading">
+      <div class="wrap">
+        <article class="card legacy-anchor__card">
+          <h2 id="legacy-catalog-heading">{page.legacyAnchors.catalog.title}</h2>
+          <p>{page.legacyAnchors.catalog.body}</p>
+          <p class="card-action">
+            <a href={pathFor(localizedPaths.methods[lang])}>{page.legacyAnchors.catalog.action}</a>
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
   <footer><div class="wrap"><span>{page.footer.text}</span><span><a href={repoUrl}>{common.github}</a> - <a href={sourcesHref}>{page.footer.sources}</a></span></div></footer>
+  <script
+    is:inline
+    define:vars={{
+      domainsTarget: pathFor(localizedPaths.domains[lang]),
+      methodsTarget: pathFor(localizedPaths.methods[lang])
+    }}
+  >
+    // Legacy hash redirect — when a visitor arrives at the homepage with
+    // `#domains` or `#catalog`, scroll to the redirect notice (the section
+    // ids are preserved on the page) and then move them to the new section
+    // page after a short pause so they have time to read where the
+    // content went. Pure client-side: GitHub Pages cannot observe URL
+    // fragments at the server.
+    const moved = { "#domains": domainsTarget, "#catalog": methodsTarget };
+    const target = moved[window.location.hash];
+    if (target) {
+      window.setTimeout(() => {
+        window.location.replace(target);
+      }, 4000);
+    }
+  </script>
 </BaseLayout>

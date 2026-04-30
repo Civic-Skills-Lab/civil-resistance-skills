@@ -221,6 +221,12 @@ footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wr
   .org-card__row { grid-template-columns: 1fr; gap: 2px; }
 }
 
+/* Legacy homepage anchors — visible "moved" sections at preserved ids */
+.legacy-anchor { padding-top: 0; padding-bottom: 28px; }
+.legacy-anchor__card { max-width: 720px; }
+.legacy-anchor__card h2 { font-size: 22px; margin-bottom: 8px; }
+.legacy-anchor__card p { color: var(--ink-soft); font-size: 14px; }
+
 /* Organization profile page */
 .org-hero-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 8px 0 4px; }
 .org-aka { margin: 0 0 8px; color: var(--muted); font-style: italic; }

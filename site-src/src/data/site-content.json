@@ -250,6 +250,18 @@
             "action": "Read the registry"
           }
         }
+      },
+      "legacyAnchors": {
+        "domains": {
+          "title": "This section moved",
+          "body": "The domain overview now has its own page. Open it for the full grid of research areas and per-domain pages.",
+          "action": "Open the domains section"
+        },
+        "catalog": {
+          "title": "This section moved",
+          "body": "The full method catalogue now has its own page. Open it for the searchable, filterable atlas.",
+          "action": "Open the methods section"
+        }
       }
     },
     "communication": {
@@ -718,6 +730,18 @@
             "body": "Registro de organizaciones cuyo trabajo en resistencia civil aparece en fuentes públicas; cada perfil cita sus fuentes.",
             "action": "Abrir el registro"
           }
+        }
+      },
+      "legacyAnchors": {
+        "domains": {
+          "title": "Esta sección se trasladó",
+          "body": "El resumen de áreas tiene ahora su propia página. Ábrala para ver toda la rejilla y las páginas de cada área.",
+          "action": "Abrir la sección de áreas"
+        },
+        "catalog": {
+          "title": "Esta sección se trasladó",
+          "body": "El catálogo completo de métodos tiene ahora su propia página. Ábrala para acceder al atlas con búsqueda y filtros.",
+          "action": "Abrir la sección de métodos"
         }
       }
     },
@@ -1188,6 +1212,18 @@
             "action": "Otwórz zestawienie"
           }
         }
+      },
+      "legacyAnchors": {
+        "domains": {
+          "title": "Ta sekcja została przeniesiona",
+          "body": "Przegląd obszarów ma teraz własną stronę. Otwórz ją, by zobaczyć całą siatkę oraz strony poszczególnych obszarów.",
+          "action": "Otwórz sekcję obszarów"
+        },
+        "catalog": {
+          "title": "Ta sekcja została przeniesiona",
+          "body": "Pełny katalog metod ma teraz własną stronę. Otwórz ją, by skorzystać z atlasu z wyszukiwaniem i filtrami.",
+          "action": "Otwórz sekcję metod"
+        }
       }
     },
     "communication": {
@@ -1656,6 +1692,18 @@
             "body": "Справочник организаций, чья работа в сфере гражданского сопротивления отражена в публичных источниках; каждая запись опирается на цитаты и ссылки.",
             "action": "Открыть справочник"
           }
+        }
+      },
+      "legacyAnchors": {
+        "domains": {
+          "title": "Эта секция переехала",
+          "body": "Обзор разделов теперь живёт на отдельной странице. Откройте её, чтобы увидеть всю сетку и страницы отдельных областей.",
+          "action": "Открыть страницу разделов"
+        },
+        "catalog": {
+          "title": "Эта секция переехала",
+          "body": "Каталог методов теперь живёт на отдельной странице. Откройте её, чтобы получить искомый и фильтруемый атлас.",
+          "action": "Открыть страницу методов"
         }
       }
     },
