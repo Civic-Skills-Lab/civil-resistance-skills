@@ -11,8 +11,16 @@ interface Props {
 const { lang } = Astro.props;
 const page = content[lang].skills;
 const common = content[lang].common;
-const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
-const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
+// One CopyButton per command line — see HomePage.astro for context.
+const claudeCommands = [
+  "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills",
+  "/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"
+];
+const codexCommands = [
+  "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills",
+  "codex",
+  "/plugins"
+];
 ---
 
 <SectionPage lang={lang} section="skills">
@@ -23,12 +31,16 @@ const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resist
         <article class="card install">
           <h3>Claude Code</h3>
           <p>{page.install.claudeBody}</p>
-          <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
+          {claudeCommands.map((cmd) => (
+            <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+          ))}
         </article>
         <article class="card install">
           <h3>Codex</h3>
           <p>{page.install.codexBody}</p>
-          <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
+          {codexCommands.map((cmd) => (
+            <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+          ))}
         </article>
       </div>
       <p class="section-copy">{page.registryNote}</p>
