@@ -149,16 +149,20 @@ const domainLabels = common.domains as Record<string, { label: string; descripti
           <article class="card install">
             <h3>Claude Code</h3>
             <p>{page.install.claudeBody}</p>
-            {claudeCommands.map((cmd) => (
-              <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
-            ))}
+            <div class="codebox-stack">
+              {claudeCommands.map((cmd) => (
+                <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+              ))}
+            </div>
           </article>
           <article class="card install">
             <h3>Codex</h3>
             <p>{page.install.codexBody}</p>
-            {codexCommands.map((cmd) => (
-              <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
-            ))}
+            <div class="codebox-stack">
+              {codexCommands.map((cmd) => (
+                <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+              ))}
+            </div>
           </article>
         </div>
       </div>
