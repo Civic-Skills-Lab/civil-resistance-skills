@@ -63,6 +63,7 @@ h1 { max-width: 900px; margin: 24px 0 18px; font-family: var(--serif); font-size
 .button.primary { color: #fff; background: var(--blue); border-color: var(--blue); }
 .button:hover { text-decoration: none; transform: translateY(-1px); }
 .codebox { position: relative; display: block; width: 100%; text-align: left; background: #1f252b; color: #e9f0f2; border: 0; border-radius: 8px; padding: 14px 82px 14px 14px; min-height: 58px; font-family: var(--mono); font-size: 13px; line-height: 1.45; cursor: pointer; overflow-wrap: anywhere; }
+.codebox + .codebox { margin-top: 10px; }
 .codebox em { position: absolute; right: 12px; top: 12px; color: #b8c4c9; font-family: var(--sans); font-size: 12px; font-style: normal; }
 .code-lines { display: block; }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 34px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.78); }

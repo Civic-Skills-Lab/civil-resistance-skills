@@ -24,8 +24,18 @@ const common = content[lang].common;
 const sections = sectionsFor(lang, common.sections);
 const safetyHref = githubBlob("SAFETY.md");
 const sourcesHref = githubBlob("methods-registry/03-sources-and-references.md");
-const claudeCommand = "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\n/plugin install civil-resistance-communication@civil-resistance-skills-marketplace";
-const codexCommand = "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills\ncodex\n/plugins";
+// Each line is a separate command the user runs in sequence in
+// different contexts (host shell vs Claude/Codex prompt). Render each
+// as its own codebox + Copy so the user can copy one line at a time.
+const claudeCommands = [
+  "/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills",
+  "/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"
+];
+const codexCommands = [
+  "codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills",
+  "codex",
+  "/plugins"
+];
 const exploreCardOrder: SectionKey[] = ["methods", "domains", "skills", "organizations"];
 const methodsHref = pathFor(localizedPaths.methods[lang]);
 const domainLabels = common.domains as Record<string, { label: string; description: string }>;
@@ -139,12 +149,16 @@ const domainLabels = common.domains as Record<string, { label: string; descripti
           <article class="card install">
             <h3>Claude Code</h3>
             <p>{page.install.claudeBody}</p>
-            <CopyButton client:load command={claudeCommand} html={"/plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>/plugin install civil-resistance-communication@civil-resistance-skills-marketplace"} copyLabel={common.copy} copiedLabel={common.copied} />
+            {claudeCommands.map((cmd) => (
+              <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+            ))}
           </article>
           <article class="card install">
             <h3>Codex</h3>
             <p>{page.install.codexBody}</p>
-            <CopyButton client:load command={codexCommand} html={"codex plugin marketplace add Civic-Skills-Lab/civil-resistance-skills<br>codex<br>/plugins"} copyLabel={common.copy} copiedLabel={common.copied} />
+            {codexCommands.map((cmd) => (
+              <CopyButton client:load command={cmd} html={cmd} copyLabel={common.copy} copiedLabel={common.copied} />
+            ))}
           </article>
         </div>
       </div>
